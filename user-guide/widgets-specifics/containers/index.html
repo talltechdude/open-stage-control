@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Containers - OSC</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">OSC</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../../getting-started/">Getting started</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../interface/">Interface</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../session-file/">Session file</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../theming/">Theming</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../widgets-generics/">Widgets generics</a>
+</li>
+
+                    
+                        
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Widgets specifics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../buttons/">Buttons</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Containers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../matrices/">Matrices</a>
+</li>
+
+        
+            
+<li >
+    <a href="../pads/">Pads</a>
+</li>
+
+        
+            
+<li >
+    <a href="../plots/">Plots</a>
+</li>
+
+        
+            
+<li >
+    <a href="../sliders/">Sliders</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../buttons/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../matrices/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/jean-emmanuel/open-stage-control">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#containers">Containers</a></li>
+        
+    
+        <li class="main "><a href="#strip">Strip</a></li>
+        
+            <li><a href="#horizontal">horizontal</a></li>
+        
+            <li><a href="#widgets">widgets</a></li>
+        
+    
+        <li class="main "><a href="#panel">Panel</a></li>
+        
+            <li><a href="#scroll">scroll</a></li>
+        
+            <li><a href="#widgets_1">widgets</a></li>
+        
+            <li><a href="#tabs">tabs</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h2 id="containers">Containers</h2>
+<p>Containers can contain any widgets</p>
+<hr />
+<h2 id="strip">Strip</h2>
+<p>Strips can contain any number of widgets, which can't be absolutely positioned and whose size can't overflow their parent's.</p>
+<pre><code class="js">{
+    type:'strip',
+    // etc
+}
+</code></pre>
+
+<h4 id="horizontal"><code>horizontal</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to display widgets horizontally</li>
+</ul>
+<h4 id="widgets"><code>widgets</code></h4>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: each element of the <code>array</code> must be a widget object</li>
+</ul>
+<hr />
+<h2 id="panel">Panel</h2>
+<p>Panels can contains tabs or widgets. These can be absolutely positioned and can overflow their parent's size (which will then display scrollbars).</p>
+<pre><code class="js">{
+    type:'panel',
+    // etc
+}
+</code></pre>
+
+<h4 id="scroll"><code>scroll</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>true</code></li>
+<li>usage: set to <code>false</code> to disable scrollbars</li>
+</ul>
+<h4 id="widgets_1"><code>widgets</code></h4>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: each element of the <code>array</code> must be a widget object.A panel cannot contain widgets and tabs simultaneously.</li>
+</ul>
+<h4 id="tabs"><code>tabs</code></h4>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: each element of the <code>array</code> must be a tab object. A panel cannot contain widgets and tabs simultaneously.</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script>var base_url = '../../..';</script>
+        <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
+        <script src="../../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

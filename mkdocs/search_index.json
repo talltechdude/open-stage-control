@@ -1,0 +1,564 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Open Stage Control\n\n\nOpen Stage Control is a libre desktop OSC bi-directionnal control surface application. It's built with HTML, JavaScript \n CSS on top of \nElectron\n framework.\n\n\nDemo\n\n\nYou can try the app here \nhttp://openstagecontrol.herokuapp.com/\n\n\nPlease note that :\n\n\n\n\nChrome/Chromium \n49\n at least is required\n\n\nSince there is only one instance running, all connected guests are synchronized (widgets using the same osc paths update each other's states) : you might experience some unwanted synchronization with other users unless you specify custom parameters for your widgets.\n\n\nYou might want to download the examples sessions files under \nexamples/\n and load them in the app to get started.\n\n\n\n\nFeatures\n\n\n\n\nmouse \n multi-touch sensitive widgets\n\n\nmodular \n responsive layout\n\n\nbuilt-in live editor\n\n\nbi-directionnal osc bindings\n\n\nheadless server mode with any number of clients using chromium\n\n\napp state store / recall \n import / export\n\n\nthemes !\n\n\n\n\nLicense \n credits\n\n\nCopyleft \u00a9 Jean-Emmanuel @\u00a0\nAMMD\n. This program is released under the GNU/GPL3 license.\n\n\nIt relies on the use of several libraries :\n\n\n\n\nNode.js\n\n\nElectron\n\n\nnode-osc\n\n\nsocket.io\n\n\nbrowserify\n\n\nexpress\n\n\nnode-sass\n\n\njQuery\n\n\njQuery-UI\n (draggable, resizable \n sortable)\n\n\nFont Awesome", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#open-stage-control", 
+            "text": "Open Stage Control is a libre desktop OSC bi-directionnal control surface application. It's built with HTML, JavaScript   CSS on top of  Electron  framework.", 
+            "title": "Open Stage Control"
+        }, 
+        {
+            "location": "/#demo", 
+            "text": "You can try the app here  http://openstagecontrol.herokuapp.com/  Please note that :   Chrome/Chromium  49  at least is required  Since there is only one instance running, all connected guests are synchronized (widgets using the same osc paths update each other's states) : you might experience some unwanted synchronization with other users unless you specify custom parameters for your widgets.  You might want to download the examples sessions files under  examples/  and load them in the app to get started.", 
+            "title": "Demo"
+        }, 
+        {
+            "location": "/#features", 
+            "text": "mouse   multi-touch sensitive widgets  modular   responsive layout  built-in live editor  bi-directionnal osc bindings  headless server mode with any number of clients using chromium  app state store / recall   import / export  themes !", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/#license-credits", 
+            "text": "Copyleft \u00a9 Jean-Emmanuel @\u00a0 AMMD . This program is released under the GNU/GPL3 license.  It relies on the use of several libraries :   Node.js  Electron  node-osc  socket.io  browserify  express  node-sass  jQuery  jQuery-UI  (draggable, resizable   sortable)  Font Awesome", 
+            "title": "License &amp; credits"
+        }, 
+        {
+            "location": "/getting-started/", 
+            "text": "Getting started\n\n\nRun from binaries\n\n\nPrebuilt binaries for Linux, Windows and OS X can be found on the \nrelease\n page.\n\n\nOptions:\n  -h, --help     display help\n  -s, --sync     synchronized hosts (ip:port pairs) (all osc messages will also be sent to these)\n  -l, --load     session file to load\n  -p, --port     osc input port (for synchronization)\n  -n, --nogui    disable default gui and makes the app availabe through http on specified port\n  -t, --theme    theme name or path (mutliple values allowed)\n\nExemples:\n\n$ open-stage-control -s 127.0.0.1:5555 127.0.0.1:6666 -p 7777\n\nThis will create an app listening on port 7777 for synchronization messages, and sending its widgets state changes to ports 5555 and 6666.\n\n$ open-stage-control -n 8080 -l path/to/session.js\n\nThis will create a headless app available through http on port 8080. Multiple clients can use the app (with chrome only) simultaneously, their widgets will be synchronized.\n\n\n$ open-stage-control -t light noinput /path/to/custom_theme.css\n\nThis will apply three themes (light ui, remove all inputs, and a custom theme file)\n\n\nAvailable themes:\n- light\n- noinput\n\n\n\n\nRun from sources\n\n\nRunning the app from the sources slightly differs from using built binaries : instead of running a binary, we'll launch the app with npm.\n\n\nRequirements\n\n\n\n\nNode.js\n\n\nnpm\n\n\n\n\n$ sudo apt-get install npm  # install nodejs \n npm\n$ sudo npm install -g npm   # update npm\n\n\n\n\nDownload\n\n\n$ git clone https://github.com/jean-emmanuel/open-stage-control\n$ cd open-stage-control/\n$ npm install --save-optional\n ```\n\n**Run**\n\n```bash\n$ npm start [ -- options]\n\n# A double hyphen (\n--\n) is used here to tell npm that the following options are to be given to the app.\n\n\n\n\nBuild from sources\n\n\nRequirements\n\n\n\n\nNode.js\n\n\nnpm\n\n\n\n\n$ sudo apt-get install npm  # install nodejs \n npm\n$ sudo npm install -g npm   # update npm\n\n\n\n\nBuild\n\n\n$ git clone https://github.com/jean-emmanuel/open-stage-control\n$ cd open-stage-control\n$ npm install --save-optional\n$ export PLATFORM=TARGET_PLATFORM # TARGET_PLATFORM can be linux, win32 (windows) or darwin (os x)\n$ export ARCH=TARGET_ARCH         # TARGET_ARCH can be ia32 or x64\n$ npm run build\n\n$ # Do the following if you want a deb package for debian/ubuntu\n$ npm run deb32\n$ #\u00a0or\n$ npm run deb64\n\n\n\n\nThis will build the app in \ndist/open-stage-control-PLATFORM-ARCH\n.\n\n\nPlease note that building the app for windows from a linux system requires wine to be installed.", 
+            "title": "Getting started"
+        }, 
+        {
+            "location": "/getting-started/#getting-started", 
+            "text": "", 
+            "title": "Getting started"
+        }, 
+        {
+            "location": "/getting-started/#run-from-binaries", 
+            "text": "Prebuilt binaries for Linux, Windows and OS X can be found on the  release  page.  Options:\n  -h, --help     display help\n  -s, --sync     synchronized hosts (ip:port pairs) (all osc messages will also be sent to these)\n  -l, --load     session file to load\n  -p, --port     osc input port (for synchronization)\n  -n, --nogui    disable default gui and makes the app availabe through http on specified port\n  -t, --theme    theme name or path (mutliple values allowed)\n\nExemples:\n\n$ open-stage-control -s 127.0.0.1:5555 127.0.0.1:6666 -p 7777\n\nThis will create an app listening on port 7777 for synchronization messages, and sending its widgets state changes to ports 5555 and 6666.\n\n$ open-stage-control -n 8080 -l path/to/session.js\n\nThis will create a headless app available through http on port 8080. Multiple clients can use the app (with chrome only) simultaneously, their widgets will be synchronized.\n\n\n$ open-stage-control -t light noinput /path/to/custom_theme.css\n\nThis will apply three themes (light ui, remove all inputs, and a custom theme file)\n\n\nAvailable themes:\n- light\n- noinput", 
+            "title": "Run from binaries"
+        }, 
+        {
+            "location": "/getting-started/#run-from-sources", 
+            "text": "Running the app from the sources slightly differs from using built binaries : instead of running a binary, we'll launch the app with npm.  Requirements   Node.js  npm   $ sudo apt-get install npm  # install nodejs   npm\n$ sudo npm install -g npm   # update npm  Download  $ git clone https://github.com/jean-emmanuel/open-stage-control\n$ cd open-stage-control/\n$ npm install --save-optional\n ```\n\n**Run**\n\n```bash\n$ npm start [ -- options]\n\n# A double hyphen ( -- ) is used here to tell npm that the following options are to be given to the app.", 
+            "title": "Run from sources"
+        }, 
+        {
+            "location": "/getting-started/#build-from-sources", 
+            "text": "Requirements   Node.js  npm   $ sudo apt-get install npm  # install nodejs   npm\n$ sudo npm install -g npm   # update npm  Build  $ git clone https://github.com/jean-emmanuel/open-stage-control\n$ cd open-stage-control\n$ npm install --save-optional\n$ export PLATFORM=TARGET_PLATFORM # TARGET_PLATFORM can be linux, win32 (windows) or darwin (os x)\n$ export ARCH=TARGET_ARCH         # TARGET_ARCH can be ia32 or x64\n$ npm run build\n\n$ # Do the following if you want a deb package for debian/ubuntu\n$ npm run deb32\n$ #\u00a0or\n$ npm run deb64  This will build the app in  dist/open-stage-control-PLATFORM-ARCH .  Please note that building the app for windows from a linux system requires wine to be installed.", 
+            "title": "Build from sources"
+        }, 
+        {
+            "location": "/user-guide/interface/", 
+            "text": "User interface\n\n\n\n\nEditor\n\n\nThe session editor can be enabled in the side panel. Once enabled, clicking on a widget or on a tab will make it the \nselected object\n, adding a fancy dashed blue border to it.\n\n\nProperties\n\n\nAll the selected object's properties are displayed and can be modified in the side panel. Any modification will redraw the object \nand all its children\n if the submitted data is valid. Please refer to the \nwidgets reference\n for the list of valid options.\n\n\nWidgets containers such as tabs, strips and panels will also list their children here, which can be reordered using drag-and-drop.\n\n\nSize / Position\n\n\nThe selected object can be resized using its south, south-east and east handles. It can be dragged with its north handle.\n\n\nContext menu\n\n\nRight clicking on a widget or on a tab will also display a context menu providing useful utilities :\n\n\n\n\ncopy\n: copy widget's data\n\n\ncut\n: copy widget's data and delete selected widget\n\n\npaste\n: paste copied widget in selected container\n\n\nAdd widget\n: create a new widget in selected container\n\n\nAdd tab\n: create a new tab in selected container\n\n\nDelete\n: delete selected tab or widget", 
+            "title": "Interface"
+        }, 
+        {
+            "location": "/user-guide/interface/#user-interface", 
+            "text": "", 
+            "title": "User interface"
+        }, 
+        {
+            "location": "/user-guide/interface/#editor", 
+            "text": "The session editor can be enabled in the side panel. Once enabled, clicking on a widget or on a tab will make it the  selected object , adding a fancy dashed blue border to it.", 
+            "title": "Editor"
+        }, 
+        {
+            "location": "/user-guide/interface/#properties", 
+            "text": "All the selected object's properties are displayed and can be modified in the side panel. Any modification will redraw the object  and all its children  if the submitted data is valid. Please refer to the  widgets reference  for the list of valid options.  Widgets containers such as tabs, strips and panels will also list their children here, which can be reordered using drag-and-drop.", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/user-guide/interface/#size-position", 
+            "text": "The selected object can be resized using its south, south-east and east handles. It can be dragged with its north handle.", 
+            "title": "Size / Position"
+        }, 
+        {
+            "location": "/user-guide/interface/#context-menu", 
+            "text": "Right clicking on a widget or on a tab will also display a context menu providing useful utilities :   copy : copy widget's data  cut : copy widget's data and delete selected widget  paste : paste copied widget in selected container  Add widget : create a new widget in selected container  Add tab : create a new tab in selected container  Delete : delete selected tab or widget", 
+            "title": "Context menu"
+        }, 
+        {
+            "location": "/user-guide/session-file/", 
+            "text": "Session file\n\n\nA valid session file is a javascript file that returns, when eval'd, an array of tab objects. It can be written as a javascript object :\n\n\n[\n    {\n        label:\nA tab containing widgets\n,\n        widgets: [\n            {\n                // widget properties\n            },\n            {\n                // etc\n            }\n        ]\n    },\n    {\n        label:\nA tab containing tabs\n,\n        tabs: [\n            {\n                // tab properties\n            },\n            {\n                // etc\n            }\n        ]\n    },\n    {\n        // tab properties\n    }\n]\n\n\n\n\nIt can also be a self invoking function that returns an array of tab objects :\n\n\n(function(){\n    var tabs = []\n    for (for i in [0,1,2,3]) {\n        tabs.push({\n            id:'tab'+i,\n            widgets:\u00a0[\n                {\n                    id:'tab'+i+'fader',\n                    type:'fader'\n                }\n                // etc\n            ]\n        })\n    }\n    return tabs\n}()\n\n\n\n\n\n\n\nTab object\n\n\nlabel\n\n\n\n\ntype: \nstring\n\n\ndefault: \nUnnamed\n\n\n\n\nwidgets\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a \nwidget\n object. A tab cannot contain widgets and tabs simultaneously.\n\n\n\n\ntabs\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a \ntab\n object. A tab cannot contain widgets and tabs simultaneously.", 
+            "title": "Session file"
+        }, 
+        {
+            "location": "/user-guide/session-file/#session-file", 
+            "text": "A valid session file is a javascript file that returns, when eval'd, an array of tab objects. It can be written as a javascript object :  [\n    {\n        label: A tab containing widgets ,\n        widgets: [\n            {\n                // widget properties\n            },\n            {\n                // etc\n            }\n        ]\n    },\n    {\n        label: A tab containing tabs ,\n        tabs: [\n            {\n                // tab properties\n            },\n            {\n                // etc\n            }\n        ]\n    },\n    {\n        // tab properties\n    }\n]  It can also be a self invoking function that returns an array of tab objects :  (function(){\n    var tabs = []\n    for (for i in [0,1,2,3]) {\n        tabs.push({\n            id:'tab'+i,\n            widgets:\u00a0[\n                {\n                    id:'tab'+i+'fader',\n                    type:'fader'\n                }\n                // etc\n            ]\n        })\n    }\n    return tabs\n}()", 
+            "title": "Session file"
+        }, 
+        {
+            "location": "/user-guide/session-file/#tab-object", 
+            "text": "", 
+            "title": "Tab object"
+        }, 
+        {
+            "location": "/user-guide/session-file/#label", 
+            "text": "type:  string  default:  Unnamed", 
+            "title": "label"
+        }, 
+        {
+            "location": "/user-guide/session-file/#widgets", 
+            "text": "type:  array  default:  []  usage: each element of the  array  must be a  widget  object. A tab cannot contain widgets and tabs simultaneously.", 
+            "title": "widgets"
+        }, 
+        {
+            "location": "/user-guide/session-file/#tabs", 
+            "text": "type:  array  default:  []  usage: each element of the  array  must be a  tab  object. A tab cannot contain widgets and tabs simultaneously.", 
+            "title": "tabs"
+        }, 
+        {
+            "location": "/user-guide/theming/", 
+            "text": "Theming\n\n\nTheming is as simple as writing a tiny css file that will override the default style variables defined in \n_vars.scss\n :\n\n\n:root {\n    --color-accent:red;\n}\n\n\n\n\nThis will change the default accent color to red. Variables can also be overridden for a specific subset of elements, for example :\n\n\n.panel-container {\n    --color-text:blue;\n}\n\n\n\n\nThis will change the default text color to blue for all elements in panel widgets.\n\n\nOf course, regular css is also allowed :\n\n\n.widget .input {\n    display: none;\n}\n\n\n\n\nThis will hide the widgets' value inputs.", 
+            "title": "Theming"
+        }, 
+        {
+            "location": "/user-guide/theming/#theming", 
+            "text": "Theming is as simple as writing a tiny css file that will override the default style variables defined in  _vars.scss  :  :root {\n    --color-accent:red;\n}  This will change the default accent color to red. Variables can also be overridden for a specific subset of elements, for example :  .panel-container {\n    --color-text:blue;\n}  This will change the default text color to blue for all elements in panel widgets.  Of course, regular css is also allowed :  .widget .input {\n    display: none;\n}  This will hide the widgets' value inputs.", 
+            "title": "Theming"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/", 
+            "text": "Widgets generics\n\n\nWidget objects share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:\n\n\n\n\nSliders\n\n\nButtons\n\n\nPads\n\n\nMatrices\n\n\nPlots\n\n\nContainers\n\n\n\n\n\n\nBasics\n\n\ntype\n\n\n\n\ntype: \nstring\n\n\ndefault: \nfader\n\n\n\n\nid\n\n\n\n\ntype: \nstring\n\n\ndefault: generated unique 'widget_n'\n\n\nusage: widgets sharing the same \nid\n will act as clones and update each other's value(s) without sending extra osc messages.\n\n\n\n\n\n\nStyle\n\n\nlabel\n\n\n\n\ntype: \nstring|false\n\n\ndefault: \nauto\n, which displays \nid\n\n\nusage: set to \nfalse\n to hide completely\n\n\n\n\ntop\n / \nleft\n\n\n\n\ntype: \nnumber|percentage\n\n\ndefault: \nauto\n\n\nusage:\n\n\nwhen both \ntop\n and \nleft\n are set to \nauto\n, the widget is positioned according to the normal flow of the page (from left to right, by order of creation).\n\n\notherwise, the widget will be absolutely positioned\n\n\n\n\n\n\n\n\nwidth\n / \nheight\n\n\n\n\ntype: \nnumber|percentage\n\n\ndefault: \nauto\n\n\n\n\ncolor\n\n\n\n\ntype: \nstring\n\n\ndefault: \nauto\n, inherited accent color\n\n\nusage: any valid \ncss\n color code is valid, this will change the default accent color for the widget and all its children\n\n\n\n\ncss\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: the \ncss\n property can be used to override inherited \ntheming\n variables. Also, some widgets expose specific theming variables that allow a finer customization. Standard \ncss\n properties can be applied to the widget's root element though this property.\n\n\n\n\n\n\nOSC\n\n\nprecision\n\n\n\n\ntype: \ninteger\n\n\ndefault: \n2\n\n\nusage: the \nprecision\n property defines the number of decimals to display and to send. Set to \n0\n to send \nintegers\n only.\n\n\n\n\ntarget\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage:\n\n\nthis defines the targets of the widget's osc messages\n\n\neach element of the \narray\n must be a string formatted as follows : \n\"ip:port\"\n\n\nmultiple targets can be specified : \n[\"ip1:port1\",\"ip2:port2\"]\n\n\n\n\n\n\n\n\npath\n\n\n\n\ntype: \nstring\n\n\ndefault: \n/widgets_id\n\n\nusage: this is the \npath\n of the osc messages sent by the widget\n\n\n\n\npreArgs\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage:\n\n\neach element of the \narray\n defines a constant value that will be prepended to the osc message\n\n\nvalues can be defined as objects if the type needs to be specified (ie different from the default implied by the \nprecision\n)\n\n\n\n\n\n\nexample:\n\n\n\n\n[\n    \n1\n,        // this will always be sent as a string\n    0.5,        // this will be sent as an integer if precision equals 0\n    1,          // this will be sent as float if precision is different from 0\n    {\n        type:\nfloat\n,\n        value:0.5\n    },\n    {\n        type:\ninteger\n,\n        value:1\n    }\n]", 
+            "title": "Widgets generics"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#widgets-generics", 
+            "text": "Widget objects share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:   Sliders  Buttons  Pads  Matrices  Plots  Containers", 
+            "title": "Widgets generics"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#basics", 
+            "text": "", 
+            "title": "Basics"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#type", 
+            "text": "type:  string  default:  fader", 
+            "title": "type"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#id", 
+            "text": "type:  string  default: generated unique 'widget_n'  usage: widgets sharing the same  id  will act as clones and update each other's value(s) without sending extra osc messages.", 
+            "title": "id"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#style", 
+            "text": "", 
+            "title": "Style"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#label", 
+            "text": "type:  string|false  default:  auto , which displays  id  usage: set to  false  to hide completely", 
+            "title": "label"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#top-left", 
+            "text": "type:  number|percentage  default:  auto  usage:  when both  top  and  left  are set to  auto , the widget is positioned according to the normal flow of the page (from left to right, by order of creation).  otherwise, the widget will be absolutely positioned", 
+            "title": "top / left"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#width-height", 
+            "text": "type:  number|percentage  default:  auto", 
+            "title": "width / height"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#color", 
+            "text": "type:  string  default:  auto , inherited accent color  usage: any valid  css  color code is valid, this will change the default accent color for the widget and all its children", 
+            "title": "color"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#css", 
+            "text": "type:  string  default:  empty  usage: the  css  property can be used to override inherited  theming  variables. Also, some widgets expose specific theming variables that allow a finer customization. Standard  css  properties can be applied to the widget's root element though this property.", 
+            "title": "css"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#osc", 
+            "text": "", 
+            "title": "OSC"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#precision", 
+            "text": "type:  integer  default:  2  usage: the  precision  property defines the number of decimals to display and to send. Set to  0  to send  integers  only.", 
+            "title": "precision"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#target", 
+            "text": "type:  array  default:  []  usage:  this defines the targets of the widget's osc messages  each element of the  array  must be a string formatted as follows :  \"ip:port\"  multiple targets can be specified :  [\"ip1:port1\",\"ip2:port2\"]", 
+            "title": "target"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#path", 
+            "text": "type:  string  default:  /widgets_id  usage: this is the  path  of the osc messages sent by the widget", 
+            "title": "path"
+        }, 
+        {
+            "location": "/user-guide/widgets-generics/#preargs", 
+            "text": "type:  array  default:  []  usage:  each element of the  array  defines a constant value that will be prepended to the osc message  values can be defined as objects if the type needs to be specified (ie different from the default implied by the  precision )    example:   [\n     1 ,        // this will always be sent as a string\n    0.5,        // this will be sent as an integer if precision equals 0\n    1,          // this will be sent as float if precision is different from 0\n    {\n        type: float ,\n        value:0.5\n    },\n    {\n        type: integer ,\n        value:1\n    }\n]", 
+            "title": "preArgs"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/", 
+            "text": "Buttons\n\n\nButtons are exactly what you think they are.\n\n\n\n\nToggle\n\n\n{\n    type:'toggle',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent on \non\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an object if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent on \noff\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an object if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\n\n\nPush\n\n\n{\n    type:'push',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent when pushing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an object if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent when releasing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an object if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\nSetting the \npush\n's value externally (via osc or widget linking/cloning) will toggle it's inner light.\n\n\n\n\nSwitch\n\n\n{\n    type:'switch',\n    // etc\n}\n\n\n\n\nvalues\n\n\n\n\ntype: \narray|object\n\n\ndefault: \n{\"Value 1\":1,\"Value 2\":2}\n\n\nusage:\n\n\narray\n of possible values to switch between : \n[1,2,3]\n\n\nobject\n of \n\"label\":value\n pairs", 
+            "title": "Buttons"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#buttons", 
+            "text": "Buttons are exactly what you think they are.", 
+            "title": "Buttons"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#toggle", 
+            "text": "{\n    type:'toggle',\n    // etc\n}", 
+            "title": "Toggle"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#on", 
+            "text": "type:  string|number|object  default:  1  usage: defines which value is sent on  on  position  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an object if the type needs to be specified (see  preArgs )", 
+            "title": "on"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#off", 
+            "text": "type:  string|number|object  default:  0  usage: defines which value is sent on  off  position  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an object if the type needs to be specified (see  preArgs )", 
+            "title": "off"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#push", 
+            "text": "{\n    type:'push',\n    // etc\n}", 
+            "title": "Push"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#on_1", 
+            "text": "type:  string|number|object  default:  1  usage: defines which value is sent when pushing the button  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an object if the type needs to be specified (see  preArgs )", 
+            "title": "on"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#off_1", 
+            "text": "type:  string|number|object  default:  0  usage: defines which value is sent when releasing the button  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an object if the type needs to be specified (see  preArgs )     Setting the  push 's value externally (via osc or widget linking/cloning) will toggle it's inner light.", 
+            "title": "off"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#switch", 
+            "text": "{\n    type:'switch',\n    // etc\n}", 
+            "title": "Switch"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#values", 
+            "text": "type:  array|object  default:  {\"Value 1\":1,\"Value 2\":2}  usage:  array  of possible values to switch between :  [1,2,3]  object  of  \"label\":value  pairs", 
+            "title": "values"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/", 
+            "text": "Containers\n\n\nContainers can contain any widgets\n\n\n\n\nStrip\n\n\nStrips can contain any number of widgets, which can't be absolutely positioned and whose size can't overflow their parent's.\n\n\n{\n    type:'strip',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to display widgets horizontally\n\n\n\n\nwidgets\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a widget object\n\n\n\n\n\n\nPanel\n\n\nPanels can contains tabs or widgets. These can be absolutely positioned and can overflow their parent's size (which will then display scrollbars).\n\n\n{\n    type:'panel',\n    // etc\n}\n\n\n\n\nscroll\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: set to \nfalse\n to disable scrollbars\n\n\n\n\nwidgets\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a widget object.A panel cannot contain widgets and tabs simultaneously.\n\n\n\n\ntabs\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a tab object. A panel cannot contain widgets and tabs simultaneously.", 
+            "title": "Containers"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/#containers", 
+            "text": "Containers can contain any widgets", 
+            "title": "Containers"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/#strip", 
+            "text": "Strips can contain any number of widgets, which can't be absolutely positioned and whose size can't overflow their parent's.  {\n    type:'strip',\n    // etc\n}", 
+            "title": "Strip"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/#horizontal", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to display widgets horizontally", 
+            "title": "horizontal"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/#widgets", 
+            "text": "type:  array  default:  []  usage: each element of the  array  must be a widget object", 
+            "title": "widgets"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/#panel", 
+            "text": "Panels can contains tabs or widgets. These can be absolutely positioned and can overflow their parent's size (which will then display scrollbars).  {\n    type:'panel',\n    // etc\n}", 
+            "title": "Panel"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/#scroll", 
+            "text": "type:  boolean  default:  true  usage: set to  false  to disable scrollbars", 
+            "title": "scroll"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/#widgets_1", 
+            "text": "type:  array  default:  []  usage: each element of the  array  must be a widget object.A panel cannot contain widgets and tabs simultaneously.", 
+            "title": "widgets"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/containers/#tabs", 
+            "text": "type:  array  default:  []  usage: each element of the  array  must be a tab object. A panel cannot contain widgets and tabs simultaneously.", 
+            "title": "tabs"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/", 
+            "text": "Matrices\n\n\nMatrices are special containers that only contain one type of widget. All contained widgets will be traversed by single dragging gestures.\n\n\nMultifader\n\n\nMultifader creates a row of vertical faders that respond to the same gestures.\n\n\n{\n    type:'multifader',\n    // etc\n}\n\n\n\n\nstrips\n\n\n\n\ntype: \ninteger\n\n\ndefault: \n2\n\n\nusage: number of faders in the row, each fader will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\npath\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\nrange\n\n\n\n\nsee fader's \nrange\n\n\n\n\nlogScale\n\n\n\n\nsee fader's \nlogScale\n\n\n\n\nunit\n\n\n\n\nsee fader's \nunit\n\n\n\n\n\n\nMultitoggle\n\n\n{\n    type:'multitoggle',\n    // etc\n}\n\n\n\n\nmatrix\n\n\n\n\ntype: \narray\n\n\ndefault: \n[2,2]\n\n\nusage: defines the number of columns and and rows. Each cell will contain a toggle button that will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\npath\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\non\n\n\n\n\nsee toggle's \non\n\n\n\n\noff\n\n\n\n\nsee toggle's \noff\n\n\n\n\n\n\nMultipush\n\n\n{\n    type:'multipush',\n    // etc\n}\n\n\n\n\nmatrix\n\n\n\n\ntype: \narray\n\n\ndefault: \n[2,2]\n\n\nusage: defines the number of columns and and rows. Each cell will contain a push button that will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\npath\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\non\n\n\n\n\nsee push's \non\n\n\n\n\noff\n\n\n\n\nsee push's \noff", 
+            "title": "Matrices"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#matrices", 
+            "text": "Matrices are special containers that only contain one type of widget. All contained widgets will be traversed by single dragging gestures.", 
+            "title": "Matrices"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#multifader", 
+            "text": "Multifader creates a row of vertical faders that respond to the same gestures.  {\n    type:'multifader',\n    // etc\n}", 
+            "title": "Multifader"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#strips", 
+            "text": "type:  integer  default:  2  usage: number of faders in the row, each fader will inherit its parent's properties and the following ones (where  i  is the fader's index in the row)  id : same as the widget's with  /i  appended to it  label :  i  path : same as the widget's with  /i  appended to it", 
+            "title": "strips"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#range", 
+            "text": "see fader's  range", 
+            "title": "range"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#logscale", 
+            "text": "see fader's  logScale", 
+            "title": "logScale"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#unit", 
+            "text": "see fader's  unit", 
+            "title": "unit"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#multitoggle", 
+            "text": "{\n    type:'multitoggle',\n    // etc\n}", 
+            "title": "Multitoggle"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#matrix", 
+            "text": "type:  array  default:  [2,2]  usage: defines the number of columns and and rows. Each cell will contain a toggle button that will inherit its parent's properties and the following ones (where  i  is the fader's index in the row)  id : same as the widget's with  /i  appended to it  label :  i  path : same as the widget's with  /i  appended to it", 
+            "title": "matrix"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#on", 
+            "text": "see toggle's  on", 
+            "title": "on"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#off", 
+            "text": "see toggle's  off", 
+            "title": "off"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#multipush", 
+            "text": "{\n    type:'multipush',\n    // etc\n}", 
+            "title": "Multipush"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#matrix_1", 
+            "text": "type:  array  default:  [2,2]  usage: defines the number of columns and and rows. Each cell will contain a push button that will inherit its parent's properties and the following ones (where  i  is the fader's index in the row)  id : same as the widget's with  /i  appended to it  label :  i  path : same as the widget's with  /i  appended to it", 
+            "title": "matrix"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#on_1", 
+            "text": "see push's  on", 
+            "title": "on"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#off_1", 
+            "text": "see push's  off", 
+            "title": "off"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/", 
+            "text": "Pads\n\n\nPads are multidimensional widgets that output multiple values.\n\n\n\n\nXY\n\n\n{\n    type:'xy',\n    // etc\n}\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault:\n    \n{\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }\n\n\nusage: defines the \nx\n and \ny\n axis (no breakpoints, only \nmin\n and \nmax\n)\n\n\n\n\nlogScaleX\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \nx\n axis (log10)\n\n\n\n\nlogScaleY\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \ny\n axis (log10)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nx\n and \ny\n axis. The \npath\n will be the same as the widget's with \n/x\n or \n/y\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{x:'/osc_path_x', y:'/osc_path_y'}\n\n\n\n\n\n\n\n\n\n\nRGB\n\n\nRGB is a variant of XY, it outputs rgb values between 0 and 255.\n\n\n{\n    type:'rgb',\n    // etc\n}\n\n\n\n\nprecision\n\n\n\n\ndefault:\n0\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nr\n and \ng\n \n \nb\n. The \npath\n will be the same as the widget's with \n/r\n, \n/g\n or \n/b\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{r:'/osc_path_r', g:'/osc_path_g',b:'/osc_path_b'}", 
+            "title": "Pads"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#pads", 
+            "text": "Pads are multidimensional widgets that output multiple values.", 
+            "title": "Pads"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#xy", 
+            "text": "{\n    type:'xy',\n    // etc\n}", 
+            "title": "XY"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#range", 
+            "text": "type:  object  default:\n     {\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }  usage: defines the  x  and  y  axis (no breakpoints, only  min  and  max )", 
+            "title": "range"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#logscalex", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to use logarithmic scale for the  x  axis (log10)", 
+            "title": "logScaleX"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#logscaley", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to use logarithmic scale for the  y  axis (log10)", 
+            "title": "logScaleY"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#snap", 
+            "text": "type:  boolean  default:  false  usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.", 
+            "title": "snap"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#split", 
+            "text": "type:  boolean|object  default:  false  usage:  set to  true  to send separate osc messages for  x  and  y  axis. The  path  will be the same as the widget's with  /x  or  /y  appended to it  can be set as an object to specify a different  path  :  {x:'/osc_path_x', y:'/osc_path_y'}", 
+            "title": "split"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#rgb", 
+            "text": "RGB is a variant of XY, it outputs rgb values between 0 and 255.  {\n    type:'rgb',\n    // etc\n}", 
+            "title": "RGB"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#precision", 
+            "text": "default: 0", 
+            "title": "precision"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#snap_1", 
+            "text": "type:  boolean  default:  false  usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.", 
+            "title": "snap"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/pads/#split_1", 
+            "text": "type:  boolean|object  default:  false  usage:  set to  true  to send separate osc messages for  r  and  g     b . The  path  will be the same as the widget's with  /r ,  /g  or  /b  appended to it  can be set as an object to specify a different  path  :  {r:'/osc_path_r', g:'/osc_path_g',b:'/osc_path_b'}", 
+            "title": "split"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/", 
+            "text": "Plots\n\n\nPlots are tools that display other widgets' state or incomming osc messages. They are not sensitive to mouse and touch interactions.\n\n\nled\n\n\ntype:'led',\nrange:x:{\nmin\n:0,\nmax\n:1}   // [object] minimum and maximum values for X and Y axis        \nlogScale: false,           // [bool] use logarithmic scale\n\n\n\n\nplot\n\n\nThe plot receives an array of [x,y]\u00a0coordinates and draws them on a chart with linear or logarithmic interpolation.\n\n\ntype:'plot',\npoints:[],                  // [string|array]\n                            // string : a single widget id, whose multiple values will be displayed,\n                            //          evenly spaced on the x-axis\n                            // array : an array of [x,y] coordinates, which can be numbers\n                            //         or widget id strings, for example :\n                            // [[0,0],[0.5,\nsome_widget_id\n],[\nsome_other_id\n,\nanother_id\n]]\nrange:{                     // [object] minimum and maximum values for X and Y axis\n        x:{\nmin\n:0,\nmax\n:1},\n        y:{\nmin\n:0,\nmax\n:1}\n    },\nlogScaleX: false,           // [bool] use logarithmic scale for X axis (log10)\nlogScaleY: false            // [bool] use logarithmic scale for y axis (log10)\n\n\n\n\nvisualizer\n\n\nThe visualizer displays the evolution in time of a received value (through osc) \nor\n another widget's value.\n\n\ntype:'visualizer',\nwidgetId:'',                // [string] widget id (its value will be displayed instead of the incoming osc)\nduration:1,                 // [number] window size in seconds\nrange:{\nmin\n:0,\nmax\n:1},    // [object] minimum and maximum values the Y axis\nlogScale: false,            // [bool] use logarithmic scale for Y axis (log10)\n\n\n\n\ntext\n\n\ntype:'text',\nvertical:false,             // [bool]", 
+            "title": "Plots"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#plots", 
+            "text": "Plots are tools that display other widgets' state or incomming osc messages. They are not sensitive to mouse and touch interactions.", 
+            "title": "Plots"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#led", 
+            "text": "type:'led',\nrange:x:{ min :0, max :1}   // [object] minimum and maximum values for X and Y axis        \nlogScale: false,           // [bool] use logarithmic scale", 
+            "title": "led"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#plot", 
+            "text": "The plot receives an array of [x,y]\u00a0coordinates and draws them on a chart with linear or logarithmic interpolation.  type:'plot',\npoints:[],                  // [string|array]\n                            // string : a single widget id, whose multiple values will be displayed,\n                            //          evenly spaced on the x-axis\n                            // array : an array of [x,y] coordinates, which can be numbers\n                            //         or widget id strings, for example :\n                            // [[0,0],[0.5, some_widget_id ],[ some_other_id , another_id ]]\nrange:{                     // [object] minimum and maximum values for X and Y axis\n        x:{ min :0, max :1},\n        y:{ min :0, max :1}\n    },\nlogScaleX: false,           // [bool] use logarithmic scale for X axis (log10)\nlogScaleY: false            // [bool] use logarithmic scale for y axis (log10)", 
+            "title": "plot"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#visualizer", 
+            "text": "The visualizer displays the evolution in time of a received value (through osc)  or  another widget's value.  type:'visualizer',\nwidgetId:'',                // [string] widget id (its value will be displayed instead of the incoming osc)\nduration:1,                 // [number] window size in seconds\nrange:{ min :0, max :1},    // [object] minimum and maximum values the Y axis\nlogScale: false,            // [bool] use logarithmic scale for Y axis (log10)", 
+            "title": "visualizer"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#text", 
+            "text": "type:'text',\nvertical:false,             // [bool]", 
+            "title": "text"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/", 
+            "text": "Sliders\n\n\nSliders are unidimensional widgets that output one value at a time.\n\n\n\n\nFader\n\n\n{\n    type:'fader',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the fader horizontally\n\n\n\n\nalign\n\n\n\n\ntype: \nstring\n\n\ndefault: \ncenter\n\n\nusage: set to \nleft\n or \nright\n to display one scale instead of two\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nobject\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be numbers or object if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the fader horizontally\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nmeter\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display a vu-meter next in the fader\n\n\nthe meter's \nid\n will be the same as the fader's with \n/meter\n appended to it\n\n\nthe meter's \npath\nwill be the same as the fader's with \n/meter\n appended to it\n\n\n\n\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;\n\n\n\n\n\n\nKnob\n\n\n{\n    type:'knob',\n    // etc\n}\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nobject\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be numbers or object if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget \nvertically\n will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;", 
+            "title": "Sliders"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#sliders", 
+            "text": "Sliders are unidimensional widgets that output one value at a time.", 
+            "title": "Sliders"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#fader", 
+            "text": "{\n    type:'fader',\n    // etc\n}", 
+            "title": "Fader"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#horizontal", 
+            "text": "type:  boolean  default:  false  usage: set to true to display the fader horizontally", 
+            "title": "horizontal"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#align", 
+            "text": "type:  string  default:  center  usage: set to  left  or  right  to display one scale instead of two", 
+            "title": "align"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#nopip", 
+            "text": "type:  boolean  default:  false  usage: set to true to hide the scale", 
+            "title": "noPip"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#range", 
+            "text": "type:  boolean  default:  object  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be numbers or object if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
+            "title": "range"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#horizontal_1", 
+            "text": "type:  boolean  default:  false  usage: set to true to display the fader horizontally", 
+            "title": "horizontal"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#logscale", 
+            "text": "type:  boolean  default:  false  usage: set to true use logarithmic scaling between breakpoints", 
+            "title": "logScale"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#unit", 
+            "text": "type:  string  default:  empty  usage:  unit  will be appended to the displayed widget's value (it doesn't affect osc messages)", 
+            "title": "unit"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#snap", 
+            "text": "type:  boolean  default:  false  usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.", 
+            "title": "snap"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#meter", 
+            "text": "type:  boolean  default:  false  usage: set to true to display a vu-meter next in the fader  the meter's  id  will be the same as the fader's with  /meter  appended to it  the meter's  path will be the same as the fader's with  /meter  appended to it", 
+            "title": "meter"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#css", 
+            "text": "--color-gauge:color;\n--color-knob:color;\n--color-pips:color;", 
+            "title": "css"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#knob", 
+            "text": "{\n    type:'knob',\n    // etc\n}", 
+            "title": "Knob"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#nopip_1", 
+            "text": "type:  boolean  default:  false  usage: set to true to hide the scale", 
+            "title": "noPip"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#range_1", 
+            "text": "type:  boolean  default:  object  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be numbers or object if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
+            "title": "range"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#logscale_1", 
+            "text": "type:  boolean  default:  false  usage: set to true use logarithmic scaling between breakpoints", 
+            "title": "logScale"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#unit_1", 
+            "text": "type:  string  default:  empty  usage:  unit  will be appended to the displayed widget's value (it doesn't affect osc messages)", 
+            "title": "unit"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#snap_1", 
+            "text": "type:  boolean  default:  false  usage: by default, dragging the widget  vertically  will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.", 
+            "title": "snap"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/sliders/#css_1", 
+            "text": "--color-gauge:color;\n--color-knob:color;\n--color-pips:color;", 
+            "title": "css"
+        }
+    ]
+}

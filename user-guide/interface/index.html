@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Interface - OSC</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">OSC</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../getting-started/">Getting started</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li class="active">
+    <a href="./">Interface</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../session-file/">Session file</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../theming/">Theming</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../widgets-generics/">Widgets generics</a>
+</li>
+
+                    
+                        
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Widgets specifics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../widgets-specifics/buttons/">Buttons</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/containers/">Containers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/matrices/">Matrices</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/pads/">Pads</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/plots/">Plots</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/sliders/">Sliders</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../../getting-started/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../session-file/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/jean-emmanuel/open-stage-control">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#user-interface">User interface</a></li>
+        
+    
+        <li class="main "><a href="#editor">Editor</a></li>
+        
+            <li><a href="#properties">Properties</a></li>
+        
+            <li><a href="#size-position">Size / Position</a></li>
+        
+            <li><a href="#context-menu">Context menu</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h2 id="user-interface">User interface</h2>
+<hr />
+<h2 id="editor">Editor</h2>
+<p>The session editor can be enabled in the side panel. Once enabled, clicking on a widget or on a tab will make it the <em>selected object</em>, adding a fancy dashed blue border to it.</p>
+<h3 id="properties">Properties</h3>
+<p>All the selected object's properties are displayed and can be modified in the side panel. Any modification will redraw the object <strong>and all its children</strong> if the submitted data is valid. Please refer to the <a href="../widgets-generics/">widgets reference</a> for the list of valid options.</p>
+<p>Widgets containers such as tabs, strips and panels will also list their children here, which can be reordered using drag-and-drop.</p>
+<h3 id="size-position">Size / Position</h3>
+<p>The selected object can be resized using its south, south-east and east handles. It can be dragged with its north handle.</p>
+<h3 id="context-menu">Context menu</h3>
+<p>Right clicking on a widget or on a tab will also display a context menu providing useful utilities :</p>
+<ul>
+<li><code>copy</code>: copy widget's data</li>
+<li><code>cut</code>: copy widget's data and delete selected widget</li>
+<li><code>paste</code>: paste copied widget in selected container</li>
+<li><code>Add widget</code>: create a new widget in selected container</li>
+<li><code>Add tab</code>: create a new tab in selected container</li>
+<li><code>Delete</code>: delete selected tab or widget</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

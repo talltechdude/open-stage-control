@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Widgets generics - OSC</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">OSC</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../getting-started/">Getting started</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../interface/">Interface</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../session-file/">Session file</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../theming/">Theming</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Widgets generics</a>
+</li>
+
+                    
+                        
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Widgets specifics</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../widgets-specifics/buttons/">Buttons</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/containers/">Containers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/matrices/">Matrices</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/pads/">Pads</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/plots/">Plots</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets-specifics/sliders/">Sliders</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../theming/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../widgets-specifics/buttons/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/jean-emmanuel/open-stage-control">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#widgets-generics">Widgets generics</a></li>
+        
+    
+        <li class="main "><a href="#basics">Basics</a></li>
+        
+            <li><a href="#type">type</a></li>
+        
+            <li><a href="#id">id</a></li>
+        
+    
+        <li class="main "><a href="#style">Style</a></li>
+        
+            <li><a href="#label">label</a></li>
+        
+            <li><a href="#top-left">top / left</a></li>
+        
+            <li><a href="#width-height">width / height</a></li>
+        
+            <li><a href="#color">color</a></li>
+        
+            <li><a href="#css">css</a></li>
+        
+    
+        <li class="main "><a href="#osc">OSC</a></li>
+        
+            <li><a href="#precision">precision</a></li>
+        
+            <li><a href="#target">target</a></li>
+        
+            <li><a href="#path">path</a></li>
+        
+            <li><a href="#preargs">preArgs</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h2 id="widgets-generics">Widgets generics</h2>
+<p>Widget objects share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:</p>
+<ul>
+<li><a href="../widgets-specifics/sliders/">Sliders</a></li>
+<li><a href="../widgets-specifics/buttons/">Buttons</a></li>
+<li><a href="../widgets-specifics/pads/">Pads</a></li>
+<li><a href="../widgets-specifics/matrices/">Matrices</a></li>
+<li><a href="../widgets-specifics/plots/">Plots</a></li>
+<li><a href="../widgets-specifics/containers/">Containers</a></li>
+</ul>
+<hr />
+<h2 id="basics">Basics</h2>
+<h4 id="type"><code>type</code></h4>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>fader</code></li>
+</ul>
+<h4 id="id"><code>id</code></h4>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: generated unique 'widget_n'</li>
+<li>usage: widgets sharing the same <code>id</code> will act as clones and update each other's value(s) without sending extra osc messages.</li>
+</ul>
+<hr />
+<h2 id="style">Style</h2>
+<h4 id="label"><code>label</code></h4>
+<ul>
+<li>type: <code>string|false</code></li>
+<li>default: <code>auto</code>, which displays <code>id</code></li>
+<li>usage: set to <code>false</code> to hide completely</li>
+</ul>
+<h4 id="top-left"><code>top</code> / <code>left</code></h4>
+<ul>
+<li>type: <code>number|percentage</code></li>
+<li>default: <code>auto</code></li>
+<li>usage:<ul>
+<li>when both <code>top</code> and <code>left</code> are set to <code>auto</code>, the widget is positioned according to the normal flow of the page (from left to right, by order of creation).</li>
+<li>otherwise, the widget will be absolutely positioned</li>
+</ul>
+</li>
+</ul>
+<h4 id="width-height"><code>width</code> / <code>height</code></h4>
+<ul>
+<li>type: <code>number|percentage</code></li>
+<li>default: <code>auto</code></li>
+</ul>
+<h4 id="color"><code>color</code></h4>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>auto</code>, inherited accent color</li>
+<li>usage: any valid <code>css</code> color code is valid, this will change the default accent color for the widget and all its children</li>
+</ul>
+<h4 id="css"><code>css</code></h4>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <em>empty</em></li>
+<li>usage: the <code>css</code> property can be used to override inherited <a href="../theming/">theming</a> variables. Also, some widgets expose specific theming variables that allow a finer customization. Standard <code>css</code> properties can be applied to the widget's root element though this property.</li>
+</ul>
+<hr />
+<h2 id="osc">OSC</h2>
+<h4 id="precision"><code>precision</code></h4>
+<ul>
+<li>type: <code>integer</code></li>
+<li>default: <code>2</code></li>
+<li>usage: the <code>precision</code> property defines the number of decimals to display and to send. Set to <code>0</code> to send <code>integers</code> only.</li>
+</ul>
+<h4 id="target"><code>target</code></h4>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage:<ul>
+<li>this defines the targets of the widget's osc messages</li>
+<li>each element of the <code>array</code> must be a string formatted as follows : <code>"ip:port"</code></li>
+<li>multiple targets can be specified : <code>["ip1:port1","ip2:port2"]</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="path"><code>path</code></h4>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>/widgets_id</code></li>
+<li>usage: this is the <code>path</code> of the osc messages sent by the widget</li>
+</ul>
+<h4 id="preargs"><code>preArgs</code></h4>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage:<ul>
+<li>each element of the <code>array</code> defines a constant value that will be prepended to the osc message</li>
+<li>values can be defined as objects if the type needs to be specified (ie different from the default implied by the <code>precision</code>)</li>
+</ul>
+</li>
+<li>example:</li>
+</ul>
+<pre><code class="js">[
+    &quot;1&quot;,        // this will always be sent as a string
+    0.5,        // this will be sent as an integer if precision equals 0
+    1,          // this will be sent as float if precision is different from 0
+    {
+        type:&quot;float&quot;,
+        value:0.5
+    },
+    {
+        type:&quot;integer&quot;,
+        value:1
+    }
+]
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
