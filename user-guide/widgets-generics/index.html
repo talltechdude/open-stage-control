@@ -233,7 +233,7 @@
         <div class="col-md-9" role="main">
 
 <h2 id="widgets-generics">Widgets generics</h2>
-<p>Widget objects share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:</p>
+<p>A widget object is a javascript object. All widgets share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:</p>
 <ul>
 <li><a href="../widgets-specifics/sliders/">Sliders</a></li>
 <li><a href="../widgets-specifics/buttons/">Buttons</a></li>
@@ -242,6 +242,11 @@
 <li><a href="../widgets-specifics/plots/">Plots</a></li>
 <li><a href="../widgets-specifics/containers/">Containers</a></li>
 </ul>
+<pre><code class="js">{
+    // widget properties
+}
+</code></pre>
+
 <hr />
 <h3 id="basics">Basics</h3>
 <h4 id="type"><code>type</code></h4>
@@ -326,7 +331,7 @@
 </li>
 <li>example:</li>
 </ul>
-<pre><code class="js">[
+<pre><code class="js">preArgs: [
     &quot;1&quot;,        // this will always be sent as a string
     0.5,        // this will be sent as an integer if precision equals 0
     1,          // this will be sent as float if precision is different from 0
@@ -346,6 +351,8 @@
     <footer class="col-md-12 text-center">
         <hr>
         <p>
+        <small>Open Stage Control is an <a href='http://ammd.net'>AMMD</a> software licensed under the <a href='https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE'>GNU/GPLv3</a> License<br></small>
+        
         <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
     </footer>
 
