@@ -202,7 +202,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/", 
-            "text": "Buttons\n\n\nButtons are exactly what you think they are.\n\n\n\n\nToggle\n\n\n{\n    type:'toggle',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent on \non\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an object if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent on \noff\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an object if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\n\n\nPush\n\n\n{\n    type:'push',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent when pushing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an object if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent when releasing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an object if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\nSetting the \npush\n's value externally (via osc or widget linking/cloning) will toggle it's inner light.\n\n\n\n\nSwitch\n\n\n{\n    type:'switch',\n    // etc\n}\n\n\n\n\nvalues\n\n\n\n\ntype: \narray|object\n\n\ndefault: \n{\"Value 1\":1,\"Value 2\":2}\n\n\nusage:\n\n\narray\n of possible values to switch between : \n[1,2,3]\n\n\nobject\n of \n\"label\":value\n pairs", 
+            "text": "Buttons\n\n\nButtons are exactly what you think they are.\n\n\n\n\nToggle\n\n\n{\n    type:'toggle',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent on \non\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent on \noff\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\n\n\nPush\n\n\n{\n    type:'push',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent when pushing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent when releasing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\nSetting the \npush\n's value externally (via osc or widget linking/cloning) will toggle it's inner light.\n\n\n\n\nSwitch\n\n\n{\n    type:'switch',\n    // etc\n}\n\n\n\n\nvalues\n\n\n\n\ntype: \narray|object\n\n\ndefault: \n{\"Value 1\":1,\"Value 2\":2}\n\n\nusage:\n\n\narray\n of possible values to switch between : \n[1,2,3]\n\n\nobject\n of \n\"label\":value\n pairs", 
             "title": "Buttons"
         }, 
         {
@@ -217,12 +217,12 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#on", 
-            "text": "type:  string|number|object  default:  1  usage: defines which value is sent on  on  position  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an object if the type needs to be specified (see  preArgs )", 
+            "text": "type:  string|number|object  default:  1  usage: defines which value is sent on  on  position  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
             "title": "on"
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#off", 
-            "text": "type:  string|number|object  default:  0  usage: defines which value is sent on  off  position  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an object if the type needs to be specified (see  preArgs )", 
+            "text": "type:  string|number|object  default:  0  usage: defines which value is sent on  off  position  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
             "title": "off"
         }, 
         {
@@ -232,12 +232,12 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#on_1", 
-            "text": "type:  string|number|object  default:  1  usage: defines which value is sent when pushing the button  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an object if the type needs to be specified (see  preArgs )", 
+            "text": "type:  string|number|object  default:  1  usage: defines which value is sent when pushing the button  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
             "title": "on"
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#off_1", 
-            "text": "type:  string|number|object  default:  0  usage: defines which value is sent when releasing the button  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an object if the type needs to be specified (see  preArgs )     Setting the  push 's value externally (via osc or widget linking/cloning) will toggle it's inner light.", 
+            "text": "type:  string|number|object  default:  0  usage: defines which value is sent when releasing the button  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an  object  if the type needs to be specified (see  preArgs )     Setting the  push 's value externally (via osc or widget linking/cloning) will toggle it's inner light.", 
             "title": "off"
         }, 
         {
@@ -252,7 +252,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/containers/", 
-            "text": "Containers\n\n\nContainers can contain any widgets\n\n\n\n\nStrip\n\n\nStrips can contain any number of widgets, which can't be absolutely positioned and whose size can't overflow their parent's.\n\n\n{\n    type:'strip',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to display widgets horizontally\n\n\n\n\nwidgets\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a widget object\n\n\n\n\n\n\nPanel\n\n\nPanels can contains tabs or widgets. These can be absolutely positioned and can overflow their parent's size (which will then display scrollbars).\n\n\n{\n    type:'panel',\n    // etc\n}\n\n\n\n\nscroll\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: set to \nfalse\n to disable scrollbars\n\n\n\n\nwidgets\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a widget object.A panel cannot contain widgets and tabs simultaneously.\n\n\n\n\ntabs\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a tab object. A panel cannot contain widgets and tabs simultaneously.", 
+            "text": "Containers\n\n\nContainers can contain any widgets\n\n\n\n\nStrip\n\n\nStrips can contain any number of widgets, which can't be absolutely positioned and whose size can't overflow their parent's.\n\n\n{\n    type:'strip',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to display widgets horizontally\n\n\n\n\nwidgets\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a widget \nobject\n\n\n\n\n\n\nPanel\n\n\nPanels can contains tabs or widgets. These can be absolutely positioned and can overflow their parent's size (which will then display scrollbars).\n\n\n{\n    type:'panel',\n    // etc\n}\n\n\n\n\nscroll\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: set to \nfalse\n to disable scrollbars\n\n\n\n\nwidgets\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a widget \nobject\n. A panel cannot contain widgets and tabs simultaneously.\n\n\n\n\ntabs\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage: each element of the \narray\n must be a tab \nobject\n. A panel cannot contain widgets and tabs simultaneously.", 
             "title": "Containers"
         }, 
         {
@@ -272,7 +272,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/containers/#widgets", 
-            "text": "type:  array  default:  []  usage: each element of the  array  must be a widget object", 
+            "text": "type:  array  default:  []  usage: each element of the  array  must be a widget  object", 
             "title": "widgets"
         }, 
         {
@@ -287,12 +287,12 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/containers/#widgets_1", 
-            "text": "type:  array  default:  []  usage: each element of the  array  must be a widget object.A panel cannot contain widgets and tabs simultaneously.", 
+            "text": "type:  array  default:  []  usage: each element of the  array  must be a widget  object . A panel cannot contain widgets and tabs simultaneously.", 
             "title": "widgets"
         }, 
         {
             "location": "/user-guide/widgets-specifics/containers/#tabs", 
-            "text": "type:  array  default:  []  usage: each element of the  array  must be a tab object. A panel cannot contain widgets and tabs simultaneously.", 
+            "text": "type:  array  default:  []  usage: each element of the  array  must be a tab  object . A panel cannot contain widgets and tabs simultaneously.", 
             "title": "tabs"
         }, 
         {
@@ -372,7 +372,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/pads/", 
-            "text": "Pads\n\n\nPads are multidimensional widgets that output multiple values.\n\n\n\n\nXY\n\n\n{\n    type:'xy',\n    // etc\n}\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault:\n    \n{\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }\n\n\nusage: defines the \nmin\n and \nmax\n values for \nx\n and \ny\n axis\n\n\n\n\nlogScaleX\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \nx\n axis (log10)\n\n\n\n\nlogScaleY\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \ny\n axis (log10)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nx\n and \ny\n axis. The \npath\n will be the same as the widget's with \n/x\n or \n/y\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{x:'/osc_path_x', y:'/osc_path_y'}\n\n\n\n\n\n\n\n\n\n\nRGB\n\n\nRGB is a variant of XY, it outputs rgb values between 0 and 255.\n\n\n{\n    type:'rgb',\n    // etc\n}\n\n\n\n\nprecision\n\n\n\n\ndefault:\n0\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nr\n and \ng\n \n \nb\n. The \npath\n will be the same as the widget's with \n/r\n, \n/g\n or \n/b\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{r:'/osc_path_r', g:'/osc_path_g',b:'/osc_path_b'}", 
+            "text": "Pads\n\n\nPads are multidimensional widgets that output multiple values.\n\n\n\n\nXY\n\n\n{\n    type:'xy',\n    // etc\n}\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault:\n    \n{\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }\n\n\nusage: defines the \nmin\n and \nmax\n values for the \nx\n and \ny\n axis\n\n\n\n\nlogScaleX\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \nx\n axis (log10)\n\n\n\n\nlogScaleY\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \ny\n axis (log10)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to \ntrue\n will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nx\n and \ny\n axis. The \npath\n will be the same as the widget's with \n/x\n or \n/y\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{x:'/osc_path_x', y:'/osc_path_y'}\n\n\n\n\n\n\n\n\n\n\nRGB\n\n\nRGB is a variant of XY, it outputs rgb values between 0 and 255.\n\n\n{\n    type:'rgb',\n    // etc\n}\n\n\n\n\nprecision\n\n\n\n\ndefault:\n0\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nr\n and \ng\n \n \nb\n. The \npath\n will be the same as the widget's with \n/r\n, \n/g\n or \n/b\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{r:'/osc_path_r', g:'/osc_path_g',b:'/osc_path_b'}", 
             "title": "Pads"
         }, 
         {
@@ -387,7 +387,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/pads/#range", 
-            "text": "type:  object  default:\n     {\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }  usage: defines the  min  and  max  values for  x  and  y  axis", 
+            "text": "type:  object  default:\n     {\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }  usage: defines the  min  and  max  values for the  x  and  y  axis", 
             "title": "range"
         }, 
         {
@@ -402,7 +402,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/pads/#snap", 
-            "text": "type:  boolean  default:  false  usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.", 
+            "text": "type:  boolean  default:  false  usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to  true  will make it snap directly to the mouse/touch position.", 
             "title": "snap"
         }, 
         {
@@ -432,7 +432,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/", 
-            "text": "Plots\n\n\nPlots are tools that display other widgets' state or incomming osc messages. They are not sensitive to mouse and touch interactions.\n\n\nLed\n\n\n{\n    type:'led',\n    // etc\n}\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: defines the \nmin\n and \nmax\n value the led's intensity will be mapped to\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling\n\n\n\n\nPlot\n\n\nThe plot receives an array of [x,y]\u00a0coordinates and draws them on a chart with linear or logarithmic interpolation.\n\n\n{\n    type:'plot',\n    // etc\n}\n\n\n\n\npoints\n\n\n\n\ntype: \narray|string\n\n\ndefault: \n[]\n\n\nusage:\n\n\nas a \nstring\n: a widget's \nid\n whose multiple values will be displayed on the \ny\n axis, evenly spaced on the \nx\n axis (only \nmatrices\n and \npads\n will work)\n\n\nas an \narray\n: each element must be an \narray\n of \n[x,y]\n coordinates, where \nx\n and \ny\n can either be a:\n\n\nnumber\n: constant values\n\n\nstring\n: a widget's \nid\n whose value will be used\n\n\n\n\n\n\n\n\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault:\n    \n{\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }\n\n\nusage: defines the \nmin\n and \nmax\n values for \nx\n and \ny\n axis\n\n\n\n\nlogScaleX\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \nx\n axis (log10)\n\n\n\n\nlogScaleY\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \ny\n axis (log10)\n\n\n\n\nVisualizer\n\n\nThe visualizer displays the evolution in time of a received value (through osc) \nor\n another widget's value.\n\n\n{\n    type:'visualizer',\n    // etc\n}\n\n\n\n\nwidgetId\n\n\n\n\ntype: \nobject\n\n\ndefault: \nempty\n\n\nusage: a widget's \nid\n whose value will be displayed (thus bypassing the incoming osc)\n\n\n\n\nduration\n\n\n\n\ntype: \nnumber\n\n\ndefault: \n1\n\n\nusage: window size in seconds\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: defines the \nmin\n and \nmax\n values for the \ny\n axis\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling\n\n\n\n\nText\n\n\nText displays incoming values (via osc) as text\n\n\n{\n    type:'text',\n    // etc\n}\n\n\n\n\nvertical\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true display vertically\n\n\n\n\nMeter\n\n\nMeter displays incoming numerical values (via osc) as a gauge level\n\n\n{\n    type:'meter',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the meter horizontally\n\n\n\n\nrange\n\n\n\n\nsee fader's \nrange\n\n\n\n\nlogScale\n\n\n\n\nsee fader's \nlogScale", 
+            "text": "Plots\n\n\nPlots are tools that display other widgets' state or incomming osc messages. They are not sensitive to mouse and touch interactions.\n\n\nLed\n\n\n{\n    type:'led',\n    // etc\n}\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: defines the \nmin\n and \nmax\n value the led's intensity will be mapped to\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling\n\n\n\n\nPlot\n\n\nThe plot receives an array of [x,y]\u00a0coordinates and draws them on a chart with linear or logarithmic interpolation.\n\n\n{\n    type:'plot',\n    // etc\n}\n\n\n\n\npoints\n\n\n\n\ntype: \narray|string\n\n\ndefault: \n[]\n\n\nusage:\n\n\nas a \nstring\n: a widget's \nid\n whose multiple values will be displayed on the \ny\n axis, evenly spaced on the \nx\n axis (only \nmatrices\n and \npads\n will work)\n\n\nas an \narray\n: each element must be an \narray\n of \n[x,y]\n coordinates, where \nx\n and \ny\n can either be a:\n\n\nnumber\n: constant values\n\n\nstring\n: a widget's \nid\n whose value will be used\n\n\n\n\n\n\n\n\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault:\n    \n{\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }\n\n\nusage: defines the \nmin\n and \nmax\n values for the \nx\n and \ny\n axis\n\n\n\n\nlogScaleX\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \nx\n axis (log10)\n\n\n\n\nlogScaleY\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \ny\n axis (log10)\n\n\n\n\nVisualizer\n\n\nThe visualizer displays the evolution in time of a received value (through osc) \nor\n another widget's value.\n\n\n{\n    type:'visualizer',\n    // etc\n}\n\n\n\n\nwidgetId\n\n\n\n\ntype: \nobject\n\n\ndefault: \nempty\n\n\nusage: a widget's \nid\n whose value will be displayed (thus bypassing the incoming osc)\n\n\n\n\nduration\n\n\n\n\ntype: \nnumber\n\n\ndefault: \n1\n\n\nusage: window size in seconds\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: defines the \nmin\n and \nmax\n values for the \ny\n axis\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n use logarithmic scaling (log10)\n\n\n\n\nText\n\n\nText displays incoming values (via osc) as text\n\n\n{\n    type:'text',\n    // etc\n}\n\n\n\n\nvertical\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n display vertically\n\n\n\n\nMeter\n\n\nMeter displays incoming numerical values (via osc) as a gauge level\n\n\n{\n    type:'meter',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to display the meter horizontally\n\n\n\n\nrange\n\n\n\n\nsee fader's \nrange\n\n\n\n\nlogScale\n\n\n\n\nsee fader's \nlogScale", 
             "title": "Plots"
         }, 
         {
@@ -467,7 +467,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/#range_1", 
-            "text": "type:  object  default:\n     {\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }  usage: defines the  min  and  max  values for  x  and  y  axis", 
+            "text": "type:  object  default:\n     {\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }  usage: defines the  min  and  max  values for the  x  and  y  axis", 
             "title": "range"
         }, 
         {
@@ -502,7 +502,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/#logscale_1", 
-            "text": "type:  boolean  default:  false  usage: set to true use logarithmic scaling", 
+            "text": "type:  boolean  default:  false  usage: set to  true  use logarithmic scaling (log10)", 
             "title": "logScale"
         }, 
         {
@@ -512,7 +512,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/#vertical", 
-            "text": "type:  boolean  default:  false  usage: set to true display vertically", 
+            "text": "type:  boolean  default:  false  usage: set to  true  display vertically", 
             "title": "vertical"
         }, 
         {
@@ -522,7 +522,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/#horizontal", 
-            "text": "type:  boolean  default:  false  usage: set to true to display the meter horizontally", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to display the meter horizontally", 
             "title": "horizontal"
         }, 
         {
@@ -537,7 +537,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/", 
-            "text": "Sliders\n\n\nSliders are unidimensional widgets that output one value at a time.\n\n\n\n\nFader\n\n\n{\n    type:'fader',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the fader horizontally\n\n\n\n\nalign\n\n\n\n\ntype: \nstring\n\n\ndefault: \ncenter\n\n\nusage: set to \nleft\n or \nright\n to display one scale instead of two\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be numbers or object if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the fader horizontally\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nmeter\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display a vu-meter next in the fader\n\n\nthe meter's \nid\n will be the same as the fader's with \n/meter\n appended to it\n\n\nthe meter's \npath\nwill be the same as the fader's with \n/meter\n appended to it\n\n\n\n\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;\n\n\n\n\n\n\nKnob\n\n\n{\n    type:'knob',\n    // etc\n}\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be numbers or object if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget \nvertically\n will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;", 
+            "text": "Sliders\n\n\nSliders are unidimensional widgets that output one value at a time.\n\n\n\n\nFader\n\n\n{\n    type:'fader',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to display the fader horizontally\n\n\n\n\nalign\n\n\n\n\ntype: \nstring\n\n\ndefault: \ncenter\n\n\nusage: set to \nleft\n or \nright\n to display one scale instead of two\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be \nnumber\n or \nobject\n if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to display the fader horizontally\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n use logarithmic scaling between breakpoints (log10)\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to \ntrue\n will make it snap directly to the mouse/touch position.\n\n\n\n\nmeter\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display a vu-meter next in the fader\n\n\nthe meter's \nid\n will be the same as the widget's with \n/meter\n appended to it\n\n\nthe meter's \npath\nwill be the same as the widget's with \n/meter\n appended to it\n\n\n\n\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;\n\n\n\n\n\n\nKnob\n\n\n{\n    type:'knob',\n    // etc\n}\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be \nnumber\n or \nobject\n if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget \nvertically\n will modify it's value starting from its last value. Setting this to \ntrue\n will make it snap directly to the mouse/touch position.\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;", 
             "title": "Sliders"
         }, 
         {
@@ -552,7 +552,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#horizontal", 
-            "text": "type:  boolean  default:  false  usage: set to true to display the fader horizontally", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to display the fader horizontally", 
             "title": "horizontal"
         }, 
         {
@@ -562,22 +562,22 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#nopip", 
-            "text": "type:  boolean  default:  false  usage: set to true to hide the scale", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to hide the scale", 
             "title": "noPip"
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#range", 
-            "text": "type:  object  default:  {\"min\":0,\"max\":1}  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be numbers or object if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
+            "text": "type:  object  default:  {\"min\":0,\"max\":1}  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be  number  or  object  if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
             "title": "range"
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#horizontal_1", 
-            "text": "type:  boolean  default:  false  usage: set to true to display the fader horizontally", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to display the fader horizontally", 
             "title": "horizontal"
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#logscale", 
-            "text": "type:  boolean  default:  false  usage: set to true use logarithmic scaling between breakpoints", 
+            "text": "type:  boolean  default:  false  usage: set to  true  use logarithmic scaling between breakpoints (log10)", 
             "title": "logScale"
         }, 
         {
@@ -587,12 +587,12 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#snap", 
-            "text": "type:  boolean  default:  false  usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.", 
+            "text": "type:  boolean  default:  false  usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to  true  will make it snap directly to the mouse/touch position.", 
             "title": "snap"
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#meter", 
-            "text": "type:  boolean  default:  false  usage: set to true to display a vu-meter next in the fader  the meter's  id  will be the same as the fader's with  /meter  appended to it  the meter's  path will be the same as the fader's with  /meter  appended to it", 
+            "text": "type:  boolean  default:  false  usage: set to true to display a vu-meter next in the fader  the meter's  id  will be the same as the widget's with  /meter  appended to it  the meter's  path will be the same as the widget's with  /meter  appended to it", 
             "title": "meter"
         }, 
         {
@@ -607,17 +607,17 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#nopip_1", 
-            "text": "type:  boolean  default:  false  usage: set to true to hide the scale", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to hide the scale", 
             "title": "noPip"
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#range_1", 
-            "text": "type:  object  default:  {\"min\":0,\"max\":1}  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be numbers or object if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
+            "text": "type:  object  default:  {\"min\":0,\"max\":1}  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be  number  or  object  if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
             "title": "range"
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#logscale_1", 
-            "text": "type:  boolean  default:  false  usage: set to true use logarithmic scaling between breakpoints", 
+            "text": "type:  boolean  default:  false  usage: set to  true  use logarithmic scaling between breakpoints", 
             "title": "logScale"
         }, 
         {
@@ -627,7 +627,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#snap_1", 
-            "text": "type:  boolean  default:  false  usage: by default, dragging the widget  vertically  will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.", 
+            "text": "type:  boolean  default:  false  usage: by default, dragging the widget  vertically  will modify it's value starting from its last value. Setting this to  true  will make it snap directly to the mouse/touch position.", 
             "title": "snap"
         }, 
         {
