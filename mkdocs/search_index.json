@@ -27,7 +27,7 @@
         }, 
         {
             "location": "/getting-started/", 
-            "text": "Getting started\n\n\nRun from binaries\n\n\nPrebuilt binaries for Linux, Windows and OS X can be found on the \nrelease\n page.\n\n\nOptions:\n  -h, --help     display help\n  -s, --sync     synchronized hosts (ip:port pairs) (all osc messages will also be sent to these)\n  -l, --load     session file to load\n  -p, --port     osc input port (for synchronization)\n  -n, --nogui    disable default gui and makes the app availabe through http on specified port\n  -t, --theme    theme name or path (mutliple values allowed)\n\nExemples:\n\n$ open-stage-control -s 127.0.0.1:5555 127.0.0.1:6666 -p 7777\n\nThis will create an app listening on port 7777 for synchronization messages, and sending its widgets state changes to ports 5555 and 6666.\n\n$ open-stage-control -n 8080 -l path/to/session.js\n\nThis will create a headless app available through http on port 8080. Multiple clients can use the app (with chrome only) simultaneously, their widgets will be synchronized.\n\n\n$ open-stage-control -t light noinput /path/to/custom_theme.css\n\nThis will apply three themes (light ui, remove all inputs, and a custom theme file)\n\n\nAvailable themes:\n- light\n- noinput\n\n\n\n\nRun from sources\n\n\nRunning the app from the sources slightly differs from using built binaries : instead of running a binary, we'll launch the app with npm.\n\n\nRequirements\n\n\n\n\nNode.js\n\n\nnpm\n\n\n\n\n$ sudo apt-get install npm  # install nodejs \n npm\n$ sudo npm install -g npm   # update npm\n\n\n\n\nDownload\n\n\n$ git clone https://github.com/jean-emmanuel/open-stage-control\n$ cd open-stage-control/\n$ npm install --save-optional\n ```\n\n**Run**\n\n```bash\n$ npm start [ -- options]\n\n# A double hyphen (\n--\n) is used here to tell npm that the following options are to be given to the app.\n\n\n\n\nBuild from sources\n\n\nRequirements\n\n\n\n\nNode.js\n\n\nnpm\n\n\n\n\n$ sudo apt-get install npm  # install nodejs \n npm\n$ sudo npm install -g npm   # update npm\n\n\n\n\nBuild\n\n\n$ git clone https://github.com/jean-emmanuel/open-stage-control\n$ cd open-stage-control\n$ npm install --save-optional\n$ export PLATFORM=TARGET_PLATFORM # TARGET_PLATFORM can be linux, win32 (windows) or darwin (os x)\n$ export ARCH=TARGET_ARCH         # TARGET_ARCH can be ia32 or x64\n$ npm run build\n\n$ # Do the following if you want a deb package for debian/ubuntu\n$ npm run deb32\n$ #\u00a0or\n$ npm run deb64\n\n\n\n\nThis will build the app in \ndist/open-stage-control-PLATFORM-ARCH\n.\n\n\nPlease note that building the app for windows from a linux system requires wine to be installed.", 
+            "text": "Getting started\n\n\n\n\nRun from binaries\n\n\nPrebuilt binaries for Linux, Windows and OS X can be found on the \nrelease\n page.\n\n\nOptions:\n  -h, --help     display help\n  -s, --sync     synchronized hosts (ip:port pairs) (all osc messages will also be sent to these)\n  -l, --load     session file to load\n  -p, --port     osc input port (for synchronization)\n  -n, --nogui    disable default gui and makes the app availabe through http on specified port\n  -t, --theme    theme name or path (mutliple values allowed)\n\nExemples:\n\n$ open-stage-control -s 127.0.0.1:5555 127.0.0.1:6666 -p 7777\n\nThis will create an app listening on port 7777 for synchronization messages, and sending its widgets state changes to ports 5555 and 6666.\n\n$ open-stage-control -n 8080 -l path/to/session.js\n\nThis will create a headless app available through http on port 8080. Multiple clients can use the app (with chrome only) simultaneously, their widgets will be synchronized.\n\n\n$ open-stage-control -t light noinput /path/to/custom_theme.css\n\nThis will apply three themes (light ui, remove all inputs, and a custom theme file)\n\n\nAvailable themes:\n- light\n- noinput\n\n\n\n\n\n\nRun from sources\n\n\nRunning the app from the sources slightly differs from using built binaries : instead of running a binary, we'll launch the app with npm.\n\n\nRequirements\n\n\n\n\nNode.js\n\n\nnpm\n\n\n\n\n$ sudo apt-get install npm  # install nodejs \n npm\n$ sudo npm install -g npm   # update npm\n\n\n\n\nDownload\n\n\n$ git clone https://github.com/jean-emmanuel/open-stage-control\n$ cd open-stage-control/\n$ npm install --save-optional\n ```\n\n**Run**\n\n```bash\n$ npm start [ -- options]\n\n# A double hyphen (\n--\n) is used here to tell npm that the following options are to be given to the app.\n\n\n\n\n\n\nBuild from sources\n\n\nRequirements\n\n\n\n\nNode.js\n\n\nnpm\n\n\n\n\n$ sudo apt-get install npm  # install nodejs \n npm\n$ sudo npm install -g npm   # update npm\n\n\n\n\nBuild\n\n\n$ git clone https://github.com/jean-emmanuel/open-stage-control\n$ cd open-stage-control\n$ npm install --save-optional\n$ export PLATFORM=TARGET_PLATFORM # TARGET_PLATFORM can be linux, win32 (windows) or darwin (os x)\n$ export ARCH=TARGET_ARCH         # TARGET_ARCH can be ia32 or x64\n$ npm run build\n\n$ # Do the following if you want a deb package for debian/ubuntu\n$ npm run deb32\n$ #\u00a0or\n$ npm run deb64\n\n\n\n\nThis will build the app in \ndist/open-stage-control-PLATFORM-ARCH\n.\n\n\nPlease note that building the app for windows from a linux system requires wine to be installed.", 
             "title": "Getting started"
         }, 
         {
@@ -372,7 +372,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/pads/", 
-            "text": "Pads\n\n\nPads are multidimensional widgets that output multiple values.\n\n\n\n\nXY\n\n\n{\n    type:'xy',\n    // etc\n}\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault:\n    \n{\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }\n\n\nusage: defines the \nx\n and \ny\n axis (no breakpoints, only \nmin\n and \nmax\n)\n\n\n\n\nlogScaleX\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \nx\n axis (log10)\n\n\n\n\nlogScaleY\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \ny\n axis (log10)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nx\n and \ny\n axis. The \npath\n will be the same as the widget's with \n/x\n or \n/y\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{x:'/osc_path_x', y:'/osc_path_y'}\n\n\n\n\n\n\n\n\n\n\nRGB\n\n\nRGB is a variant of XY, it outputs rgb values between 0 and 255.\n\n\n{\n    type:'rgb',\n    // etc\n}\n\n\n\n\nprecision\n\n\n\n\ndefault:\n0\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nr\n and \ng\n \n \nb\n. The \npath\n will be the same as the widget's with \n/r\n, \n/g\n or \n/b\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{r:'/osc_path_r', g:'/osc_path_g',b:'/osc_path_b'}", 
+            "text": "Pads\n\n\nPads are multidimensional widgets that output multiple values.\n\n\n\n\nXY\n\n\n{\n    type:'xy',\n    // etc\n}\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault:\n    \n{\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }\n\n\nusage: defines the \nmin\n and \nmax\n values for \nx\n and \ny\n axis\n\n\n\n\nlogScaleX\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \nx\n axis (log10)\n\n\n\n\nlogScaleY\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \ny\n axis (log10)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nx\n and \ny\n axis. The \npath\n will be the same as the widget's with \n/x\n or \n/y\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{x:'/osc_path_x', y:'/osc_path_y'}\n\n\n\n\n\n\n\n\n\n\nRGB\n\n\nRGB is a variant of XY, it outputs rgb values between 0 and 255.\n\n\n{\n    type:'rgb',\n    // etc\n}\n\n\n\n\nprecision\n\n\n\n\ndefault:\n0\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean|object\n\n\ndefault: \nfalse\n\n\nusage:\n\n\nset to \ntrue\n to send separate osc messages for \nr\n and \ng\n \n \nb\n. The \npath\n will be the same as the widget's with \n/r\n, \n/g\n or \n/b\n appended to it\n\n\ncan be set as an object to specify a different \npath\n : \n{r:'/osc_path_r', g:'/osc_path_g',b:'/osc_path_b'}", 
             "title": "Pads"
         }, 
         {
@@ -387,7 +387,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/pads/#range", 
-            "text": "type:  object  default:\n     {\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }  usage: defines the  x  and  y  axis (no breakpoints, only  min  and  max )", 
+            "text": "type:  object  default:\n     {\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }  usage: defines the  min  and  max  values for  x  and  y  axis", 
             "title": "range"
         }, 
         {
@@ -432,7 +432,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/", 
-            "text": "Plots\n\n\nPlots are tools that display other widgets' state or incomming osc messages. They are not sensitive to mouse and touch interactions.\n\n\nled\n\n\ntype:'led',\nrange:x:{\nmin\n:0,\nmax\n:1}   // [object] minimum and maximum values for X and Y axis        \nlogScale: false,           // [bool] use logarithmic scale\n\n\n\n\nplot\n\n\nThe plot receives an array of [x,y]\u00a0coordinates and draws them on a chart with linear or logarithmic interpolation.\n\n\ntype:'plot',\npoints:[],                  // [string|array]\n                            // string : a single widget id, whose multiple values will be displayed,\n                            //          evenly spaced on the x-axis\n                            // array : an array of [x,y] coordinates, which can be numbers\n                            //         or widget id strings, for example :\n                            // [[0,0],[0.5,\nsome_widget_id\n],[\nsome_other_id\n,\nanother_id\n]]\nrange:{                     // [object] minimum and maximum values for X and Y axis\n        x:{\nmin\n:0,\nmax\n:1},\n        y:{\nmin\n:0,\nmax\n:1}\n    },\nlogScaleX: false,           // [bool] use logarithmic scale for X axis (log10)\nlogScaleY: false            // [bool] use logarithmic scale for y axis (log10)\n\n\n\n\nvisualizer\n\n\nThe visualizer displays the evolution in time of a received value (through osc) \nor\n another widget's value.\n\n\ntype:'visualizer',\nwidgetId:'',                // [string] widget id (its value will be displayed instead of the incoming osc)\nduration:1,                 // [number] window size in seconds\nrange:{\nmin\n:0,\nmax\n:1},    // [object] minimum and maximum values the Y axis\nlogScale: false,            // [bool] use logarithmic scale for Y axis (log10)\n\n\n\n\ntext\n\n\ntype:'text',\nvertical:false,             // [bool]", 
+            "text": "Plots\n\n\nPlots are tools that display other widgets' state or incomming osc messages. They are not sensitive to mouse and touch interactions.\n\n\nLed\n\n\n{\n    type:'led',\n    // etc\n}\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: defines the \nmin\n and \nmax\n value the led's intensity will be mapped to\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling\n\n\n\n\nPlot\n\n\nThe plot receives an array of [x,y]\u00a0coordinates and draws them on a chart with linear or logarithmic interpolation.\n\n\n{\n    type:'plot',\n    // etc\n}\n\n\n\n\npoints\n\n\n\n\ntype: \narray|string\n\n\ndefault: \n[]\n\n\nusage:\n\n\nas a \nstring\n: a widget's \nid\n whose multiple values will be displayed on the \ny\n axis, evenly spaced on the \nx\n axis (only \nmatrices\n and \npads\n will work)\n\n\nas an \narray\n: each element must be an \narray\n of \n[x,y]\n coordinates, where \nx\n and \ny\n can either be a:\n\n\nnumber\n: constant values\n\n\nstring\n: a widget's \nid\n whose value will be used\n\n\n\n\n\n\n\n\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault:\n    \n{\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }\n\n\nusage: defines the \nmin\n and \nmax\n values for \nx\n and \ny\n axis\n\n\n\n\nlogScaleX\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \nx\n axis (log10)\n\n\n\n\nlogScaleY\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to \ntrue\n to use logarithmic scale for the \ny\n axis (log10)\n\n\n\n\nVisualizer\n\n\nThe visualizer displays the evolution in time of a received value (through osc) \nor\n another widget's value.\n\n\n{\n    type:'visualizer',\n    // etc\n}\n\n\n\n\nwidgetId\n\n\n\n\ntype: \nobject\n\n\ndefault: \nempty\n\n\nusage: a widget's \nid\n whose value will be displayed (thus bypassing the incoming osc)\n\n\n\n\nduration\n\n\n\n\ntype: \nnumber\n\n\ndefault: \n1\n\n\nusage: window size in seconds\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: defines the \nmin\n and \nmax\n values for the \ny\n axis\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling\n\n\n\n\nText\n\n\nText displays incoming values (via osc) as text\n\n\n{\n    type:'text',\n    // etc\n}\n\n\n\n\nvertical\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true display vertically\n\n\n\n\nMeter\n\n\nMeter displays incoming numerical values (via osc) as a gauge level\n\n\n{\n    type:'meter',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the meter horizontally\n\n\n\n\nrange\n\n\n\n\nsee fader's \nrange\n\n\n\n\nlogScale\n\n\n\n\nsee fader's \nlogScale", 
             "title": "Plots"
         }, 
         {
@@ -442,27 +442,102 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/#led", 
-            "text": "type:'led',\nrange:x:{ min :0, max :1}   // [object] minimum and maximum values for X and Y axis        \nlogScale: false,           // [bool] use logarithmic scale", 
-            "title": "led"
+            "text": "{\n    type:'led',\n    // etc\n}", 
+            "title": "Led"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#range", 
+            "text": "type:  object  default:  {\"min\":0,\"max\":1}  usage: defines the  min  and  max  value the led's intensity will be mapped to", 
+            "title": "range"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#logscale", 
+            "text": "type:  boolean  default:  false  usage: set to true use logarithmic scaling", 
+            "title": "logScale"
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/#plot", 
-            "text": "The plot receives an array of [x,y]\u00a0coordinates and draws them on a chart with linear or logarithmic interpolation.  type:'plot',\npoints:[],                  // [string|array]\n                            // string : a single widget id, whose multiple values will be displayed,\n                            //          evenly spaced on the x-axis\n                            // array : an array of [x,y] coordinates, which can be numbers\n                            //         or widget id strings, for example :\n                            // [[0,0],[0.5, some_widget_id ],[ some_other_id , another_id ]]\nrange:{                     // [object] minimum and maximum values for X and Y axis\n        x:{ min :0, max :1},\n        y:{ min :0, max :1}\n    },\nlogScaleX: false,           // [bool] use logarithmic scale for X axis (log10)\nlogScaleY: false            // [bool] use logarithmic scale for y axis (log10)", 
-            "title": "plot"
+            "text": "The plot receives an array of [x,y]\u00a0coordinates and draws them on a chart with linear or logarithmic interpolation.  {\n    type:'plot',\n    // etc\n}", 
+            "title": "Plot"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#points", 
+            "text": "type:  array|string  default:  []  usage:  as a  string : a widget's  id  whose multiple values will be displayed on the  y  axis, evenly spaced on the  x  axis (only  matrices  and  pads  will work)  as an  array : each element must be an  array  of  [x,y]  coordinates, where  x  and  y  can either be a:  number : constant values  string : a widget's  id  whose value will be used", 
+            "title": "points"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#range_1", 
+            "text": "type:  object  default:\n     {\n        x:{\"min\":0,\"max\":1},\n        y:{\"min\":0,\"max\":1}\n    }  usage: defines the  min  and  max  values for  x  and  y  axis", 
+            "title": "range"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#logscalex", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to use logarithmic scale for the  x  axis (log10)", 
+            "title": "logScaleX"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#logscaley", 
+            "text": "type:  boolean  default:  false  usage: set to  true  to use logarithmic scale for the  y  axis (log10)", 
+            "title": "logScaleY"
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/#visualizer", 
-            "text": "The visualizer displays the evolution in time of a received value (through osc)  or  another widget's value.  type:'visualizer',\nwidgetId:'',                // [string] widget id (its value will be displayed instead of the incoming osc)\nduration:1,                 // [number] window size in seconds\nrange:{ min :0, max :1},    // [object] minimum and maximum values the Y axis\nlogScale: false,            // [bool] use logarithmic scale for Y axis (log10)", 
-            "title": "visualizer"
+            "text": "The visualizer displays the evolution in time of a received value (through osc)  or  another widget's value.  {\n    type:'visualizer',\n    // etc\n}", 
+            "title": "Visualizer"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#widgetid", 
+            "text": "type:  object  default:  empty  usage: a widget's  id  whose value will be displayed (thus bypassing the incoming osc)", 
+            "title": "widgetId"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#duration", 
+            "text": "type:  number  default:  1  usage: window size in seconds", 
+            "title": "duration"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#range_2", 
+            "text": "type:  object  default:  {\"min\":0,\"max\":1}  usage: defines the  min  and  max  values for the  y  axis", 
+            "title": "range"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#logscale_1", 
+            "text": "type:  boolean  default:  false  usage: set to true use logarithmic scaling", 
+            "title": "logScale"
         }, 
         {
             "location": "/user-guide/widgets-specifics/plots/#text", 
-            "text": "type:'text',\nvertical:false,             // [bool]", 
-            "title": "text"
+            "text": "Text displays incoming values (via osc) as text  {\n    type:'text',\n    // etc\n}", 
+            "title": "Text"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#vertical", 
+            "text": "type:  boolean  default:  false  usage: set to true display vertically", 
+            "title": "vertical"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#meter", 
+            "text": "Meter displays incoming numerical values (via osc) as a gauge level  {\n    type:'meter',\n    // etc\n}", 
+            "title": "Meter"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#horizontal", 
+            "text": "type:  boolean  default:  false  usage: set to true to display the meter horizontally", 
+            "title": "horizontal"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#range_3", 
+            "text": "see fader's  range", 
+            "title": "range"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/plots/#logscale_2", 
+            "text": "see fader's  logScale", 
+            "title": "logScale"
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/", 
-            "text": "Sliders\n\n\nSliders are unidimensional widgets that output one value at a time.\n\n\n\n\nFader\n\n\n{\n    type:'fader',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the fader horizontally\n\n\n\n\nalign\n\n\n\n\ntype: \nstring\n\n\ndefault: \ncenter\n\n\nusage: set to \nleft\n or \nright\n to display one scale instead of two\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nobject\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be numbers or object if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the fader horizontally\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nmeter\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display a vu-meter next in the fader\n\n\nthe meter's \nid\n will be the same as the fader's with \n/meter\n appended to it\n\n\nthe meter's \npath\nwill be the same as the fader's with \n/meter\n appended to it\n\n\n\n\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;\n\n\n\n\n\n\nKnob\n\n\n{\n    type:'knob',\n    // etc\n}\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nobject\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be numbers or object if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget \nvertically\n will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;", 
+            "text": "Sliders\n\n\nSliders are unidimensional widgets that output one value at a time.\n\n\n\n\nFader\n\n\n{\n    type:'fader',\n    // etc\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the fader horizontally\n\n\n\n\nalign\n\n\n\n\ntype: \nstring\n\n\ndefault: \ncenter\n\n\nusage: set to \nleft\n or \nright\n to display one scale instead of two\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be numbers or object if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nhorizontal\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display the fader horizontally\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\nmeter\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to display a vu-meter next in the fader\n\n\nthe meter's \nid\n will be the same as the fader's with \n/meter\n appended to it\n\n\nthe meter's \npath\nwill be the same as the fader's with \n/meter\n appended to it\n\n\n\n\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;\n\n\n\n\n\n\nKnob\n\n\n{\n    type:'knob',\n    // etc\n}\n\n\n\n\nnoPip\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true to hide the scale\n\n\n\n\nrange\n\n\n\n\ntype: \nobject\n\n\ndefault: \n{\"min\":0,\"max\":1}\n\n\nusage: \nrange\n defines the breakpoints of the fader's scale\n\n\nkeys can be percentages and/or \nmin\n / \nmax\n\n\nvalues can be numbers or object if a custom label is needed\n\n\n\n\n\n\nexample:\n\n\n\n\nrange: {\n    \nmin\n:0,\n    \n50%\n:1,        \n    \nmax\n: {\ninf\n:10} // \ninf\n will be used as a custom label on the scale\n}\n\n\n\n\nlogScale\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: set to true use logarithmic scaling between breakpoints\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsnap\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: by default, dragging the widget \nvertically\n will modify it's value starting from its last value. Setting this to true will make it snap directly to the mouse/touch position.\n\n\n\n\ncss\n\n\n--color-gauge:color;\n--color-knob:color;\n--color-pips:color;", 
             "title": "Sliders"
         }, 
         {
@@ -492,7 +567,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#range", 
-            "text": "type:  boolean  default:  object  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be numbers or object if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
+            "text": "type:  object  default:  {\"min\":0,\"max\":1}  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be numbers or object if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
             "title": "range"
         }, 
         {
@@ -537,7 +612,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/sliders/#range_1", 
-            "text": "type:  boolean  default:  object  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be numbers or object if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
+            "text": "type:  object  default:  {\"min\":0,\"max\":1}  usage:  range  defines the breakpoints of the fader's scale  keys can be percentages and/or  min  /  max  values can be numbers or object if a custom label is needed    example:   range: {\n     min :0,\n     50% :1,        \n     max : { inf :10} //  inf  will be used as a custom label on the scale\n}", 
             "title": "range"
         }, 
         {

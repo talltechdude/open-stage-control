@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Plots - OSC</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../../css/highlight.css">
-        <link href="../../../css/base.css" rel="stylesheet">
+    <title>Plots - Open Stage Control</title>
 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link href="../../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
-        
-    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
 
-    <body>
+    
+</head>
 
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
         <!-- Collapsed navigation -->
         <div class="navbar-header">
+            
             <!-- Expander button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -39,58 +51,60 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            
 
             <!-- Main title -->
-            <a class="navbar-brand" href="../../..">OSC</a>
+            <a class="navbar-brand" href="../../..">Open Stage Control</a>
         </div>
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
-            <!-- Main navigation -->
-            <ul class="nav navbar-nav">
             
-            
-                <li >
-                    <a href="../../..">Home</a>
-                </li>
-            
-            
-            
-                <li >
-                    <a href="../../../getting-started/">Getting started</a>
-                </li>
-            
-            
-            
-                <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User guide <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../getting-started/">Getting started</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
                         
+                            
 <li >
     <a href="../../interface/">Interface</a>
 </li>
 
-                    
                         
+                            
 <li >
     <a href="../../session-file/">Session file</a>
 </li>
 
-                    
                         
+                            
 <li >
     <a href="../../theming/">Theming</a>
 </li>
 
-                    
                         
+                            
 <li >
     <a href="../../widgets-generics/">Widgets generics</a>
 </li>
 
-                    
                         
+                            
   <li class="dropdown-submenu">
     <a tabindex="-1" href="">Widgets specifics</a>
     <ul class="dropdown-menu">
@@ -134,140 +148,281 @@
     </ul>
   </li>
 
-                    
-                    </ul>
-                </li>
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
             
-            
-            </ul>
 
-            <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                <li >
-                    <a rel="next" href="../pads/">
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
-                </li>
-                <li >
-                    <a rel="prev" href="../sliders/">
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </li>
                 
-                <li>
-                    <a href="https://github.com/jean-emmanuel/open-stage-control">
-                        
-                            <i class="fa fa-github"></i>
-                        
-                        GitHub
-                    </a>
-                </li>
+                    <li >
+                        <a rel="next" href="../pads/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../sliders/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/jean-emmanuel/open-stage-control">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
                 
             </ul>
         </div>
     </div>
 </div>
 
-        <div class="container">
-            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#plots">Plots</a></li>
+        <li class="first-level active"><a href="#plots">Plots</a></li>
         
-            <li><a href="#led">led</a></li>
+            <li class="second-level"><a href="#led">Led</a></li>
+            
+                <li class="third-level"><a href="#range">range</a></li>
+            
+                <li class="third-level"><a href="#logscale">logScale</a></li>
+            
         
-            <li><a href="#plot">plot</a></li>
+            <li class="second-level"><a href="#plot">Plot</a></li>
+            
+                <li class="third-level"><a href="#points">points</a></li>
+            
+                <li class="third-level"><a href="#range_1">range</a></li>
+            
+                <li class="third-level"><a href="#logscalex">logScaleX</a></li>
+            
+                <li class="third-level"><a href="#logscaley">logScaleY</a></li>
+            
         
-            <li><a href="#visualizer">visualizer</a></li>
+            <li class="second-level"><a href="#visualizer">Visualizer</a></li>
+            
+                <li class="third-level"><a href="#widgetid">widgetId</a></li>
+            
+                <li class="third-level"><a href="#duration">duration</a></li>
+            
+                <li class="third-level"><a href="#range_2">range</a></li>
+            
+                <li class="third-level"><a href="#logscale_1">logScale</a></li>
+            
         
-            <li><a href="#text">text</a></li>
+            <li class="second-level"><a href="#text">Text</a></li>
+            
+                <li class="third-level"><a href="#vertical">vertical</a></li>
+            
+        
+            <li class="second-level"><a href="#meter">Meter</a></li>
+            
+                <li class="third-level"><a href="#horizontal">horizontal</a></li>
+            
+                <li class="third-level"><a href="#range_3">range</a></li>
+            
+                <li class="third-level"><a href="#logscale_2">logScale</a></li>
+            
         
     
     </ul>
 </div></div>
-            <div class="col-md-9" role="main">
+        <div class="col-md-9" role="main">
 
 <h1 id="plots">Plots</h1>
 <p>Plots are tools that display other widgets' state or incomming osc messages. They are not sensitive to mouse and touch interactions.</p>
-<h2 id="led">led</h2>
-<pre><code class="js">type:'led',
-range:x:{&quot;min&quot;:0,&quot;max&quot;:1}   // [object] minimum and maximum values for X and Y axis        
-logScale: false,           // [bool] use logarithmic scale
+<h2 id="led">Led</h2>
+<pre><code class="js">{
+    type:'led',
+    // etc
+}
 </code></pre>
 
-<h2 id="plot">plot</h2>
+<h4 id="range"><code>range</code></h4>
+<ul>
+<li>type: <code>object</code></li>
+<li>default: <code>{"min":0,"max":1}</code></li>
+<li>usage: defines the <code>min</code> and <code>max</code> value the led's intensity will be mapped to</li>
+</ul>
+<h4 id="logscale"><code>logScale</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to true use logarithmic scaling</li>
+</ul>
+<h2 id="plot">Plot</h2>
 <p>The plot receives an array of [x,y] coordinates and draws them on a chart with linear or logarithmic interpolation.</p>
-<pre><code class="js">type:'plot',
-points:[],                  // [string|array]
-                            // string : a single widget id, whose multiple values will be displayed,
-                            //          evenly spaced on the x-axis
-                            // array : an array of [x,y] coordinates, which can be numbers
-                            //         or widget id strings, for example :
-                            // [[0,0],[0.5,&quot;some_widget_id&quot;],[&quot;some_other_id&quot;,&quot;another_id&quot;]]
-range:{                     // [object] minimum and maximum values for X and Y axis
-        x:{&quot;min&quot;:0,&quot;max&quot;:1},
-        y:{&quot;min&quot;:0,&quot;max&quot;:1}
-    },
-logScaleX: false,           // [bool] use logarithmic scale for X axis (log10)
-logScaleY: false            // [bool] use logarithmic scale for y axis (log10)
+<pre><code class="js">{
+    type:'plot',
+    // etc
+}
 </code></pre>
 
-<h2 id="visualizer">visualizer</h2>
+<h4 id="points"><code>points</code></h4>
+<ul>
+<li>type: <code>array|string</code></li>
+<li>default: <code>[]</code></li>
+<li>usage:<ul>
+<li>as a <code>string</code>: a widget's <code>id</code> whose multiple values will be displayed on the <code>y</code> axis, evenly spaced on the <code>x</code> axis (only <em><a href="../matrices/">matrices</a></em> and <em><a href="../pads/">pads</a></em> will work)</li>
+<li>as an <code>array</code>: each element must be an <code>array</code> of <code>[x,y]</code> coordinates, where <code>x</code> and <code>y</code> can either be a:<ul>
+<li><code>number</code>: constant values</li>
+<li><code>string</code>: a widget's <code>id</code> whose value will be used</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="range_1"><code>range</code></h4>
+<ul>
+<li>type: <code>object</code></li>
+<li>default:
+    <code>{
+        x:{"min":0,"max":1},
+        y:{"min":0,"max":1}
+    }</code></li>
+<li>usage: defines the <code>min</code> and <code>max</code> values for <code>x</code> and <code>y</code> axis</li>
+</ul>
+<h4 id="logscalex"><code>logScaleX</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to use logarithmic scale for the <code>x</code> axis (log10)</li>
+</ul>
+<h4 id="logscaley"><code>logScaleY</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to use logarithmic scale for the <code>y</code> axis (log10)</li>
+</ul>
+<h2 id="visualizer">Visualizer</h2>
 <p>The visualizer displays the evolution in time of a received value (through osc) <em>or</em> another widget's value.</p>
-<pre><code class="js">type:'visualizer',
-widgetId:'',                // [string] widget id (its value will be displayed instead of the incoming osc)
-duration:1,                 // [number] window size in seconds
-range:{&quot;min&quot;:0,&quot;max&quot;:1},    // [object] minimum and maximum values the Y axis
-logScale: false,            // [bool] use logarithmic scale for Y axis (log10)
+<pre><code class="js">{
+    type:'visualizer',
+    // etc
+}
 </code></pre>
 
-<h2 id="text">text</h2>
-<pre><code class="js">type:'text',
-vertical:false,             // [bool]
-</code></pre></div>
-        </div>
+<h4 id="widgetid"><code>widgetId</code></h4>
+<ul>
+<li>type: <code>object</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: a widget's <code>id</code> whose value will be displayed (thus bypassing the incoming osc)</li>
+</ul>
+<h4 id="duration"><code>duration</code></h4>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>1</code></li>
+<li>usage: window size in seconds</li>
+</ul>
+<h4 id="range_2"><code>range</code></h4>
+<ul>
+<li>type: <code>object</code></li>
+<li>default: <code>{"min":0,"max":1}</code></li>
+<li>usage: defines the <code>min</code> and <code>max</code> values for the <code>y</code> axis</li>
+</ul>
+<h4 id="logscale_1"><code>logScale</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to true use logarithmic scaling</li>
+</ul>
+<h2 id="text">Text</h2>
+<p>Text displays incoming values (via osc) as text</p>
+<pre><code class="js">{
+    type:'text',
+    // etc
+}
+</code></pre>
 
-        <footer class="col-md-12">
-            <hr>
-            
-            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
-        </footer>
+<h4 id="vertical"><code>vertical</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to true display vertically</li>
+</ul>
+<h2 id="meter">Meter</h2>
+<p>Meter displays incoming numerical values (via osc) as a gauge level</p>
+<pre><code class="js">{
+    type:'meter',
+    // etc
+}
+</code></pre>
 
-        <script src="../../../js/jquery-1.10.2.min.js"></script>
-        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../../../js/highlight.pack.js"></script>
-        <script>var base_url = '../../..';</script>
-        <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
-        <script src="../../../js/base.js"></script>
+<h4 id="horizontal"><code>horizontal</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to true to display the meter horizontally</li>
+</ul>
+<h4 id="range_3"><code>range</code></h4>
+<ul>
+<li>see fader's <a href="../sliders/#fader"><code>range</code></a></li>
+</ul>
+<h4 id="logscale_2"><code>logScale</code></h4>
+<ul>
+<li>see fader's <a href="../sliders/#fader"><code>logScale</code></a></li>
+</ul></div>
+        
+    </div>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            From here you can search these documents. Enter
-                            your search terms below.
-                        </p>
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                            </div>
-                        </form>
-                        <div id="mkdocs-search-results"></div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
+    <script src="../../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
                 </div>
             </div>
         </div>
+    </div>
+
     </body>
+
 </html>
