@@ -229,6 +229,8 @@
             
                 <li class="third-level"><a href="#vertical">vertical</a></li>
             
+                <li class="third-level"><a href="#defaulttext">defaultText</a></li>
+            
         
             <li class="second-level"><a href="#meter">Meter</a></li>
             
@@ -342,7 +344,7 @@
 <li>usage: set to <code>true</code> use logarithmic scaling (log10)</li>
 </ul>
 <h2 id="text">Text</h2>
-<p>Text displays incoming values (via osc) as text</p>
+<p>Text displays incoming values (via osc) as text. Setting its value to <code>default</code> will display the default text.</p>
 <pre><code class="js">{
     type:'text',
     // etc
@@ -354,6 +356,12 @@
 <li>type: <code>boolean</code></li>
 <li>default: <code>false</code></li>
 <li>usage: set to <code>true</code> display vertically</li>
+</ul>
+<h4 id="defaulttext"><code>defaultText</code></h4>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: default text to be displayed. If not set, <code>label</code> or <code>id</code> is used</li>
 </ul>
 <h2 id="meter">Meter</h2>
 <p>Meter displays incoming numerical values (via osc) as a gauge level</p>
