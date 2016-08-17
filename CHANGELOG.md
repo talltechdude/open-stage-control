@@ -5,7 +5,7 @@
 - bug fixes
   - editor: widgets/tabs can be accessed through their parent's children list (#27)
 - engine
-  - electron 1.3.1
+  - electron 1.3.3
 
 ## 0.6.0
 
