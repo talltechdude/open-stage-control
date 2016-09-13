@@ -335,18 +335,20 @@
 <li>type: <code>array</code></li>
 <li>default: <code>[]</code></li>
 <li>usage:<ul>
-<li>each item must be an object of the following form:
-<code>{
-    type:[string],          // "highpass", "highshelf", "lowpass", "lowshelf", "peak", "notch"
-    freq:[number],   //
-    q:[number],      //
-    gain:[number],   //
-    on:[bool]        // 1 or true = active, 0 or false = bypassed
-}</code></li>
+<li>each item must be an object of the form below</li>
 <li>all filters parameters can be filled with widget ids, whose value will be used</li>
 </ul>
 </li>
 </ul>
+<pre><code>{
+    type:[string],   // &quot;highpass&quot;, &quot;highshelf&quot;, &quot;lowpass&quot;, &quot;lowshelf&quot;, &quot;peak&quot;, &quot;notch&quot;
+    freq:[number],   //
+    q:[number],      //
+    gain:[number],   //
+    on:[bool]        // 1 or true = active, 0 or false = bypassed
+}
+</code></pre>
+
 <h4 id="resolution"><code>resolution</code></h4>
 <ul>
 <li>type: <code>number</code></li>
