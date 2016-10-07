@@ -212,7 +212,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/", 
-            "text": "Buttons\n\n\nButtons are exactly what you think they are.\n\n\n\n\nToggle\n\n\n{\n    type:'toggle',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent on \non\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent on \noff\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\n\n\nPush\n\n\n{\n    type:'push',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent when pushing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent when releasing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\nset to \nfalse\n to prevent sending any osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\nSetting the \npush\n's value externally (via osc or widget linking/cloning) will toggle it's inner light.\n\n\n\n\nSwitch\n\n\n{\n    type:'switch',\n    // etc\n}\n\n\n\n\nvalues\n\n\n\n\ntype: \narray|object\n\n\ndefault: \n{\"Value 1\":1,\"Value 2\":2}\n\n\nusage:\n\n\narray\n of possible values to switch between : \n[1,2,3]\n\n\nobject\n of \n\"label\":value\n pairs", 
+            "text": "Buttons\n\n\nButtons are exactly what you think they are.\n\n\n\n\nToggle\n\n\n{\n    type:'toggle',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent on \non\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent on \noff\n position\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\n\n\nPush\n\n\n{\n    type:'push',\n    // etc\n}\n\n\n\n\non\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n1\n\n\nusage: defines which value is sent when pushing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\noff\n\n\n\n\ntype: \nstring|number|object\n\n\ndefault: \n0\n\n\nusage: defines which value is sent when releasing the button\n\n\nset to \nnull\n to send send no argument in the osc message\n\n\ncan be an \nobject\n if the type needs to be specified (see \npreArgs\n)\n\n\n\n\n\n\n\n\nnorelease\n\n\n\n\ntype: \nbool\n\n\ndefault: \nfalse\n\n\nusage: set to true to prevent sending any osc message when releasing the button\n\n\n\n\nSetting the \npush\n's value externally (via osc) will toggle it's inner light.\n\n\n\n\nSwitch\n\n\n{\n    type:'switch',\n    // etc\n}\n\n\n\n\nvalues\n\n\n\n\ntype: \narray|object\n\n\ndefault: \n{\"Value 1\":1,\"Value 2\":2}\n\n\nusage:\n\n\narray\n of possible values to switch between : \n[1,2,3]\n\n\nobject\n of \n\"label\":value\n pairs", 
             "title": "Buttons"
         }, 
         {
@@ -227,12 +227,12 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#on", 
-            "text": "type:  string|number|object  default:  1  usage: defines which value is sent on  on  position  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
+            "text": "type:  string|number|object  default:  1  usage: defines which value is sent on  on  position  set to  null  to send send no argument in the osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
             "title": "on"
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#off", 
-            "text": "type:  string|number|object  default:  0  usage: defines which value is sent on  off  position  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
+            "text": "type:  string|number|object  default:  0  usage: defines which value is sent on  off  position  set to  null  to send send no argument in the osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
             "title": "off"
         }, 
         {
@@ -242,13 +242,18 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#on_1", 
-            "text": "type:  string|number|object  default:  1  usage: defines which value is sent when pushing the button  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
+            "text": "type:  string|number|object  default:  1  usage: defines which value is sent when pushing the button  set to  null  to send send no argument in the osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
             "title": "on"
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#off_1", 
-            "text": "type:  string|number|object  default:  0  usage: defines which value is sent when releasing the button  set to  null  to send send no argument in the osc message  set to  false  to prevent sending any osc message  can be an  object  if the type needs to be specified (see  preArgs )     Setting the  push 's value externally (via osc or widget linking/cloning) will toggle it's inner light.", 
+            "text": "type:  string|number|object  default:  0  usage: defines which value is sent when releasing the button  set to  null  to send send no argument in the osc message  can be an  object  if the type needs to be specified (see  preArgs )", 
             "title": "off"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/buttons/#norelease", 
+            "text": "type:  bool  default:  false  usage: set to true to prevent sending any osc message when releasing the button   Setting the  push 's value externally (via osc) will toggle it's inner light.", 
+            "title": "norelease"
         }, 
         {
             "location": "/user-guide/widgets-specifics/buttons/#switch", 

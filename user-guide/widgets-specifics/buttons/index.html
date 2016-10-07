@@ -209,6 +209,8 @@
             
                 <li class="third-level"><a href="#off_1">off</a></li>
             
+                <li class="third-level"><a href="#norelease">norelease</a></li>
+            
         
             <li class="second-level"><a href="#switch">Switch</a></li>
             
@@ -236,7 +238,6 @@
 <li>default: <code>1</code></li>
 <li>usage: defines which value is sent on <code>on</code> position<ul>
 <li>set to <code>null</code> to send send no argument in the osc message</li>
-<li>set to <code>false</code> to prevent sending any osc message</li>
 <li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
 </ul>
 </li>
@@ -247,7 +248,6 @@
 <li>default: <code>0</code></li>
 <li>usage: defines which value is sent on <code>off</code> position<ul>
 <li>set to <code>null</code> to send send no argument in the osc message</li>
-<li>set to <code>false</code> to prevent sending any osc message</li>
 <li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
 </ul>
 </li>
@@ -266,7 +266,6 @@
 <li>default: <code>1</code></li>
 <li>usage: defines which value is sent when pushing the button<ul>
 <li>set to <code>null</code> to send send no argument in the osc message</li>
-<li>set to <code>false</code> to prevent sending any osc message</li>
 <li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
 </ul>
 </li>
@@ -277,12 +276,17 @@
 <li>default: <code>0</code></li>
 <li>usage: defines which value is sent when releasing the button<ul>
 <li>set to <code>null</code> to send send no argument in the osc message</li>
-<li>set to <code>false</code> to prevent sending any osc message</li>
 <li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
 </ul>
 </li>
 </ul>
-<p>Setting the <code>push</code>'s value externally (via osc or widget linking/cloning) will toggle it's inner light.</p>
+<h3 id="norelease"><code>norelease</code></h3>
+<ul>
+<li>type: <code>bool</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to true to prevent sending any osc message when releasing the button</li>
+</ul>
+<p>Setting the <code>push</code>'s value externally (via osc) will toggle it's inner light.</p>
 <hr />
 <h2 id="switch">Switch</h2>
 <pre><code class="js">{
