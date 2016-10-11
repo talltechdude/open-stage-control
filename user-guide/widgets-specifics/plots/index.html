@@ -213,6 +213,8 @@
             
                 <li class="third-level"><a href="#logscaley">logScaleY</a></li>
             
+                <li class="third-level"><a href="#origin">origin</a></li>
+            
         
             <li class="second-level"><a href="#eq">Eq</a></li>
             
@@ -224,6 +226,8 @@
             
                 <li class="third-level"><a href="#logscalex_1">logScaleX</a></li>
             
+                <li class="third-level"><a href="#origin_1">origin</a></li>
+            
         
             <li class="second-level"><a href="#visualizer">Visualizer</a></li>
             
@@ -234,6 +238,8 @@
                 <li class="third-level"><a href="#range_2">range</a></li>
             
                 <li class="third-level"><a href="#logscale_1">logScale</a></li>
+            
+                <li class="third-level"><a href="#origin_2">origin</a></li>
             
         
             <li class="second-level"><a href="#text">Text</a></li>
@@ -322,6 +328,12 @@
 <li>default: <code>false</code></li>
 <li>usage: set to <code>true</code> to use logarithmic scale for the <code>y</code> axis (log10)</li>
 </ul>
+<h4 id="origin"><code>origin</code></h4>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>auto</code></li>
+<li>usage: defines the y-axis origin. Set to <code>false</code> to disable it.</li>
+</ul>
 <h2 id="eq">Eq</h2>
 <p>The Eq receives an array of filter objects and draws their frequency response between 20Hz and 22050Hz.</p>
 <pre><code class="js">{
@@ -368,6 +380,12 @@
 <li>default: <code>false</code></li>
 <li>usage: set to <code>true</code> to use logarithmic scale for the <code>x</code> axis (log10)</li>
 </ul>
+<h4 id="origin_1"><code>origin</code></h4>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>auto</code></li>
+<li>usage: defines the y-axis origin. Set to <code>false</code> to disable it.</li>
+</ul>
 <h2 id="visualizer">Visualizer</h2>
 <p>The visualizer displays the evolution in time of a received value (through osc) <em>or</em> another widget's value.</p>
 <pre><code class="js">{
@@ -399,6 +417,12 @@
 <li>type: <code>boolean</code></li>
 <li>default: <code>false</code></li>
 <li>usage: set to <code>true</code> use logarithmic scaling (log10)</li>
+</ul>
+<h4 id="origin_2"><code>origin</code></h4>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>auto</code></li>
+<li>usage: defines the y-axis origin. Set to <code>false</code> to disable it.</li>
 </ul>
 <h2 id="text">Text</h2>
 <p>Text displays incoming values (via osc) as text. Sending a message with no argument to the widget will reset it to its default text.</p>
