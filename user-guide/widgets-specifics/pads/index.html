@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <link rel="shortcut icon" href="../../../../../../img/logo.png">
 
     <title>Pads - Open Stage Control</title>
 
@@ -17,6 +17,9 @@
     <link href="../../../css/base.css" rel="stylesheet">
     <link href="../../../css/cinder.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/highlight.css">
+
+
+    <link href="../../../css/extra.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -82,7 +85,19 @@
                         
                             
 <li >
+    <a href="../../cutom-module/">Cutom module</a>
+</li>
+
+                        
+                            
+<li >
     <a href="../../interface/">Interface</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../remote-editing/">Remote editing</a>
 </li>
 
                         
@@ -289,11 +304,11 @@
 <li>type: <code>boolean|object</code></li>
 <li>default: <code>false</code></li>
 <li>usage:<ul>
-<li>set to <code>true</code> to send separate osc messages for <code>x</code> and <code>y</code> axis. The <code>path</code> will be the same as the widget's with <code>/x</code> or <code>/y</code> appended to it</li>
-<li>can be set as an object to specify a different <code>path</code> : <code>{x:'/osc_path_x', y:'/osc_path_y'}</code></li>
+<li>set to <code>true</code> to send separate osc messages for <code>x</code> and <code>y</code> axis. The <code>address</code> will be the same as the widget's with <code>/x</code> or <code>/y</code> appended to it</li>
+<li>can be set as an object to specify a different <code>address</code> : <code>{x:'/osc_address_x', y:'/osc_address_y'}</code></li>
 </ul>
 </li>
-<li>note: the widget will only respond to its original osc path, not to the splitted version</li>
+<li>note: the widget will only respond to its original osc address, not to the splitted version</li>
 </ul>
 <hr />
 <h2 id="multixy">MultiXy</h2>
@@ -346,11 +361,11 @@
 <li>type: <code>boolean|object</code></li>
 <li>default: <code>false</code></li>
 <li>usage:<ul>
-<li>set to <code>true</code> to send separate osc messages for each point's <code>x</code> and <code>y</code> axis. The <code>path</code> will be the same as the widget's with <code>/N/x</code> or <code>/N/y</code> appended to it, where <code>N</code> is the point's id.</li>
-<li>can be set as an object to specify a different <code>path</code> : <code>{0:'/osc_path/0', 1:'/osc_path_/1'}</code> (each path will be appended <code>/x</code> or <code>y</code>)</li>
+<li>set to <code>true</code> to send separate osc messages for each point's <code>x</code> and <code>y</code> axis. The <code>address</code> will be the same as the widget's with <code>/N/x</code> or <code>/N/y</code> appended to it, where <code>N</code> is the point's id.</li>
+<li>can be set as an object to specify a different <code>address</code> : <code>{0:'/osc_address/0', 1:'/osc_address_/1'}</code> (each address will be appended <code>/x</code> or <code>y</code>)</li>
 </ul>
 </li>
-<li>note: the widget will only respond to its original osc path, not to the splitted version</li>
+<li>note: the widget will only respond to its original osc address, not to the splitted version</li>
 </ul>
 <hr />
 <h2 id="rgb">RGB</h2>
@@ -376,8 +391,8 @@
 <li>type: <code>boolean|object</code></li>
 <li>default: <code>false</code></li>
 <li>usage:<ul>
-<li>set to <code>true</code> to send separate osc messages for <code>r</code> and <code>g</code> &amp; <code>b</code>. The <code>path</code> will be the same as the widget's with <code>/r</code>, <code>/g</code> or <code>/b</code> appended to it</li>
-<li>can be set as an object to specify a different <code>path</code> : <code>{r:'/osc_path_r', g:'/osc_path_g',b:'/osc_path_b'}</code></li>
+<li>set to <code>true</code> to send separate osc messages for <code>r</code> and <code>g</code> &amp; <code>b</code>. The <code>address</code> will be the same as the widget's with <code>/r</code>, <code>/g</code> or <code>/b</code> appended to it</li>
+<li>can be set as an object to specify a different <code>address</code> : <code>{r:'/osc_address_r', g:'/osc_address_g',b:'/osc_address_b'}</code></li>
 </ul>
 </li>
 </ul></div>
@@ -401,6 +416,7 @@
     </script>
     <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
     <script src="../../../js/base.js"></script>
+    <script src="../../../js/extra.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
         <div class="modal-dialog">

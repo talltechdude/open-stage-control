@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../../../img/logo.png">
 
-    <title>Session file - Open Stage Control</title>
+    <title>Remote editing - Open Stage Control</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -96,14 +96,14 @@
 
                         
                             
-<li >
-    <a href="../remote-editing/">Remote editing</a>
+<li class="active">
+    <a href="./">Remote editing</a>
 </li>
 
                         
                             
-<li class="active">
-    <a href="./">Session file</a>
+<li >
+    <a href="../session-file/">Session file</a>
 </li>
 
                         
@@ -179,12 +179,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../remote-editing/">
+                        <a rel="next" href="../interface/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../theming/">
+                        <a rel="prev" href="../session-file/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -209,15 +209,11 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#session-file">Session file</a></li>
+        <li class="first-level active"><a href="#remote-editing">Remote editing</a></li>
         
-            <li class="second-level"><a href="#tab-object">Tab object</a></li>
+            <li class="second-level"><a href="#supported-commands">Supported commands</a></li>
             
-                <li class="third-level"><a href="#label">label</a></li>
-            
-                <li class="third-level"><a href="#widgets">widgets</a></li>
-            
-                <li class="third-level"><a href="#tabs">tabs</a></li>
+                <li class="third-level"><a href="#edit-exec-edit-id-options">edit :  /EXEC edit id options</a></li>
             
         
     
@@ -225,82 +221,20 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="session-file">Session file</h1>
-<p>A valid session file is a javascript file that returns an array of <a href="#tab-object">tab objects</a>. It can be written as a javascript <code>array</code> :</p>
-<pre><code class="js">[// array
-    {// tab object
-        label:&quot;A tab containing widgets&quot;,
-        widgets: [// array
-            {// widget object
-                // widget properties
-            },
-            {
-                // etc
-            }
-        ]
-    },
-    {
-        label:&quot;A tab containing tabs&quot;,
-        tabs: [
-            {// tab object
-                // tab properties
-            },
-            {
-                // etc
-            }
-        ]
-    },
-    {
-        // tab properties
-    }
-]
+<h1 id="remote-editing">Remote editing</h1>
+<p>The interface can be remotely edited by sending the appropriate osc messages (from an external source with <code>-o</code> / <code>--osc-port</code> set, or via <code>custom-module</code> scripting).</p>
+<pre><code>/EXEC COMMAND ARGS
 </code></pre>
 
-<p>It can also be a javascript self invoking function that returns an array of <a href="#tab-object">tab objects</a> :</p>
-<pre><code class="js">(function(){
-    var tabs = []
-    for (for i in [0,1,2,3]) {
-        tabs.push({
-            id:'tab'+i,
-            widgets: [
-                {
-                    id:'tab'+i+'fader',
-                    type:'fader'
-                }
-                // etc
-            ]
-        })
-    }
-    return tabs
-}()
-
-</code></pre>
-
-<hr />
-<h2 id="tab-object">Tab object</h2>
-<p>A tab object is a javascript object which properties are described below.</p>
-<pre><code class="js">{
-    // tab properties
-}
-</code></pre>
-
-<h4 id="label"><code>label</code></h4>
+<h2 id="supported-commands">Supported commands</h2>
+<h4 id="edit-exec-edit-id-options"><code>edit</code> :  <code>/EXEC edit id options</code></h4>
+<p>Apply a set of options to an existing widget</p>
 <ul>
-<li>type: <code>string</code></li>
-<li>default: <code>Unnamed</code></li>
+<li><code>id</code>: <code>string</code>, widget's <code>id</code></li>
+<li><code>options</code>: <code>string</code>, JSON object defining the new properties to merge</li>
+<li>example: <code>{"label":"New Label", "color":"red"}</code></li>
 </ul>
-<h4 id="widgets"><code>widgets</code></h4>
-<ul>
-<li>type: <code>array</code></li>
-<li>default: <code>[]</code></li>
-<li>usage: each element of the <code>array</code> must be a <code>widget</code> object. A tab cannot contain widgets and tabs simultaneously.</li>
-</ul>
-<h4 id="tabs"><code>tabs</code></h4>
-<ul>
-<li>type: <code>array</code></li>
-<li>default: <code>[]</code></li>
-<li>usage: each element of the <code>array</code> must be a <code>tab</code> object. A tab cannot contain widgets and tabs simultaneously.</li>
-</ul></div>
+<p><em>Editing a widget can be cpu expensive, hence updating the UI continuously is not a good idea.</em></p></div>
         
     </div>
 
