@@ -235,6 +235,8 @@
         
             <li class="second-level"><a href="#osc">OSC</a></li>
             
+                <li class="third-level"><a href="#value">value</a></li>
+            
                 <li class="third-level"><a href="#precision">precision</a></li>
             
                 <li class="third-level"><a href="#target">target</a></li>
@@ -324,6 +326,13 @@
 </ul>
 <hr />
 <h3 id="osc">OSC</h3>
+<h4 id="value"><code>value</code></h4>
+<ul>
+<li>type: <code>*</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: if set, the widget will be initialized with this <code>value</code>. This won't affect linked widgets and won't send any osc message. </li>
+<li>note: its <code>type</code> must match the widget's value type (ie a <code>number</code> for sliders, an <code>array</code> for pads, etc)</li>
+</ul>
 <h4 id="precision"><code>precision</code></h4>
 <ul>
 <li>type: <code>integer</code></li>
