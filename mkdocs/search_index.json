@@ -147,7 +147,7 @@
         }, 
         {
             "location": "/user-guide/widgets-generics/", 
-            "text": "Widgets generics\n\n\nA widget object is a javascript object. All widgets share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:\n\n\n\n\nSliders\n\n\nButtons\n\n\nPads\n\n\nMatrices\n\n\nPlots\n\n\nContainers\n\n\n\n\n{\n    // widget properties\n}\n\n\n\n\n\n\nBasics\n\n\ntype\n\n\n\n\ntype: \nstring\n\n\ndefault: \nfader\n\n\n\n\nid\n\n\n\n\ntype: \nstring\n\n\ndefault: generated unique 'widget_n'\n\n\nusage: widgets sharing the same \nid\n will act as clones and update each other's value(s) without sending extra osc messages.\n\n\n\n\nlinkId\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: widgets sharing the same \nlinkId\n update each other's value(s) AND send their respective osc messages.\n\n\n\n\n\n\nStyle\n\n\nlabel\n\n\n\n\ntype: \nstring|false\n\n\ndefault: \nauto\n, which displays \nid\n\n\nusage:\n\n\nset to \nfalse\n to hide completely\n\n\nset to \nicon: fontawesome-class\n to display an icon from \nFontAwesome\n (replace \nfontawesome-class\n with the icon's name)\n\n\n\n\n\n\n\n\ntop\n / \nleft\n\n\n\n\ntype: \nnumber|percentage\n\n\ndefault: \nauto\n\n\nusage:\n\n\nwhen both \ntop\n and \nleft\n are set to \nauto\n, the widget is positioned according to the normal flow of the page (from left to right, by order of creation).\n\n\notherwise, the widget will be absolutely positioned\n\n\n\n\n\n\n\n\nwidth\n / \nheight\n\n\n\n\ntype: \nnumber|percentage\n\n\ndefault: \nauto\n\n\n\n\ncolor\n\n\n\n\ntype: \nstring\n\n\ndefault: \nauto\n, inherited accent color\n\n\nusage: any valid \ncss\n color code is valid, this will change the default accent color for the widget and all its children\n\n\n\n\ncss\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: the \ncss\n property can be used to override inherited \ntheming\n variables. Also, some widgets expose specific theming variables that allow a finer customization. Standard \ncss\n properties can be applied to the widget's root element through this property.\n\n\n\n\n\n\nOSC\n\n\nvalue\n\n\n\n\ntype: \n*\n\n\ndefault: \nempty\n\n\nusage: if set, the widget will be initialized with this \nvalue\n. This won't affect linked widgets and won't send any osc message.\n\n\nnote: its \ntype\n must match the widget's value type (ie a \nnumber\n for sliders, an \narray\n for pads, etc). \nChanges made to \nvalue\n won't be visible until the session is reloaded.\n\n\n\n\nprecision\n\n\n\n\ntype: \ninteger\n\n\ndefault: \n2\n\n\nusage: the \nprecision\n property defines the number of decimals to display and to send. Set to \n0\n to send \nintegers\n only.\n\n\n\n\ntarget\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage:\n\n\nthis defines the targets of the widget's osc messages\n\n\neach element of the \narray\n must be a string formatted as follows : \n\"ip:port\"\n\n\nmultiple targets can be specified : \n[\"ip1:port1\",\"ip2:port2\"]\n\n\nif no target is set, messages can still be sent if the server has synchronized hosts (\n-s / --sync\n)\n\n\n\n\n\n\n\n\naddress\n\n\n\n\ntype: \nstring\n\n\ndefault: \n/widgets_id\n\n\nusage: this is the \naddress\n of the osc messages sent by the widget\n\n\n\n\npreArgs\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage:\n\n\neach element of the \narray\n defines a constant value that will be prepended to the osc message\n\n\nvalues can be defined as objects if the type needs to be specified (ie different from the default implied by the \nprecision\n)\n\n\n\n\n\n\nexample:\n\n\n\n\npreArgs: [\n    \n1\n,        // this will always be sent as a string\n    0.5,        // this will be sent as an integer if precision equals 0\n    1,          // this will be sent as float if precision is different from 0\n    {\n        type:\nf\n,\n        value:0.5\n    },\n    {\n        type:\ni\n,\n        value:1\n    },\n    {\n        type:\nT\n,\n        value:true\n    },\n    {\n        type:\nF\n,\n        value:false\n    }\n]", 
+            "text": "Widgets generics\n\n\nA widget object is a javascript object. All widgets share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:\n\n\n\n\nSliders\n\n\nButtons\n\n\nPads\n\n\nMatrices\n\n\nPlots\n\n\nContainers\n\n\n\n\n{\n    // widget properties\n}\n\n\n\n\n\n\nBasics\n\n\ntype\n\n\n\n\ntype: \nstring\n\n\ndefault: \nfader\n\n\n\n\nid\n\n\n\n\ntype: \nstring\n\n\ndefault: generated unique 'widget_n'\n\n\nusage: widgets sharing the same \nid\n will act as clones and update each other's value(s) without sending extra osc messages.\n\n\n\n\nlinkId\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: widgets sharing the same \nlinkId\n update each other's value(s) AND send their respective osc messages.\n\n\n\n\n\n\nStyle\n\n\nlabel\n\n\n\n\ntype: \nstring|false\n\n\ndefault: \nauto\n, which displays \nid\n\n\nusage:\n\n\nset to \nfalse\n to hide completely\n\n\ninsert icons from \nFontAwesome\n using the prefix \n^\n followed by the icon's name : \nmade with ^heart\n, etc\n\n\n\n\n\n\n\n\ntop\n / \nleft\n\n\n\n\ntype: \nnumber|percentage\n\n\ndefault: \nauto\n\n\nusage:\n\n\nwhen both \ntop\n and \nleft\n are set to \nauto\n, the widget is positioned according to the normal flow of the page (from left to right, by order of creation).\n\n\notherwise, the widget will be absolutely positioned\n\n\n\n\n\n\n\n\nwidth\n / \nheight\n\n\n\n\ntype: \nnumber|percentage\n\n\ndefault: \nauto\n\n\n\n\ncolor\n\n\n\n\ntype: \nstring\n\n\ndefault: \nauto\n, inherited accent color\n\n\nusage: any valid \ncss\n color code is valid, this will change the default accent color for the widget and all its children\n\n\n\n\ncss\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: the \ncss\n property can be used to override inherited \ntheming\n variables. Also, some widgets expose specific theming variables that allow a finer customization. Standard \ncss\n properties can be applied to the widget's root element through this property.\n\n\n\n\n\n\nOSC\n\n\nvalue\n\n\n\n\ntype: \n*\n\n\ndefault: \nempty\n\n\nusage: if set, the widget will be initialized with this \nvalue\n. This won't affect linked widgets and won't send any osc message.\n\n\nnote: its \ntype\n must match the widget's value type (ie a \nnumber\n for sliders, an \narray\n for pads, etc). \nChanges made to \nvalue\n won't be visible until the session is reloaded.\n\n\n\n\nprecision\n\n\n\n\ntype: \ninteger\n\n\ndefault: \n2\n\n\nusage: the \nprecision\n property defines the number of decimals to display and to send. Set to \n0\n to send \nintegers\n only.\n\n\n\n\ntarget\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage:\n\n\nthis defines the targets of the widget's osc messages\n\n\neach element of the \narray\n must be a string formatted as follows : \n\"ip:port\"\n\n\nmultiple targets can be specified : \n[\"ip1:port1\",\"ip2:port2\"]\n\n\nif no target is set, messages can still be sent if the server has synchronized hosts (\n-s / --sync\n)\n\n\n\n\n\n\n\n\naddress\n\n\n\n\ntype: \nstring\n\n\ndefault: \n/widgets_id\n\n\nusage: this is the \naddress\n of the osc messages sent by the widget\n\n\n\n\npreArgs\n\n\n\n\ntype: \narray\n\n\ndefault: \n[]\n\n\nusage:\n\n\neach element of the \narray\n defines a constant value that will be prepended to the osc message\n\n\nvalues can be defined as objects if the type needs to be specified (ie different from the default implied by the \nprecision\n)\n\n\n\n\n\n\nexample:\n\n\n\n\npreArgs: [\n    \n1\n,        // this will always be sent as a string\n    0.5,        // this will be sent as an integer if precision equals 0\n    1,          // this will be sent as float if precision is different from 0\n    {\n        type:\nf\n,\n        value:0.5\n    },\n    {\n        type:\ni\n,\n        value:1\n    },\n    {\n        type:\nT\n,\n        value:true\n    },\n    {\n        type:\nF\n,\n        value:false\n    }\n]", 
             "title": "Widgets generics"
         }, 
         {
@@ -182,7 +182,7 @@
         }, 
         {
             "location": "/user-guide/widgets-generics/#label", 
-            "text": "type:  string|false  default:  auto , which displays  id  usage:  set to  false  to hide completely  set to  icon: fontawesome-class  to display an icon from  FontAwesome  (replace  fontawesome-class  with the icon's name)", 
+            "text": "type:  string|false  default:  auto , which displays  id  usage:  set to  false  to hide completely  insert icons from  FontAwesome  using the prefix  ^  followed by the icon's name :  made with ^heart , etc", 
             "title": "label"
         }, 
         {
@@ -337,7 +337,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/matrices/", 
-            "text": "Matrices\n\n\nMatrices are special containers that only contain one type of widget. All contained widgets will be traversed by single dragging gestures.\n\n\nMultifader\n\n\nMultifader creates a row of vertical faders that respond to the same gestures.\n\n\n{\n    type:'multifader',\n    // etc\n}\n\n\n\n\nstrips\n\n\n\n\ntype: \ninteger\n\n\ndefault: \n2\n\n\nusage: number of faders in the row, each fader will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\naddress\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\ntraversing\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: enable traversing gestures\n\n\n\n\noptions\n\n\n\n\nsee fader's \noptions\n\n\n\n\n\n\nMultitoggle\n\n\n{\n    type:'multitoggle',\n    // etc\n}\n\n\n\n\nmatrix\n\n\n\n\ntype: \narray\n\n\ndefault: \n[2,2]\n\n\nusage: defines the number of columns and and rows. Each cell will contain a toggle button that will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\naddress\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\ntraversing\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: enable traversing gestures\n\n\n\n\noptions\n\n\n\n\nsee toggle's \noptions\n\n\n\n\n\n\nMultipush\n\n\n{\n    type:'multipush',\n    // etc\n}\n\n\n\n\nmatrix\n\n\n\n\ntype: \narray\n\n\ndefault: \n[2,2]\n\n\nusage: defines the number of columns and and rows. Each cell will contain a push button that will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\naddress\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\ntraversing\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: enable traversing gestures\n\n\n\n\noptions\n\n\n\n\nsee push's \noptions", 
+            "text": "Matrices\n\n\nMatrices are special containers that only contain one type of widget. All contained widgets will be traversed by single dragging gestures.\n\n\nMultifader\n\n\nMultifader creates a row of vertical faders that respond to the same gestures.\n\n\n{\n    type:'multifader',\n    // etc\n}\n\n\n\n\nstrips\n\n\n\n\ntype: \ninteger\n\n\ndefault: \n2\n\n\nusage: number of faders in the row, each fader will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\naddress\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\ntraversing\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: enable traversing gestures\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: if \ntrue\n, the fader's index will be appended to the widget's osc \naddress\n; if \nfalse\n it will be prepended to the widget's \npreArgs\n\n\n\n\noptions\n\n\n\n\nsee fader's \noptions\n\n\n\n\n\n\nMultitoggle\n\n\n{\n    type:'multitoggle',\n    // etc\n}\n\n\n\n\nmatrix\n\n\n\n\ntype: \narray\n\n\ndefault: \n[2,2]\n\n\nusage: defines the number of columns and and rows. Each cell will contain a toggle button that will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\naddress\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\ntraversing\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: enable traversing gestures\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: if \ntrue\n, the toggle's index will be appended to the widget's osc \naddress\n; if \nfalse\n it will be prepended to the widget's \npreArgs\n\n\n\n\noptions\n\n\n\n\nsee toggle's \noptions\n\n\n\n\n\n\nMultipush\n\n\n{\n    type:'multipush',\n    // etc\n}\n\n\n\n\nmatrix\n\n\n\n\ntype: \narray\n\n\ndefault: \n[2,2]\n\n\nusage: defines the number of columns and and rows. Each cell will contain a push button that will inherit its parent's properties and the following ones (where \ni\n is the fader's index in the row)\n\n\nid\n: same as the widget's with \n/i\n appended to it\n\n\nlabel\n: \ni\n\n\naddress\n: same as the widget's with \n/i\n appended to it\n\n\n\n\n\n\n\n\ntraversing\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: enable traversing gestures\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: if \ntrue\n, the push's index will be appended to the widget's osc \naddress\n; if \nfalse\n it will be prepended to the widget's \npreArgs\n\n\n\n\noptions\n\n\n\n\nsee push's \noptions\n\n\n\n\n\n\nKeyboard\n\n\nThis one works pretty much like the multipush, excepts it looks like a piano keyboard ad\n\n\n{\n    type:'keyboard',\n    // etc\n}\n\n\n\n\nkeys\n\n\n\n\ntype: \ninteger\n\n\ndefault: \n24\n\n\nusage: defines the number keys\n\n\n\n\nstart\n\n\n\n\ntype: \ninteger\n\n\ndefault: \n60\n\n\nusage: MIDI note number to start with (default is C4)\n\n\n\n\ntraversing\n\n\n\n\ntype: \nboolean\n\n\ndefault: \ntrue\n\n\nusage: enable traversing gestures\n\n\n\n\nsplit\n\n\n\n\ntype: \nboolean\n\n\ndefault: \nfalse\n\n\nusage: if \ntrue\n, the note's midi code will be appended to the widget's osc \naddress\n; if \nfalse\n it will be prepended to the widget's \npreArgs\n\n\n\n\noptions\n\n\n\n\nsee push's \noptions\n\n\n\n\ncss\n\n\n--color-white:color; /* white keys color */\n--color-black:color; /* black keys color */", 
             "title": "Matrices"
         }, 
         {
@@ -361,6 +361,11 @@
             "title": "traversing"
         }, 
         {
+            "location": "/user-guide/widgets-specifics/matrices/#split", 
+            "text": "type:  boolean  default:  false  usage: if  true , the fader's index will be appended to the widget's osc  address ; if  false  it will be prepended to the widget's  preArgs", 
+            "title": "split"
+        }, 
+        {
             "location": "/user-guide/widgets-specifics/matrices/#options", 
             "text": "see fader's  options", 
             "title": "options"
@@ -379,6 +384,11 @@
             "location": "/user-guide/widgets-specifics/matrices/#traversing_1", 
             "text": "type:  boolean  default:  true  usage: enable traversing gestures", 
             "title": "traversing"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#split_1", 
+            "text": "type:  boolean  default:  false  usage: if  true , the toggle's index will be appended to the widget's osc  address ; if  false  it will be prepended to the widget's  preArgs", 
+            "title": "split"
         }, 
         {
             "location": "/user-guide/widgets-specifics/matrices/#options_1", 
@@ -401,9 +411,49 @@
             "title": "traversing"
         }, 
         {
+            "location": "/user-guide/widgets-specifics/matrices/#split_2", 
+            "text": "type:  boolean  default:  false  usage: if  true , the push's index will be appended to the widget's osc  address ; if  false  it will be prepended to the widget's  preArgs", 
+            "title": "split"
+        }, 
+        {
             "location": "/user-guide/widgets-specifics/matrices/#options_2", 
             "text": "see push's  options", 
             "title": "options"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#keyboard", 
+            "text": "This one works pretty much like the multipush, excepts it looks like a piano keyboard ad  {\n    type:'keyboard',\n    // etc\n}", 
+            "title": "Keyboard"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#keys", 
+            "text": "type:  integer  default:  24  usage: defines the number keys", 
+            "title": "keys"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#start", 
+            "text": "type:  integer  default:  60  usage: MIDI note number to start with (default is C4)", 
+            "title": "start"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#traversing_3", 
+            "text": "type:  boolean  default:  true  usage: enable traversing gestures", 
+            "title": "traversing"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#split_3", 
+            "text": "type:  boolean  default:  false  usage: if  true , the note's midi code will be appended to the widget's osc  address ; if  false  it will be prepended to the widget's  preArgs", 
+            "title": "split"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#options_3", 
+            "text": "see push's  options", 
+            "title": "options"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/matrices/#css", 
+            "text": "--color-white:color; /* white keys color */\n--color-black:color; /* black keys color */", 
+            "title": "css"
         }, 
         {
             "location": "/user-guide/widgets-specifics/pads/", 

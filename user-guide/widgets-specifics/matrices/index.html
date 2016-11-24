@@ -217,6 +217,8 @@
             
                 <li class="third-level"><a href="#traversing">traversing</a></li>
             
+                <li class="third-level"><a href="#split">split</a></li>
+            
                 <li class="third-level"><a href="#options">options</a></li>
             
         
@@ -225,6 +227,8 @@
                 <li class="third-level"><a href="#matrix">matrix</a></li>
             
                 <li class="third-level"><a href="#traversing_1">traversing</a></li>
+            
+                <li class="third-level"><a href="#split_1">split</a></li>
             
                 <li class="third-level"><a href="#options_1">options</a></li>
             
@@ -235,7 +239,24 @@
             
                 <li class="third-level"><a href="#traversing_2">traversing</a></li>
             
+                <li class="third-level"><a href="#split_2">split</a></li>
+            
                 <li class="third-level"><a href="#options_2">options</a></li>
+            
+        
+            <li class="second-level"><a href="#keyboard">Keyboard</a></li>
+            
+                <li class="third-level"><a href="#keys">keys</a></li>
+            
+                <li class="third-level"><a href="#start">start</a></li>
+            
+                <li class="third-level"><a href="#traversing_3">traversing</a></li>
+            
+                <li class="third-level"><a href="#split_3">split</a></li>
+            
+                <li class="third-level"><a href="#options_3">options</a></li>
+            
+                <li class="third-level"><a href="#css">css</a></li>
             
         
     
@@ -270,6 +291,12 @@
 <li>default: <code>true</code></li>
 <li>usage: enable traversing gestures</li>
 </ul>
+<h4 id="split"><code>split</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: if <code>true</code>, the fader's index will be appended to the widget's osc <code>address</code>; if <code>false</code> it will be prepended to the widget's <code>preArgs</code></li>
+</ul>
 <h4 id="options"><code>options</code></h4>
 <ul>
 <li>see fader's <a href="../sliders/#fader"><code>options</code></a></li>
@@ -298,6 +325,12 @@
 <li>type: <code>boolean</code></li>
 <li>default: <code>true</code></li>
 <li>usage: enable traversing gestures</li>
+</ul>
+<h4 id="split_1"><code>split</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: if <code>true</code>, the toggle's index will be appended to the widget's osc <code>address</code>; if <code>false</code> it will be prepended to the widget's <code>preArgs</code></li>
 </ul>
 <h4 id="options_1"><code>options</code></h4>
 <ul>
@@ -328,10 +361,57 @@
 <li>default: <code>true</code></li>
 <li>usage: enable traversing gestures</li>
 </ul>
+<h4 id="split_2"><code>split</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: if <code>true</code>, the push's index will be appended to the widget's osc <code>address</code>; if <code>false</code> it will be prepended to the widget's <code>preArgs</code></li>
+</ul>
 <h4 id="options_2"><code>options</code></h4>
 <ul>
 <li>see push's <a href="../buttons/#push"><code>options</code></a></li>
-</ul></div>
+</ul>
+<hr />
+<h2 id="keyboard">Keyboard</h2>
+<p>This one works pretty much like the multipush, excepts it looks like a piano keyboard ad</p>
+<pre><code class="js">{
+    type:'keyboard',
+    // etc
+}
+</code></pre>
+
+<h4 id="keys"><code>keys</code></h4>
+<ul>
+<li>type: <code>integer</code></li>
+<li>default: <code>24</code></li>
+<li>usage: defines the number keys</li>
+</ul>
+<h4 id="start"><code>start</code></h4>
+<ul>
+<li>type: <code>integer</code></li>
+<li>default: <code>60</code></li>
+<li>usage: MIDI note number to start with (default is C4)</li>
+</ul>
+<h4 id="traversing_3"><code>traversing</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>true</code></li>
+<li>usage: enable traversing gestures</li>
+</ul>
+<h4 id="split_3"><code>split</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: if <code>true</code>, the note's midi code will be appended to the widget's osc <code>address</code>; if <code>false</code> it will be prepended to the widget's <code>preArgs</code></li>
+</ul>
+<h4 id="options_3"><code>options</code></h4>
+<ul>
+<li>see push's <a href="../buttons/#push"><code>options</code></a></li>
+</ul>
+<h4 id="css"><code>css</code></h4>
+<pre><code>--color-white:color; /* white keys color */
+--color-black:color; /* black keys color */
+</code></pre></div>
         
     </div>
 
