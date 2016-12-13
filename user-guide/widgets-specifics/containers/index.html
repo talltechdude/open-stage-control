@@ -227,6 +227,13 @@
                 <li class="third-level"><a href="#tabs">tabs</a></li>
             
         
+            <li class="second-level"><a href="#modal">Modal</a></li>
+            
+                <li class="third-level"><a href="#widgets_2">widgets</a></li>
+            
+                <li class="third-level"><a href="#tabs_1">tabs</a></li>
+            
+        
     
     </ul>
 </div></div>
@@ -281,6 +288,27 @@
 <li>type: <code>array</code></li>
 <li>default: <code>[]</code></li>
 <li>usage: each element of the <code>array</code> must be a tab <code>object</code>. A panel cannot contain widgets and tabs simultaneously.</li>
+</ul>
+<hr />
+<h2 id="modal">Modal</h2>
+<p>Modals are buttons that turn into a fullscreen panels when enabled. They can be enabled via osc (1 to enable, 0 to disable).</p>
+<pre><code class="js">{
+    type:'modal',
+    // etc
+}
+</code></pre>
+
+<h4 id="widgets_2"><code>widgets</code></h4>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: each element of the <code>array</code> must be a widget <code>object</code>. A modal cannot contain widgets and tabs simultaneously.</li>
+</ul>
+<h4 id="tabs_1"><code>tabs</code></h4>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: each element of the <code>array</code> must be a tab <code>object</code>. A modal cannot contain widgets and tabs simultaneously.</li>
 </ul></div>
         
     </div>
