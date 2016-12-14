@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Open Stage Control is a libre desktop OSC bi-directionnal control surface application. It's built with HTML, JavaScript \n&\n CSS and run as a Node / \nElectron\n web server that accepts any number of Chrome / Chromium / Electron clients.\n    \n\n\n    \n\n\n    \n\n    \n \n...\n\n    \n Latest release (\n...\n)\n\n    \n Demo (chrome 49+ required)\n\n    \n\n\n\n\n\nFeatures\n\n\n\n\nmouse \n multi-touch sensitive widgets\n\n\nmodular \n responsive layout\n\n\nbuilt-in live editor\n\n\nbi-directionnal osc bindings\n\n\nheadless server mode with any number of clients using chromium\n\n\napp state store / recall \n import / export\n\n\nthemes !\n\n\n\n\nSupported platforms\n\n\nThe server can run on all \nplatforms supported by Electron\n. Any client that can run chrome browser can connect to the server.\n\n\nLicense \n credits\n\n\nCopyleft \u00a9 Jean-Emmanuel @\u00a0\nAMMD\n. This program is released under the GNU/GPL3 license.\n\n\nIt relies on the use of several libraries :\n\n\n\n\nNode.js\n\n\nElectron\n\n\nosc.js\n\n\nsocket.io\n\n\nbrowserify\n\n\nexpress\n\n\nnode-sass\n\n\njQuery\n\n\njQuery-UI\n (draggable, resizable \n sortable)\n\n\nFont Awesome", 
+            "text": "Open Stage Control is a libre desktop OSC bi-directionnal control surface application. It's built with HTML, JavaScript \n&\n CSS and run as a Node / \nElectron\n web server that accepts any number of Chrome / Chromium / Electron clients.\n    \n\n\n    \n\n\n    \n\n    \n \n...\n\n    \n Latest release (\n...\n)\n\n    \n Demo (chrome 49+ required)\n\n    \n\n\n\n\n\nFeatures\n\n\n\n\nmouse \n multi-touch sensitive widgets\n\n\nmodular \n responsive layout\n\n\nbuilt-in live editor\n\n\nbi-directionnal osc bindings\n\n\nheadless server mode with any number of clients using chromium\n\n\napp state store / recall \n import / export\n\n\nthemes !\n\n\n\n\nSupported platforms\n\n\nThe server can run on all \nplatforms supported by Electron\n. Any client that can run chrome browser can connect to the server.\n\n\nLicense \n credits\n\n\nCopyleft \u00a9 Jean-Emmanuel @\u00a0\nAMMD\n. This program is released under the GNU/GPL3 license.\n\n\nIt relies on the use of several libraries :\n\n\n\n\nNode.js\n\n\nElectron\n\n\nosc.js\n\n\nsocket.io\n\n\nbrowserify\n\n\nexorcist\n\n\nexpress\n\n\nnode-sass\n\n\njQuery\n\n\njQuery-UI\n (draggable, resizable \n sortable)\n\n\nFont Awesome\n\n\nsource-map", 
             "title": "Home"
         }, 
         {
@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/#license-credits", 
-            "text": "Copyleft \u00a9 Jean-Emmanuel @\u00a0 AMMD . This program is released under the GNU/GPL3 license.  It relies on the use of several libraries :   Node.js  Electron  osc.js  socket.io  browserify  express  node-sass  jQuery  jQuery-UI  (draggable, resizable   sortable)  Font Awesome", 
+            "text": "Copyleft \u00a9 Jean-Emmanuel @\u00a0 AMMD . This program is released under the GNU/GPL3 license.  It relies on the use of several libraries :   Node.js  Electron  osc.js  socket.io  browserify  exorcist  express  node-sass  jQuery  jQuery-UI  (draggable, resizable   sortable)  Font Awesome  source-map", 
             "title": "License &amp; credits"
         }, 
         {
