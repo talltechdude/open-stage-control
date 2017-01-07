@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link rel="shortcut icon" href="../../../../img/logo.png">
+    <link rel="shortcut icon" href="../../../../../../img/logo.png">
 
-    <title>Theming - Open Stage Control</title>
+    <title>Switchers - Open Stage Control</title>
 
-    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../css/base.css" rel="stylesheet">
-    <link href="../../css/cinder.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/highlight.css">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link href="../../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
 
 
-    <link href="../../css/extra.css" rel="stylesheet">
+    <link href="../../../css/extra.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -57,7 +57,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href="../..">Open Stage Control</a>
+            <a class="navbar-brand" href="../../..">Open Stage Control</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -68,13 +68,13 @@
                 
                 
                     <li >
-                        <a href="../..">Home</a>
+                        <a href="../../..">Home</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="../../getting-started/">Getting started</a>
+                        <a href="../../../getting-started/">Getting started</a>
                     </li>
                 
                 
@@ -85,37 +85,37 @@
                         
                             
 <li >
-    <a href="../cutom-module/">Cutom module</a>
+    <a href="../../cutom-module/">Cutom module</a>
 </li>
 
                         
                             
 <li >
-    <a href="../interface/">Interface</a>
+    <a href="../../interface/">Interface</a>
 </li>
 
                         
                             
 <li >
-    <a href="../remote-editing/">Remote editing</a>
+    <a href="../../remote-editing/">Remote editing</a>
 </li>
 
                         
                             
 <li >
-    <a href="../session-file/">Session file</a>
-</li>
-
-                        
-                            
-<li class="active">
-    <a href="./">Theming</a>
+    <a href="../../session-file/">Session file</a>
 </li>
 
                         
                             
 <li >
-    <a href="../widgets-generics/">Widgets generics</a>
+    <a href="../../theming/">Theming</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../widgets-generics/">Widgets generics</a>
 </li>
 
                         
@@ -126,43 +126,43 @@
         
             
 <li >
-    <a href="../widgets-specifics/buttons/">Buttons</a>
+    <a href="../buttons/">Buttons</a>
 </li>
 
         
             
 <li >
-    <a href="../widgets-specifics/containers/">Containers</a>
+    <a href="../containers/">Containers</a>
 </li>
 
         
             
 <li >
-    <a href="../widgets-specifics/matrices/">Matrices</a>
+    <a href="../matrices/">Matrices</a>
 </li>
 
         
             
 <li >
-    <a href="../widgets-specifics/pads/">Pads</a>
+    <a href="../pads/">Pads</a>
 </li>
 
         
             
 <li >
-    <a href="../widgets-specifics/plots/">Plots</a>
+    <a href="../plots/">Plots</a>
 </li>
 
         
             
 <li >
-    <a href="../widgets-specifics/sliders/">Sliders</a>
+    <a href="../sliders/">Sliders</a>
 </li>
 
         
             
-<li >
-    <a href="../widgets-specifics/switchers/">Switchers</a>
+<li class="active">
+    <a href="./">Switchers</a>
 </li>
 
         
@@ -185,12 +185,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../session-file/">
+                        <a rel="next" href="../sliders/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="prev" href="../widgets-generics/">
+                    <li class="disabled">
+                        <a rel="prev" >
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -215,34 +215,53 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#theming">Theming</a></li>
+        <li class="first-level active"><a href="#switchers">Switchers</a></li>
+        
+            <li class="second-level"><a href="#switcher">Switcher</a></li>
+            
+                <li class="third-level"><a href="#linkedwidgets">linkedWidgets</a></li>
+            
+                <li class="third-level"><a href="#values">values</a></li>
+            
+        
+            <li class="second-level"><a href="#crossfader">Crossfader</a></li>
+            
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="theming">Theming</h1>
-<p>Theming is as simple as writing a tiny css file that will override the default style variables defined in <a href="https://github.com/jean-emmanuel/open-stage-control/blob/master/browser/scss/_vars.scss">_vars.scss</a> :</p>
-<pre><code class="css">:root {
-    --color-accent:red;
+<h1 id="switchers">Switchers</h1>
+<p>Switcher can store and recall the state of other widgets.</p>
+<hr />
+<h2 id="switcher">Switcher</h2>
+<p>The switcher looks like the <a href="../buttons/#switch"><code>switch</code></a>. Each of its possible values represent a bank that stores the values from the widgets listed in its <code>linkedWidgets</code> attribute.  </p>
+<pre><code class="js">{
+    type:'switcher',
+    // etc
 }
 </code></pre>
 
-<p>This will change the default accent color to red. Variables can also be overridden for a specific subset of elements, for example :</p>
-<pre><code class="css">.panel-container {
-    --color-text:blue;
-}
-</code></pre>
-
-<p>This will change the default text color to blue for all elements in panel widgets.</p>
-<p>Of course, regular css is also allowed :</p>
-<pre><code class="css">.widget .input {
-    display: none;
-}
-</code></pre>
-
-<p>This will hide the widgets' value inputs.</p></div>
+<h4 id="linkedwidgets"><code>linkedWidgets</code></h4>
+<ul>
+<li>type: <code>array|string</code></li>
+<li>default:
+    <code>empty</code></li>
+<li>usage:</li>
+<li>as a <code>string</code>: a widget's <code>id</code> whose state changes will be stored</li>
+<li>as an <code>array</code>: a list of widget <code>id</code>s</li>
+</ul>
+<h4 id="values"><code>values</code></h4>
+<ul>
+<li>type: <code>array|object</code></li>
+<li>default: <code>["A", "B"]</code></li>
+<li>usage:</li>
+<li><code>array</code> of possible values to switch between : <code>[1,2,3]</code></li>
+<li><code>object</code> of <code>"label":value</code> pairs</li>
+</ul>
+<h2 id="crossfader">Crossfader</h2>
+<p>The crossfader is a 2-states-only switcher that comes with a slider allowing to fade from one state to the other by interpolating the values.  </p></div>
         
     </div>
 
@@ -254,16 +273,16 @@
         <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
     </footer>
 
-    <script src="../../js/jquery-1.10.2.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
+    <script src="../../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script>
-    var base_url = '../..';
+    var base_url = '../../..';
     </script>
-    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
-    <script src="../../js/base.js"></script>
-    <script src="../../js/extra.js"></script>
+    <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
+    <script src="../../../js/base.js"></script>
+    <script src="../../../js/extra.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
         <div class="modal-dialog">
