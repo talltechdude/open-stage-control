@@ -882,7 +882,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/switchers/", 
-            "text": "Switchers\n\n\nSwitcher can store and recall the state of other widgets.\n\n\n\n\nSwitcher\n\n\nThe switcher looks like the \nswitch\n. Each of its possible values represent a bank that stores the values from the widgets listed in its \nlinkedWidgets\n attribute.  \n\n\n{\n    type:'switcher',\n    // etc\n}\n\n\n\n\nlinkedWidgets\n\n\n\n\ntype: \narray|string\n\n\ndefault:\n    \nempty\n\n\nusage:\n\n\nas a \nstring\n: a widget's \nid\n whose state changes will be stored\n\n\nas an \narray\n: a list of widget \nid\ns\n\n\n\n\nvalues\n\n\n\n\ntype: \narray|object\n\n\ndefault: \n[\"A\", \"B\"]\n\n\nusage:\n\n\narray\n of possible values to switch between : \n[1,2,3]\n\n\nobject\n of \n\"label\":value\n pairs\n\n\n\n\nCrossfader\n\n\nThe crossfader is a 2-states-only switcher that comes with a slider allowing to fade from one state to the other by interpolating the values.", 
+            "text": "Switchers\n\n\nSwitcher can store and recall the state of other widgets.\n\n\n\n\nSwitcher\n\n\nThe switcher looks like the \nswitch\n. Each of its possible values represent a bank that stores the values from the widgets listed in its \nlinkedWidgets\n attribute.  \n\n\n{\n    type:'switcher',\n    // etc\n}\n\n\n\n\nlinkedWidgets\n\n\n\n\ntype: \narray|string\n\n\ndefault:\n    \nempty\n\n\nusage:\n\n\nas a \nstring\n: a widget's \nid\n whose state changes will be stored\n\n\nas an \narray\n: a list of widget \nid\n \nstrings\n\n\n\n\n\n\n\n\nvalues\n\n\n\n\ntype: \narray|object\n\n\ndefault: \n[\"A\", \"B\"]\n\n\nusage:\n\n\narray\n of possible values to switch between : \n[1,2,3]\n\n\nobject\n of \n\"label\":value\n pairs\n\n\n\n\n\n\n\n\nCrossfader\n\n\nThe crossfader is a 2-states-only switcher that comes with a slider allowing to fade from one state to the other by interpolating the values.", 
             "title": "Switchers"
         }, 
         {
@@ -897,7 +897,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/switchers/#linkedwidgets", 
-            "text": "type:  array|string  default:\n     empty  usage:  as a  string : a widget's  id  whose state changes will be stored  as an  array : a list of widget  id s", 
+            "text": "type:  array|string  default:\n     empty  usage:  as a  string : a widget's  id  whose state changes will be stored  as an  array : a list of widget  id   strings", 
             "title": "linkedWidgets"
         }, 
         {
