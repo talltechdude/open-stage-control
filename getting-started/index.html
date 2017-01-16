@@ -226,6 +226,9 @@
             <li class="second-level"><a href="#build-from-sources">Build from sources</a></li>
             
         
+            <li class="second-level"><a href="#running-a-true-headless-server">Running a true headless server</a></li>
+            
+        
     
     </ul>
 </div></div>
@@ -332,7 +335,13 @@ $ npm run debarm
 </code></pre>
 
 <p>This will build the app in <code>dist/open-stage-control-PLATFORM-ARCH</code>.</p>
-<p><em>Please note that building the app for windows from a linux system requires wine to be installed.</em></p></div>
+<p><em>Please note that building the app for windows from a linux system requires wine to be installed.</em></p>
+<hr />
+<h2 id="running-a-true-headless-server">Running a true headless server</h2>
+<p>Electron, Open Stage Control's engine, is based on chromium and can't run out of the box without a display server. However, using a virtual framebuffer does the trick. Detailed instructions can be found in Electron's <a href="http://electron.atom.io/docs/tutorial/testing-on-headless-ci/">documentation</a>.</p>
+<p>In short: install <code>https://github.com/jean-emmanuel/open-stage-control/issues/xfvb</code> and prepend your command with <code>xvfb-run</code>:  </p>
+<pre><code class="bash">xvfb-run open-stage-control -n
+</code></pre></div>
         
     </div>
 
