@@ -138,6 +138,12 @@
         
             
 <li >
+    <a href="../maths/">Maths</a>
+</li>
+
+        
+            
+<li >
     <a href="../matrices/">Matrices</a>
 </li>
 
@@ -313,7 +319,7 @@
 <li>default: <code>false</code></li>
 <li>usage:<ul>
 <li>set to <code>true</code> to send separate osc messages for <code>x</code> and <code>y</code> axis. The <code>address</code> will be the same as the widget's with <code>/x</code> or <code>/y</code> appended to it</li>
-<li>can be set as an object to specify a different <code>address</code> : <code>{x:'/osc_address_x', y:'/osc_address_y'}</code></li>
+<li>can be set as an object to specify a different <code>address</code> : <code>['/osc_address_x', '/osc_address_y']</code></li>
 </ul>
 </li>
 <li>note: the widget will only respond to its original osc address, not to the splitted version</li>
@@ -328,9 +334,9 @@
 
 <h4 id="points"><code>points</code></h4>
 <ul>
-<li>type: <code>integer</code></li>
+<li>type: <code>integer|array</code></li>
 <li>default: <code>2</code></li>
-<li>usage: defines the number of points on the pad</li>
+<li>usage: defines the number of points on the pad. Can be an <code>array</code> of <code>strings</code> that will be used as labels for the points (ex: <code>['A', 'B']</code>)</li>
 </ul>
 <h4 id="pointsize"><code>pointSize</code></h4>
 <ul>
@@ -369,8 +375,8 @@
 <li>type: <code>boolean|object</code></li>
 <li>default: <code>false</code></li>
 <li>usage:<ul>
-<li>set to <code>true</code> to send separate osc messages for each point's <code>x</code> and <code>y</code> axis. The <code>address</code> will be the same as the widget's with <code>/N/x</code> or <code>/N/y</code> appended to it, where <code>N</code> is the point's id.</li>
-<li>can be set as an object to specify a different <code>address</code> : <code>{0:'/osc_address/0', 1:'/osc_address_/1'}</code> (each address will be appended <code>/x</code> or <code>y</code>)</li>
+<li>set to <code>true</code> to send separate osc messages for each point's <code>x</code> and <code>y</code> axis. The <code>address</code> will be the same as the widget's with <code>/N/x</code> or <code>/N/y</code> appended to it, where <code>N</code> is the point's id (or the point's label if <code>points</code> is an <code>array</code>).</li>
+<li>can be set as an object to specify a different <code>address</code> : <code>['/0/x', '/0/y', '/1/x', '/2/y']</code></li>
 </ul>
 </li>
 <li>note: the widget will only respond to its original osc address, not to the splitted version</li>
@@ -406,7 +412,7 @@
 <li>default: <code>false</code></li>
 <li>usage:<ul>
 <li>set to <code>true</code> to send separate osc messages for <code>r</code> and <code>g</code> &amp; <code>b</code>. The <code>address</code> will be the same as the widget's with <code>/r</code>, <code>/g</code> or <code>/b</code> appended to it</li>
-<li>can be set as an object to specify a different <code>address</code> : <code>{r:'/osc_address_r', g:'/osc_address_g',b:'/osc_address_b'}</code></li>
+<li>can be set as an object to specify a different <code>address</code> : <code>['/r', '/b', '/b']</code></li>
 </ul>
 </li>
 </ul></div>

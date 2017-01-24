@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../../../../../img/logo.png">
 
-    <title>Buttons - Open Stage Control</title>
+    <title>Maths - Open Stage Control</title>
 
     <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -125,8 +125,8 @@
     <ul class="dropdown-menu">
         
             
-<li class="active">
-    <a href="./">Buttons</a>
+<li >
+    <a href="../buttons/">Buttons</a>
 </li>
 
         
@@ -137,8 +137,8 @@
 
         
             
-<li >
-    <a href="../maths/">Maths</a>
+<li class="active">
+    <a href="./">Maths</a>
 </li>
 
         
@@ -191,12 +191,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../../widgets-generics/">
+                        <a rel="next" href="../containers/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../containers/">
+                        <a rel="prev" href="../matrices/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -221,27 +221,11 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#buttons">Buttons</a></li>
+        <li class="first-level active"><a href="#maths">Maths</a></li>
         
-            <li class="second-level"><a href="#toggle">Toggle</a></li>
+            <li class="second-level"><a href="#formula">Formula</a></li>
             
-                <li class="third-level"><a href="#on">on</a></li>
-            
-                <li class="third-level"><a href="#off">off</a></li>
-            
-        
-            <li class="second-level"><a href="#push">Push</a></li>
-            
-                <li class="third-level"><a href="#on_1">on</a></li>
-            
-                <li class="third-level"><a href="#off_1">off</a></li>
-            
-                <li class="third-level"><a href="#norelease">norelease</a></li>
-            
-        
-            <li class="second-level"><a href="#switch">Switch</a></li>
-            
-                <li class="third-level"><a href="#values">values</a></li>
+                <li class="third-level"><a href="#formula_1">formula</a></li>
             
         
     
@@ -249,88 +233,24 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="buttons">Buttons</h1>
-<p>Buttons are exactly what you think they are.</p>
+<h1 id="maths">Maths</h1>
+<p>Maths do the maths !</p>
 <hr />
-<h2 id="toggle">Toggle</h2>
+<h2 id="formula">Formula</h2>
+<p>Formula evaluates mathematical expressions over other widgets' values each one of these widgets changes.</p>
 <pre><code class="js">{
-    type:'toggle',
+    type:'formula',
     // etc
 }
 </code></pre>
 
-<h4 id="on"><code>on</code></h4>
+<h4 id="formula_1"><code>formula</code></h4>
 <ul>
-<li>type: <code>string|number|object</code></li>
-<li>default: <code>1</code></li>
-<li>usage: defines which value is sent on <code>on</code> position<ul>
-<li>set to <code>null</code> to send send no argument in the osc message</li>
-<li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
-</ul>
-</li>
-</ul>
-<h4 id="off"><code>off</code></h4>
-<ul>
-<li>type: <code>string|number|object</code></li>
-<li>default: <code>0</code></li>
-<li>usage: defines which value is sent on <code>off</code> position<ul>
-<li>set to <code>null</code> to send send no argument in the osc message</li>
-<li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="push">Push</h2>
-<pre><code class="js">{
-    type:'push',
-    // etc
-}
-</code></pre>
-
-<h4 id="on_1"><code>on</code></h4>
-<ul>
-<li>type: <code>string|number|object</code></li>
-<li>default: <code>1</code></li>
-<li>usage: defines which value is sent when pushing the button<ul>
-<li>set to <code>null</code> to send send no argument in the osc message</li>
-<li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
-</ul>
-</li>
-</ul>
-<h4 id="off_1"><code>off</code></h4>
-<ul>
-<li>type: <code>string|number|object</code></li>
-<li>default: <code>0</code></li>
-<li>usage: defines which value is sent when releasing the button<ul>
-<li>set to <code>null</code> to send send no argument in the osc message</li>
-<li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
-</ul>
-</li>
-</ul>
-<h3 id="norelease"><code>norelease</code></h3>
-<ul>
-<li>type: <code>bool</code></li>
-<li>default: <code>false</code></li>
-<li>usage: set to true to prevent sending any osc message when releasing the button</li>
-</ul>
-<p>Setting the <code>push</code>'s value externally (via osc) will toggle it's inner light.</p>
-<hr />
-<h2 id="switch">Switch</h2>
-<pre><code class="js">{
-    type:'switch',
-    // etc
-}
-</code></pre>
-
-<h4 id="values"><code>values</code></h4>
-<ul>
-<li>type: <code>array|object</code></li>
-<li>default: <code>{"Value 1":1,"Value 2":2}</code></li>
-<li>usage:<ul>
-<li><code>array</code> of possible values to switch between : <code>[1,2,3]</code></li>
-<li><code>object</code> of <code>"label":value</code> pairs</li>
-</ul>
-</li>
+<li>type: <code>string</code></li>
+<li>default: <code>''</code></li>
+<li>usage: a <a href="http://mathjs.org/docs/expressions/syntax.html">mathjs</a> expression in which</li>
+<li><code>${id}</code> will be replaced the <code>id</code>'s value  </li>
+<li>example: <code>${fader_1} * 2 + ${fader_2}</code></li>
 </ul></div>
         
     </div>
