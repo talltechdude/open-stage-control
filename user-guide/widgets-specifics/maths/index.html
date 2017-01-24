@@ -227,6 +227,8 @@
             
                 <li class="third-level"><a href="#formula_1">formula</a></li>
             
+                <li class="third-level"><a href="#split">split</a></li>
+            
         
     
     </ul>
@@ -248,9 +250,19 @@
 <ul>
 <li>type: <code>string</code></li>
 <li>default: <code>''</code></li>
-<li>usage: a <a href="http://mathjs.org/docs/expressions/syntax.html">mathjs</a> expression in which</li>
+<li>usage: a <a href="http://mathjs.org/docs/expressions/syntax.html">mathjs</a> expression in which<ul>
 <li><code>${id}</code> will be replaced the <code>id</code>'s value  </li>
 <li>example: <code>${fader_1} * 2 + ${fader_2}</code></li>
+</ul>
+</li>
+<li><strong>important note</strong>: contrary to what is stated in <em>mathjs</em>' documentation, <strong>matrix indexes are zero-based</strong> here</li>
+</ul>
+<h4 id="split"><code>split</code></h4>
+<ul>
+<li>type: <code>object</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: specify a different <code>address</code> for each item of the widget's value : <code>['/a', '/b']</code></li>
+<li>note: only use this is the formula return an <code>array</code></li>
 </ul></div>
         
     </div>

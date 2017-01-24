@@ -362,7 +362,7 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/maths/", 
-            "text": "Maths\n\n\nMaths do the maths !\n\n\n\n\nFormula\n\n\nFormula evaluates mathematical expressions over other widgets' values each one of these widgets changes.\n\n\n{\n    type:'formula',\n    // etc\n}\n\n\n\n\nformula\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage: a \nmathjs\n expression in which\n\n\n${id}\n will be replaced the \nid\n's value  \n\n\nexample: \n${fader_1} * 2 + ${fader_2}", 
+            "text": "Maths\n\n\nMaths do the maths !\n\n\n\n\nFormula\n\n\nFormula evaluates mathematical expressions over other widgets' values each one of these widgets changes.\n\n\n{\n    type:'formula',\n    // etc\n}\n\n\n\n\nformula\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage: a \nmathjs\n expression in which\n\n\n${id}\n will be replaced the \nid\n's value  \n\n\nexample: \n${fader_1} * 2 + ${fader_2}\n\n\n\n\n\n\nimportant note\n: contrary to what is stated in \nmathjs\n' documentation, \nmatrix indexes are zero-based\n here\n\n\n\n\nsplit\n\n\n\n\ntype: \nobject\n\n\ndefault: \n[]\n\n\nusage: specify a different \naddress\n for each item of the widget's value : \n['/a', '/b']\n\n\nnote: only use this is the formula return an \narray", 
             "title": "Maths"
         }, 
         {
@@ -377,8 +377,13 @@
         }, 
         {
             "location": "/user-guide/widgets-specifics/maths/#formula_1", 
-            "text": "type:  string  default:  ''  usage: a  mathjs  expression in which  ${id}  will be replaced the  id 's value    example:  ${fader_1} * 2 + ${fader_2}", 
+            "text": "type:  string  default:  ''  usage: a  mathjs  expression in which  ${id}  will be replaced the  id 's value    example:  ${fader_1} * 2 + ${fader_2}    important note : contrary to what is stated in  mathjs ' documentation,  matrix indexes are zero-based  here", 
             "title": "formula"
+        }, 
+        {
+            "location": "/user-guide/widgets-specifics/maths/#split", 
+            "text": "type:  object  default:  []  usage: specify a different  address  for each item of the widget's value :  ['/a', '/b']  note: only use this is the formula return an  array", 
+            "title": "split"
         }, 
         {
             "location": "/user-guide/widgets-specifics/matrices/", 
