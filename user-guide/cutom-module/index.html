@@ -236,6 +236,9 @@
     // Do whatever you want, initialize some variables, declare some functions, ...
 
     return {
+        init: function(){
+            // this will be executed once when the osc server starts
+        },
         oscInFilter:function(data){
             // Filter incomming osc messages
 
@@ -271,6 +274,7 @@
 <li><code>console</code>: <code>object</code></li>
 <li><code>sendOsc</code>: <code>function({address, args, host, port})</code></li>
 <li><code>receiveOsc</code>: <code>function({address, args, host, port})</code></li>
+<li><code>setTimeout</code>: <code>function(function, delay)</code></li>
 </ul></div>
         
     </div>
