@@ -227,6 +227,8 @@
             
                 <li class="third-level"><a href="#edit-exec-edit-id-options">edit :  /EXEC edit id options</a></li>
             
+                <li class="third-level"><a href="#edit_soft-exec-edit_soft-id-options">edit_soft :  /EXEC edit_soft id options</a></li>
+            
         
     
     </ul>
@@ -240,7 +242,15 @@
 
 <h2 id="supported-commands">Supported commands</h2>
 <h4 id="edit-exec-edit-id-options"><code>edit</code> :  <code>/EXEC edit id options</code></h4>
-<p>Apply a set of options to an existing widget</p>
+<p>Apply a set of options to an existing widget by replacing the old ones with the new ones.</p>
+<ul>
+<li><code>id</code>: <code>string</code>, widget's <code>id</code></li>
+<li><code>options</code>: <code>string</code>, JSON object defining the new properties to merge</li>
+<li>example: <code>{"label":"New Label", "color":"red"}</code></li>
+</ul>
+<p><em>Editing a widget can be cpu expensive, hence updating the UI continuously is not a good idea.</em></p>
+<h4 id="edit_soft-exec-edit_soft-id-options"><code>edit_soft</code> :  <code>/EXEC edit_soft id options</code></h4>
+<p>Apply a set of options to an existing widget by merging them to the widget's options.  </p>
 <ul>
 <li><code>id</code>: <code>string</code>, widget's <code>id</code></li>
 <li><code>options</code>: <code>string</code>, JSON object defining the new properties to merge</li>

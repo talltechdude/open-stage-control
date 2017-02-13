@@ -97,7 +97,7 @@
         }, 
         {
             "location": "/user-guide/remote-editing/", 
-            "text": "Remote editing\n\n\nThe interface can be remotely edited by sending the appropriate osc messages (from an external source with \n-o\n / \n--osc-port\n set, or via \ncustom-module\n scripting).\n\n\n/EXEC COMMAND ARGS\n\n\n\n\nSupported commands\n\n\nedit\n :  \n/EXEC edit id options\n\n\nApply a set of options to an existing widget\n\n\n\n\nid\n: \nstring\n, widget's \nid\n\n\noptions\n: \nstring\n, JSON object defining the new properties to merge\n\n\nexample: \n{\"label\":\"New Label\", \"color\":\"red\"}\n\n\n\n\nEditing a widget can be cpu expensive, hence updating the UI continuously is not a good idea.", 
+            "text": "Remote editing\n\n\nThe interface can be remotely edited by sending the appropriate osc messages (from an external source with \n-o\n / \n--osc-port\n set, or via \ncustom-module\n scripting).\n\n\n/EXEC COMMAND ARGS\n\n\n\n\nSupported commands\n\n\nedit\n :  \n/EXEC edit id options\n\n\nApply a set of options to an existing widget by replacing the old ones with the new ones.\n\n\n\n\nid\n: \nstring\n, widget's \nid\n\n\noptions\n: \nstring\n, JSON object defining the new properties to merge\n\n\nexample: \n{\"label\":\"New Label\", \"color\":\"red\"}\n\n\n\n\nEditing a widget can be cpu expensive, hence updating the UI continuously is not a good idea.\n\n\nedit_soft\n :  \n/EXEC edit_soft id options\n\n\nApply a set of options to an existing widget by merging them to the widget's options.  \n\n\n\n\nid\n: \nstring\n, widget's \nid\n\n\noptions\n: \nstring\n, JSON object defining the new properties to merge\n\n\nexample: \n{\"label\":\"New Label\", \"color\":\"red\"}\n\n\n\n\nEditing a widget can be cpu expensive, hence updating the UI continuously is not a good idea.", 
             "title": "Remote editing"
         }, 
         {
@@ -112,8 +112,13 @@
         }, 
         {
             "location": "/user-guide/remote-editing/#edit-exec-edit-id-options", 
-            "text": "Apply a set of options to an existing widget   id :  string , widget's  id  options :  string , JSON object defining the new properties to merge  example:  {\"label\":\"New Label\", \"color\":\"red\"}   Editing a widget can be cpu expensive, hence updating the UI continuously is not a good idea.", 
+            "text": "Apply a set of options to an existing widget by replacing the old ones with the new ones.   id :  string , widget's  id  options :  string , JSON object defining the new properties to merge  example:  {\"label\":\"New Label\", \"color\":\"red\"}   Editing a widget can be cpu expensive, hence updating the UI continuously is not a good idea.", 
             "title": "edit :  /EXEC edit id options"
+        }, 
+        {
+            "location": "/user-guide/remote-editing/#edit_soft-exec-edit_soft-id-options", 
+            "text": "Apply a set of options to an existing widget by merging them to the widget's options.     id :  string , widget's  id  options :  string , JSON object defining the new properties to merge  example:  {\"label\":\"New Label\", \"color\":\"red\"}   Editing a widget can be cpu expensive, hence updating the UI continuously is not a good idea.", 
+            "title": "edit_soft :  /EXEC edit_soft id options"
         }, 
         {
             "location": "/user-guide/session-file/", 
