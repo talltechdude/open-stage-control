@@ -229,7 +229,7 @@
     
         <li class="first-level active"><a href="#sending-receiving-midi">Sending / Receiving MIDI</a></li>
         
-            <li class="second-level"><a href="#requirement">Requirement</a></li>
+            <li class="second-level"><a href="#requirements">Requirements</a></li>
             
         
             <li class="second-level"><a href="#setup">Setup</a></li>
@@ -248,7 +248,7 @@
 
 <h1 id="sending-receiving-midi">Sending / Receiving MIDI</h1>
 <p>Open Stage Control can send and receive midi messages using pyo / portmidi.</p>
-<h2 id="requirement">Requirement</h2>
+<h2 id="requirements">Requirements</h2>
 <p>MIDI support requires additionnal softwares to be installed on the server's system:</p>
 <ul>
 <li><code>python 2.7</code></li>
@@ -258,16 +258,13 @@
 <p>Providing cross-platform midi support is not trivial, as it requires os-specific compilations that cannot be automated within Open Stage Control's current packaging workflow. Using a python addon seems the best compromise so far : the core app remains easy to build, and the extra dependency is easy to install.</p>
 <p>Note: <code>pyo</code> doesn't support Windows 64bit.</p>
 <h2 id="setup">Setup</h2>
-<p>When running the app, the <code>-m / -midi</code> switch must be set; it accepts the following arguments (separated by spaces):</p>
-<ul>
-<li><code>list</code>: prints the available midi inputs / outputs</li>
-<li><code>device_name:input,output</code>, where:<ul>
-<li><code>device_name</code></li>
-<li><code>input</code> is the midi input number (midi message sent to open-stage-control)</li>
-<li><code>output</code> is the midi output number (midi message sent from open-stage-control)</li>
-</ul>
-</li>
-</ul>
+<p>When running the app, the <code>-m / -midi</code> switch must be set; it accepts the following arguments (separated by spaces):
+z
+- <code>list</code>: prints the available midi inputs / outputs
+- <code>device_name:input,output</code>, where:
+    - <code>device_name</code>
+    - <code>input</code> is the midi input number (midi message sent to open-stage-control)
+    - <code>output</code> is the midi output number (midi message sent from open-stage-control)</p>
 <p><strong>Linux only</strong></p>
 <ul>
 <li><code>device_name:virtual</code>: (requires <a href="http://das.nasophon.de/mididings/"><code>mididings</code></a> to be installed) creates a virtual midi device called 'Open Stage Control' with the following ports :<ul>
