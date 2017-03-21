@@ -244,12 +244,14 @@
             
                 <li class="third-level"><a href="#tabs">tabs</a></li>
             
+                <li class="third-level"><a href="#layout">layout</a></li>
+            
+                <li class="third-level"><a href="#spacing">spacing</a></li>
+            
         
             <li class="second-level"><a href="#modal">Modal</a></li>
             
-                <li class="third-level"><a href="#widgets_2">widgets</a></li>
-            
-                <li class="third-level"><a href="#tabs_1">tabs</a></li>
+                <li class="third-level"><a href="#options">options</a></li>
             
         
     
@@ -307,6 +309,18 @@
 <li>default: <code>[]</code></li>
 <li>usage: each element of the <code>array</code> must be a tab <code>object</code>. A panel cannot contain widgets and tabs simultaneously.</li>
 </ul>
+<h4 id="layout"><code>layout</code></h4>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>''</code></li>
+<li>usage: <code>layout</code> must be a valid <a href="https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html">Visual Format Language</a> expression. It accepts the <a href="https://github.com/IjzerenHein/autolayout.js#extended-visual-format-language-evfl">Extended Visual Format Language</a> as well. Widgets are targeted using their <code>id</code> or their index prefixed with a <code>$</code> (<code>$0, $1, etc</code>), the latter method being incompatible with the <a href="https://github.com/IjzerenHein/autolayout.js#view-ranges-spread-operator">range spread operator</a>. Expressions can be tested and debugged with the online <a href="https://rawgit.com/IjzerenHein/visualformat-editor/master/dist/index.html">Visual Format Editor</a>.</li>
+</ul>
+<h4 id="spacing"><code>spacing</code></h4>
+<ul>
+<li>type: <code>integer|array</code></li>
+<li>default: <code>0</code></li>
+<li>usage: spacing size used in <code>layout</code> expression, can be set as a <code>[vertical,horizontal]</code> array.</li>
+</ul>
 <hr />
 <h2 id="modal">Modal</h2>
 <p>Modals are buttons that turn into a fullscreen panels when enabled. They can be enabled via osc (1 to enable, 0 to disable).</p>
@@ -316,17 +330,9 @@
 }
 </code></pre>
 
-<h4 id="widgets_2"><code>widgets</code></h4>
+<h4 id="options"><code>options</code></h4>
 <ul>
-<li>type: <code>array</code></li>
-<li>default: <code>[]</code></li>
-<li>usage: each element of the <code>array</code> must be a widget <code>object</code>. A modal cannot contain widgets and tabs simultaneously.</li>
-</ul>
-<h4 id="tabs_1"><code>tabs</code></h4>
-<ul>
-<li>type: <code>array</code></li>
-<li>default: <code>[]</code></li>
-<li>usage: each element of the <code>array</code> must be a tab <code>object</code>. A modal cannot contain widgets and tabs simultaneously.</li>
+<li>see panel's <a href="#panel"><code>options</code></a></li>
 </ul></div>
         
     </div>
