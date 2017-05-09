@@ -229,6 +229,9 @@
     
         <li class="first-level active"><a href="#user-interface">User interface</a></li>
         
+            <li class="second-level"><a href="#url-options">URL Options</a></li>
+            
+        
             <li class="second-level"><a href="#interaction-events">Interaction events</a></li>
             
                 <li class="third-level"><a href="#click-tap">Click / Tap</a></li>
@@ -256,6 +259,14 @@
 
 <h1 id="user-interface">User interface</h1>
 <hr />
+<h2 id="url-options">URL Options</h2>
+<p>Client specific options can be set by adding query parameters to the server's url. One must prepend the url with a question mark (<code>?</code>) followed by <code>parameter=value</code> pairs separated with ampersands (<code>&amp;</code>).</p>
+<p>Supported options:</p>
+<ul>
+<li><code>hdpi=1</code>: enable high resolution canvas</li>
+</ul>
+<p>Example:</p>
+<p><code>http://server-ip:port?hdpi=1</code></p>
 <h2 id="interaction-events">Interaction events</h2>
 <h3 id="click-tap">Click / Tap</h3>
 <p>Click / Tap events are handled at pressing time, not releasing.</p>

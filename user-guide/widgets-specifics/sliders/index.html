@@ -249,6 +249,8 @@
             
                 <li class="third-level"><a href="#snap">snap</a></li>
             
+                <li class="third-level"><a href="#spring">spring</a></li>
+            
                 <li class="third-level"><a href="#meter">meter</a></li>
             
                 <li class="third-level"><a href="#css">css</a></li>
@@ -272,7 +274,24 @@
             
                 <li class="third-level"><a href="#snap_1">snap</a></li>
             
+                <li class="third-level"><a href="#spring_1">spring</a></li>
+            
                 <li class="third-level"><a href="#css_1">css</a></li>
+            
+        
+            <li class="second-level"><a href="#encoder">Encoder</a></li>
+            
+                <li class="third-level"><a href="#ticks">ticks</a></li>
+            
+                <li class="third-level"><a href="#back">back</a></li>
+            
+                <li class="third-level"><a href="#forth">forth</a></li>
+            
+                <li class="third-level"><a href="#release">release</a></li>
+            
+                <li class="third-level"><a href="#snap_2">snap</a></li>
+            
+                <li class="third-level"><a href="#css_2">css</a></li>
             
         
     
@@ -355,6 +374,12 @@
 <li>type: <code>boolean</code></li>
 <li>default: <code>false</code></li>
 <li>usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to <code>true</code> will make it snap directly to the mouse/touch position.</li>
+</ul>
+<h4 id="spring"><code>spring</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: when set to <code>true</code>, the widget will go back to its initial value when released.</li>
 </ul>
 <h4 id="meter"><code>meter</code></h4>
 <ul>
@@ -440,10 +465,68 @@
 <li>default: <code>false</code></li>
 <li>usage: by default, dragging the widget <em>vertically</em> will modify it's value starting from its last value. Setting this to <code>true</code> will make it snap directly to the mouse/touch position.</li>
 </ul>
+<h4 id="spring_1"><code>spring</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: when set to <code>true</code>, the widget will go back to its initial value when released.</li>
+</ul>
 <h4 id="css_1"><code>css</code></h4>
 <pre><code>--color-gauge:color;
 --color-knob:color;
 --color-pips:color;
+</code></pre>
+
+<h2 id="encoder">Encoder</h2>
+<p>An endless knob that only responds to rotative gestures.</p>
+<pre><code class="js">{
+    type:'encoder',
+    // etc
+}
+</code></pre>
+
+<h4 id="ticks"><code>ticks</code></h4>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>360</code></li>
+<li>usage: defines the granularity / verbosity of the encoder (number of step for a 360° arc)</li>
+</ul>
+<h4 id="back"><code>back</code></h4>
+<ul>
+<li>type: <code>string|number|object</code></li>
+<li>default: <code>-1</code></li>
+<li>usage: defines which value is sent when rotating the encoder anticlockwise<ul>
+<li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
+</ul>
+</li>
+</ul>
+<h4 id="forth"><code>forth</code></h4>
+<ul>
+<li>type: <code>string|number|object</code></li>
+<li>default: <code>1</code></li>
+<li>usage: defines which value is sent when rotating the encoder clockwise<ul>
+<li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
+</ul>
+</li>
+</ul>
+<h4 id="release"><code>release</code></h4>
+<ul>
+<li>type: <code>string|number|object</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: defines which value is sent when releasing the encoder<ul>
+<li>set to <code>null</code> to send send no argument in the osc message</li>
+<li>can be an <code>object</code> if the type needs to be specified (see <a href="../../widgets-generics/#preargs">preArgs</a>)</li>
+</ul>
+</li>
+</ul>
+<h4 id="snap_2"><code>snap</code></h4>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: by default, dragging the widget will modify it's value starting from its last value. Setting this to <code>true</code> will make it snap directly to the mouse/touch position.</li>
+</ul>
+<h4 id="css_2"><code>css</code></h4>
+<pre><code>--color-knob:color;
 </code></pre></div>
         
     </div>
