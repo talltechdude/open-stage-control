@@ -261,6 +261,8 @@
             
                 <li class="third-level"><a href="#address">address</a></li>
             
+                <li class="third-level"><a href="#touchaddress">touchAddress</a></li>
+            
                 <li class="third-level"><a href="#preargs">preArgs</a></li>
             
         
@@ -381,8 +383,17 @@
 <ul>
 <li>type: <code>string</code></li>
 <li>default: <code>/widgets_id</code></li>
-<li>usage: this is the <code>address</code> of the osc messages sent by the widget</li>
+<li>usage: this is the <code>address</code> of the osc messages sent by the widget, it must start with a <code>/</code></li>
 </ul>
+<h4 id="touchaddress"><code>touchAddress</code></h4>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: sliders and pads can send special osc messages to inform weither they are currently touched or not. The osc message will be of the following form :</li>
+</ul>
+<pre><code>    /touch/address [preArgs] 0/1
+</code></pre>
+
 <h4 id="preargs"><code>preArgs</code></h4>
 <ul>
 <li>type: <code>array</code></li>
