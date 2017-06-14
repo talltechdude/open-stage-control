@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../../../../img/logo.png">
 
-    <title>Widgets generics - Open Stage Control</title>
+    <title>Widgets properties - Open Stage Control</title>
 
     <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -109,19 +109,13 @@
                         
                             
 <li >
-    <a href="../session-file/">Session file</a>
-</li>
-
-                        
-                            
-<li >
     <a href="../theming/">Theming</a>
 </li>
 
                         
                             
 <li class="active">
-    <a href="./">Widgets generics</a>
+    <a href="./">Widgets properties</a>
 </li>
 
                         
@@ -227,7 +221,10 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#widgets-generics">Widgets generics</a></li>
+        <li class="first-level active"><a href="#widgets-properties">Widgets properties</a></li>
+        
+    
+        <li class="first-level "><a href="#property-inheritance">Property inheritance</a></li>
         
             <li class="second-level"><a href="#basics">Basics</a></li>
             
@@ -271,8 +268,8 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="widgets-generics">Widgets generics</h2>
-<p>A widget object is a javascript object. All widgets share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:</p>
+<h2 id="widgets-properties">Widgets properties</h2>
+<p>All widgets share a set of generic properties described below. Each widget type comes with an additional set of specific properties which are documented in these pages:</p>
 <ul>
 <li><a href="../widgets-specifics/sliders/">Sliders</a></li>
 <li><a href="../widgets-specifics/buttons/">Buttons</a></li>
@@ -288,6 +285,20 @@
 }
 </code></pre>
 
+<h2 id="property-inheritance">Property inheritance</h2>
+<p>Widgets can use each other's property values by using the following syntaxes:</p>
+<ul>
+<li><code>@{this.propertyName}</code></li>
+<li><code>@{parent.propertyName}</code></li>
+<li><code>@{widgetId.propertyName}</code> (where <code>widgetId</code> is the target widget's <code>id</code>)</li>
+</ul>
+<p>It can be used to:</p>
+<ul>
+<li>concatenate strings: <code>/@{parent.id}/some_suffix</code></li>
+<li>define object value:   <code>["@{parent.id}"]</code></li>
+</ul>
+<p>If the retreived property is an object (<code>[] / {}</code>), it can be used as is or one can retreive a specfic item from it: <code>@{parent.variables.0}</code> will try to return the first item of the parent's <code>variables</code> property.</p>
+<p>Note: the root panel's <code>id</code> is <code>root</code>.</p>
 <hr />
 <h3 id="basics">Basics</h3>
 <h4 id="type"><code>type</code></h4>

@@ -109,19 +109,13 @@
                         
                             
 <li >
-    <a href="../session-file/">Session file</a>
-</li>
-
-                        
-                            
-<li >
     <a href="../theming/">Theming</a>
 </li>
 
                         
                             
 <li >
-    <a href="../widgets-generics/">Widgets generics</a>
+    <a href="../widgets-properties/">Widgets properties</a>
 </li>
 
                         
@@ -264,6 +258,8 @@
         oscOutFilter:function(data){
             // Filter outgoing osc messages
 
+            var {address, args, host, port} = data
+
             // same as oscInFilter
 
             // return data if you want the message to be and sent
@@ -275,7 +271,7 @@
 
 </code></pre>
 
-<p>The module is executed in a restricted context, only a few globals areh available :</p>
+<p>The module is executed in a restricted context, only a few globals are available :</p>
 <ul>
 <li><code>console</code>: <code>object</code></li>
 <li><code>sendOsc</code>: <code>function({address, args, host, port})</code></li>

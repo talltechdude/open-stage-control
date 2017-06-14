@@ -109,19 +109,13 @@
                         
                             
 <li >
-    <a href="../session-file/">Session file</a>
-</li>
-
-                        
-                            
-<li >
     <a href="../theming/">Theming</a>
 </li>
 
                         
                             
 <li >
-    <a href="../widgets-generics/">Widgets generics</a>
+    <a href="../widgets-properties/">Widgets properties</a>
 </li>
 
                         
@@ -236,6 +230,8 @@
             
                 <li class="third-level"><a href="#click-tap">Click / Tap</a></li>
             
+                <li class="third-level"><a href="#double-click-tap">Double Click / Tap</a></li>
+            
                 <li class="third-level"><a href="#right-click-long-touch">Right-click / Long touch</a></li>
             
                 <li class="third-level"><a href="#drag">Drag</a></li>
@@ -264,12 +260,15 @@
 <p>Supported options:</p>
 <ul>
 <li><code>hdpi=1</code>: enable high resolution canvas</li>
+<li><code>doubletab=X</code>: sets the double tap/click time thershold in milliseconds (default to <code>375</code>)</li>
 </ul>
 <p>Example:</p>
 <p><code>http://server-ip:port?hdpi=1</code></p>
 <h2 id="interaction-events">Interaction events</h2>
 <h3 id="click-tap">Click / Tap</h3>
 <p>Click / Tap events are handled at pressing time, not releasing.</p>
+<h3 id="double-click-tap">Double Click / Tap</h3>
+<p>Some widgets handle double click / tap events.</p>
 <h3 id="right-click-long-touch">Right-click / Long touch</h3>
 <p>Widgets that have only one value input will give focus to it when receiving this event. When the editor is enabled, Right-click / Long touch spawns the editor's context menu.</p>
 <h3 id="drag">Drag</h3>
@@ -278,7 +277,7 @@
 <h2 id="editor">Editor</h2>
 <p>The session editor can be enabled in the side panel. Once enabled, clicking on a widget or on a tab will make it the <em>selected object</em>, adding a fancy dashed blue border to it.</p>
 <h3 id="properties">Properties</h3>
-<p>All the selected object's properties are displayed and can be modified in the side panel. Any modification will redraw the object <strong>and all its children</strong> if the submitted data is valid. Please refer to the <a href="../widgets-generics/">widgets reference</a> for the list of valid options.</p>
+<p>All the selected object's properties are displayed and can be modified in the side panel. Any modification will redraw the object <strong>and all its children</strong> if the submitted data is valid. Please refer to the <a href="widgets-generics.md">widgets reference</a> for the list of valid options.</p>
 <p>Widgets containers such as tabs, strips and panels will also list their children here, which can be reordered using drag-and-drop.</p>
 <h3 id="size-position">Size / Position</h3>
 <p>The selected object can be resized using its south, south-east and east handles. It can be dragged with its north-west handle.</p>
@@ -287,11 +286,12 @@
 <h3 id="context-menu">Context menu</h3>
 <p>Right clicking / long touch on a widget or on a tab will also display a context menu providing useful utilities :</p>
 <ul>
-<li><code>copy</code>: copy widget's data</li>
-<li><code>cut</code>: copy widget's data and delete selected widget</li>
-<li><code>paste</code>: paste copied widget in selected container</li>
+<li><code>Edit parent</code>: selects the widget's parent for edition</li>
+<li><code>Copy</code>: copy widget's data</li>
+<li><code>Cut</code>: copy widget's data and delete selected widget</li>
+<li><code>Paste</code>: paste copied widget in selected container</li>
 <li><code>n+1</code> : increments the id of the copied widget (and all its children) before pasting</li>
-<li><code>clone</code> : paste the exact same widget</li>
+<li><code>Clone</code> : paste the exact same widget</li>
 <li><code>Add widget</code>: create a new widget in selected container</li>
 <li><code>Add tab</code>: create a new tab in selected container</li>
 <li><code>Delete</code>: delete selected tab or widget</li>
