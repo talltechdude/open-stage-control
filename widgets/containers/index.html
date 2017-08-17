@@ -1,0 +1,1123 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A libre desktop OSC bi-directionnal control surface application.">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../img/logo.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+    
+    
+      
+        <title>Containers - Open Stage Control</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f2c98adc9a.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Open Stage Control" class="md-logo md-header-nav__button">
+            <img src="../../img/logo-material.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Widgets reference
+                </span>
+              
+            
+            Containers
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/jean-emmanuel/open-stage-control" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      open-stage-control
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/logo-material.svg">
+      </i>
+    
+    Open Stage Control
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/jean-emmanuel/open-stage-control" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      open-stage-control
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Open Stage Control" class="md-nav__link">
+      Open Stage Control
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../interface/" title="User interface" class="md-nav__link">
+      User interface
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../editing-sessions/" title="Editing sessions" class="md-nav__link">
+      Editing sessions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Widgets reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Widgets reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../widgets/" title="Widget properties" class="md-nav__link">
+      Widget properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Containers
+      </label>
+    
+    <a href="./" title="Containers" class="md-nav__link md-nav__link--active">
+      Containers
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panel" title="Panel" class="md-nav__link">
+    Panel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scroll" title="scroll" class="md-nav__link">
+    scroll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border" title="border" class="md-nav__link">
+    border
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets" title="widgets" class="md-nav__link">
+    widgets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabs" title="tabs" class="md-nav__link">
+    tabs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" title="variables" class="md-nav__link">
+    variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout" title="layout" class="md-nav__link">
+    layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spacing" title="spacing" class="md-nav__link">
+    spacing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strip" title="Strip" class="md-nav__link">
+    Strip
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizontal" title="horizontal" class="md-nav__link">
+    horizontal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stretch" title="stretch" class="md-nav__link">
+    stretch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spacing_1" title="spacing" class="md-nav__link">
+    spacing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_1" title="border" class="md-nav__link">
+    border
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets_1" title="widgets" class="md-nav__link">
+    widgets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modal" title="Modal" class="md-nav__link">
+    Modal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doubletap" title="doubleTap" class="md-nav__link">
+    doubleTap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popupwidth-popupheight" title="popupWidth / popupHeight" class="md-nav__link">
+    popupWidth / popupHeight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popuplabel" title="popupLabel" class="md-nav__link">
+    popupLabel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" title="options" class="md-nav__link">
+    options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone" title="Clone" class="md-nav__link">
+    Clone
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#props" title="props" class="md-nav__link">
+    props
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sliders/" title="Sliders" class="md-nav__link">
+      Sliders
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pads/" title="Pads" class="md-nav__link">
+      Pads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../buttons/" title="Buttons" class="md-nav__link">
+      Buttons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../switchers/" title="Switchers" class="md-nav__link">
+      Switchers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plots/" title="Plots" class="md-nav__link">
+      Plots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Matrices" class="md-nav__link">
+      Matrices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maths/" title="Maths" class="md-nav__link">
+      Maths
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Extras
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Extras
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/property-inheritance/" title="Property inheritance" class="md-nav__link">
+      Property inheritance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/theming/" title="Theming" class="md-nav__link">
+      Theming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/url-options/" title="URL options" class="md-nav__link">
+      URL options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/remote-control/" title="Remote control" class="md-nav__link">
+      Remote control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/custom-module/" title="Custom module" class="md-nav__link">
+      Custom module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/midi/" title="Midi" class="md-nav__link">
+      Midi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panel" title="Panel" class="md-nav__link">
+    Panel
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scroll" title="scroll" class="md-nav__link">
+    scroll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border" title="border" class="md-nav__link">
+    border
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets" title="widgets" class="md-nav__link">
+    widgets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabs" title="tabs" class="md-nav__link">
+    tabs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" title="variables" class="md-nav__link">
+    variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout" title="layout" class="md-nav__link">
+    layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spacing" title="spacing" class="md-nav__link">
+    spacing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strip" title="Strip" class="md-nav__link">
+    Strip
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizontal" title="horizontal" class="md-nav__link">
+    horizontal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stretch" title="stretch" class="md-nav__link">
+    stretch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spacing_1" title="spacing" class="md-nav__link">
+    spacing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border_1" title="border" class="md-nav__link">
+    border
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets_1" title="widgets" class="md-nav__link">
+    widgets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modal" title="Modal" class="md-nav__link">
+    Modal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doubletap" title="doubleTap" class="md-nav__link">
+    doubleTap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popupwidth-popupheight" title="popupWidth / popupHeight" class="md-nav__link">
+    popupWidth / popupHeight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popuplabel" title="popupLabel" class="md-nav__link">
+    popupLabel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" title="options" class="md-nav__link">
+    options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone" title="Clone" class="md-nav__link">
+    Clone
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#props" title="props" class="md-nav__link">
+    props
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="containers">Containers<a class="headerlink" href="#containers" title="Permanent link">&para;</a></h1>
+<p>Containers can contain any widgets.</p>
+<h2 id="panel">Panel<a class="headerlink" href="#panel" title="Permanent link">&para;</a></h2>
+<p>Panels can contains tabs or widgets. These can be absolutely positioned and can overflow their parent's size (which will then display scrollbars). When a panel contains tabs, it can send and receive its active tab's index through osc.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;panel&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="scroll"><code>scroll</code><a class="headerlink" href="#scroll" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>true</code></li>
+<li>usage: set to <code>false</code> to disable scrollbars</li>
+</ul>
+<h3 id="border"><code>border</code><a class="headerlink" href="#border" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>true</code></li>
+<li>usage: by default, widgets in panels/strip have their border disabled, except for panels and strips. Set to <code>false</code> to apply this rule to the panel too.</li>
+</ul>
+<h3 id="widgets"><code>widgets</code><a class="headerlink" href="#widgets" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: each element of the <code>array</code> must be a widget <code>object</code>. A panel cannot contain widgets and tabs simultaneously.</li>
+</ul>
+<h3 id="tabs"><code>tabs</code><a class="headerlink" href="#tabs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: each element of the <code>array</code> must be a tab <code>object</code>. A panel cannot contain widgets and tabs simultaneously.</li>
+</ul>
+<h3 id="variables"><code>variables</code><a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>*</code></li>
+<li>default: <code>@{parent.variables}</code></li>
+<li>usage: defines one or more arbitrary variables that can be inherited by children widgets.</li>
+<li>examples:</li>
+<li><code>1</code> (<code>@{parent.variables}</code> will return <code>1</code>)</li>
+<li><code>{a: [1, 2], b: 2}</code> (<code>@{parent.variables.a}</code> will return <code>[1, 2]</code>)</li>
+<li><code>[1, 2]</code> (<code>@{parent.variables.0}</code> will return <code>1</code>)</li>
+<li><code>@{parent.variables}</code> useful when nesting containers</li>
+</ul>
+<h3 id="layout"><code>layout</code><a class="headerlink" href="#layout" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>''</code></li>
+<li>usage: <code>layout</code> must be a valid <a href="https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html">Visual Format Language</a> expression. It accepts the <a href="https://github.com/IjzerenHein/autolayout.js#extended-visual-format-language-evfl">Extended Visual Format Language</a> as well. Widgets are targeted using their <code>id</code> or their index prefixed with a <code>$</code> (<code>$0, $1, etc</code>), the latter method being incompatible with the <a href="https://github.com/IjzerenHein/autolayout.js#view-ranges-spread-operator">range spread operator</a>. Expressions can be tested and debugged with the online <a href="https://rawgit.com/IjzerenHein/visualformat-editor/master/dist/index.html">Visual Format Editor</a>.</li>
+<li>note: this only applies when the panel contains widgets, not tabs</li>
+</ul>
+<h3 id="spacing"><code>spacing</code><a class="headerlink" href="#spacing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>integer|array</code></li>
+<li>default: <code>0</code></li>
+<li>usage: spacing size used in <code>layout</code> expression, can be set as a <code>[vertical,horizontal]</code> array.</li>
+<li>note: this only applies when the panel contains widgets, not tabs</li>
+</ul>
+<h2 id="strip">Strip<a class="headerlink" href="#strip" title="Permanent link">&para;</a></h2>
+<p>Unidirectionnal panel with stretching capability. By default, children widgets that don't have an explicit <code>width</code>/<code>height</code> set will be shrinked to respect the sizes specified by others. Adding <code>flex:1;</code> to a children's <code>css</code> will give it the ability the fill the remaining space. Multiple children can have a <code>flex:x;</code> css property (<code>x</code> will ponderate their expansion).</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;strip&#39;</span><span class="p">,</span>
+  <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="horizontal"><code>horizontal</code><a class="headerlink" href="#horizontal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to display widgets horizontally</li>
+</ul>
+<h3 id="stretch"><code>stretch</code><a class="headerlink" href="#stretch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to stretch widgets evenly</li>
+</ul>
+<h3 id="spacing_1"><code>spacing</code><a class="headerlink" href="#spacing_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>integer</code></li>
+<li>default: <code>0</code></li>
+<li>usage: adds space between widgets</li>
+</ul>
+<h3 id="border_1"><code>border</code><a class="headerlink" href="#border_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>true</code></li>
+<li>usage: by default, widgets in panels/strip have their border disabled, except for panels and strips. Set to <code>false</code> to apply this rule to the strip too.</li>
+</ul>
+<h3 id="widgets_1"><code>widgets</code><a class="headerlink" href="#widgets_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage: each element of the <code>array</code> must be a widget <code>object</code></li>
+</ul>
+<h2 id="modal">Modal<a class="headerlink" href="#modal" title="Permanent link">&para;</a></h2>
+<p>Modals are buttons that turn into a centered popup panels when enabled. They can only contain widgets. They can send and receive their state via osc (1 to enable, 0 to disable).</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;modal&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="doubletap"><code>doubleTap</code><a class="headerlink" href="#doubletap" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to make the modal require a double tap to open instead of a single tap</li>
+</ul>
+<h3 id="popupwidth-popupheight"><code>popupWidth</code> / <code>popupHeight</code><a class="headerlink" href="#popupwidth-popupheight" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>number|percentage</code></li>
+<li>default: <code>100%</code></li>
+<li>usage: sets the modal's size once opened</li>
+</ul>
+<h3 id="popuplabel"><code>popupLabel</code><a class="headerlink" href="#popuplabel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: alternative label for the popup</li>
+</ul>
+<h3 id="options"><code>options</code><a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+<ul>
+<li>see panel's <a href="#panel"><code>options</code></a></li>
+</ul>
+<h2 id="clone">Clone<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;clone&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="widgetid"><code>widgetId</code><a class="headerlink" href="#widgetid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: <code>id</code> of the widget to clone</li>
+</ul>
+<h3 id="props"><code>props</code><a class="headerlink" href="#props" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>object</code></li>
+<li>default: <code>{}</code></li>
+<li>usage: cloned widget's properties to override</li>
+<li>example:
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;variables&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;n&quot;</span><span class="p">:</span> <span class="mi">2</span> <span class="p">},</span>
+    <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;orange&quot;</span>    
+<span class="p">}</span>
+</pre></div></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../widgets/" title="Widget properties" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Widget properties
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../sliders/" title="Sliders" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Sliders
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Open Stage Control is an <a href='http://ammd.net'>AMMD</a> software licensed under the <a href='https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE'>GNU/GPLv3</a> License
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

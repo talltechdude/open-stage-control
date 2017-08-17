@@ -1,0 +1,1026 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A libre desktop OSC bi-directionnal control surface application.">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../img/logo.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+    
+    
+      
+        <title>Widget properties - Open Stage Control</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f2c98adc9a.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Open Stage Control" class="md-logo md-header-nav__button">
+            <img src="../../img/logo-material.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Widgets reference
+                </span>
+              
+            
+            Widget properties
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/jean-emmanuel/open-stage-control" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      open-stage-control
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/logo-material.svg">
+      </i>
+    
+    Open Stage Control
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/jean-emmanuel/open-stage-control" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      open-stage-control
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Open Stage Control" class="md-nav__link">
+      Open Stage Control
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../interface/" title="User interface" class="md-nav__link">
+      User interface
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../editing-sessions/" title="Editing sessions" class="md-nav__link">
+      Editing sessions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Widgets reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Widgets reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Widget properties
+      </label>
+    
+    <a href="./" title="Widget properties" class="md-nav__link md-nav__link--active">
+      Widget properties
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics" title="Basics" class="md-nav__link">
+    Basics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type" title="type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" title="id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkid" title="linkId" class="md-nav__link">
+    linkId
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style" title="Style" class="md-nav__link">
+    Style
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#label" title="label" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-left" title="top / left" class="md-nav__link">
+    top / left
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#width-height" title="width / height" class="md-nav__link">
+    width / height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color" title="color" class="md-nav__link">
+    color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css" title="css" class="md-nav__link">
+    css
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osc" title="OSC" class="md-nav__link">
+    OSC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#value" title="value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precision" title="precision" class="md-nav__link">
+    precision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" title="target" class="md-nav__link">
+    target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address" title="address" class="md-nav__link">
+    address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touchaddress" title="touchAddress" class="md-nav__link">
+    touchAddress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preargs" title="preArgs" class="md-nav__link">
+    preArgs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../containers/" title="Containers" class="md-nav__link">
+      Containers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sliders/" title="Sliders" class="md-nav__link">
+      Sliders
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pads/" title="Pads" class="md-nav__link">
+      Pads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../buttons/" title="Buttons" class="md-nav__link">
+      Buttons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../switchers/" title="Switchers" class="md-nav__link">
+      Switchers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plots/" title="Plots" class="md-nav__link">
+      Plots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Matrices" class="md-nav__link">
+      Matrices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maths/" title="Maths" class="md-nav__link">
+      Maths
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Extras
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Extras
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/property-inheritance/" title="Property inheritance" class="md-nav__link">
+      Property inheritance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/theming/" title="Theming" class="md-nav__link">
+      Theming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/url-options/" title="URL options" class="md-nav__link">
+      URL options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/remote-control/" title="Remote control" class="md-nav__link">
+      Remote control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/custom-module/" title="Custom module" class="md-nav__link">
+      Custom module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/midi/" title="Midi" class="md-nav__link">
+      Midi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics" title="Basics" class="md-nav__link">
+    Basics
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type" title="type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" title="id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkid" title="linkId" class="md-nav__link">
+    linkId
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style" title="Style" class="md-nav__link">
+    Style
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#label" title="label" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-left" title="top / left" class="md-nav__link">
+    top / left
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#width-height" title="width / height" class="md-nav__link">
+    width / height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color" title="color" class="md-nav__link">
+    color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css" title="css" class="md-nav__link">
+    css
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osc" title="OSC" class="md-nav__link">
+    OSC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#value" title="value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precision" title="precision" class="md-nav__link">
+    precision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" title="target" class="md-nav__link">
+    target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address" title="address" class="md-nav__link">
+    address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touchaddress" title="touchAddress" class="md-nav__link">
+    touchAddress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preargs" title="preArgs" class="md-nav__link">
+    preArgs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="widgets-properties">Widgets properties<a class="headerlink" href="#widgets-properties" title="Permanent link">&para;</a></h1>
+<p>All widgets share a set of generic properties described below.</p>
+<h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
+<h3 id="type"><code>type</code><a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>fader</code></li>
+</ul>
+<h3 id="id"><code>id</code><a class="headerlink" href="#id" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: generated unique 'widget_n'</li>
+<li>usage: widgets sharing the same <code>id</code> will act as clones and update each other's value(s) without sending extra osc messages.</li>
+</ul>
+<h3 id="linkid"><code>linkId</code><a class="headerlink" href="#linkid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: widgets sharing the same <code>linkId</code> update each other's value(s) AND send their respective osc messages.</li>
+</ul>
+<h2 id="style">Style<a class="headerlink" href="#style" title="Permanent link">&para;</a></h2>
+<h3 id="label"><code>label</code><a class="headerlink" href="#label" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string|false</code></li>
+<li>default: <code>auto</code>, which displays <code>id</code></li>
+<li>usage:<ul>
+<li>set to <code>false</code> to hide completely</li>
+<li>insert icons from <a href="http://fontawesome.io/icons/">FontAwesome</a> using the prefix <code>^</code> followed by the icon's name : <code>made with ^heart</code>, etc</li>
+</ul>
+</li>
+</ul>
+<h3 id="top-left"><code>top</code> / <code>left</code><a class="headerlink" href="#top-left" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>number|percentage</code></li>
+<li>default: <code>auto</code></li>
+<li>usage:<ul>
+<li>when both <code>top</code> and <code>left</code> are set to <code>auto</code>, the widget is positioned according to the normal flow of the page (from left to right, by order of creation).</li>
+<li>otherwise, the widget will be absolutely positioned</li>
+</ul>
+</li>
+</ul>
+<h3 id="width-height"><code>width</code> / <code>height</code><a class="headerlink" href="#width-height" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>number|percentage</code></li>
+<li>default: <code>auto</code></li>
+</ul>
+<h3 id="color"><code>color</code><a class="headerlink" href="#color" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>auto</code>, inherited accent color</li>
+<li>usage: any valid <code>css</code> color code is valid, this will change the default accent color for the widget and all its children</li>
+</ul>
+<h3 id="css"><code>css</code><a class="headerlink" href="#css" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <em>empty</em></li>
+<li>usage: the <code>css</code> property can be used to override inherited <a href="../extra/theming.md">theming</a> variables. Also, some widgets expose specific theming variables that allow a finer customization. Standard <code>css</code> properties can be applied to the widget's root element through this property, <code>css</code> selectors can also be used apply custom styles to the widget's children.</li>
+<li>examples:<ul>
+<li><code>border-radius:5rem; .label {font-size: 20rem}</code> will round the widget's corners and increase its label's font-size and all its children's labels'</li>
+<li><code>border-radius:5rem; &gt; .label {font-size: 20rem}</code> will round the widget's corners and increase its label's font-size (the <code>&gt;</code> selector targets only the direct children of the widget element)</li>
+</ul>
+</li>
+</ul>
+<h2 id="osc">OSC<a class="headerlink" href="#osc" title="Permanent link">&para;</a></h2>
+<h3 id="value"><code>value</code><a class="headerlink" href="#value" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>*</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: if set, the widget will be initialized with this <code>value</code>. This won't affect linked widgets and won't send any osc message.</li>
+<li>note: its <code>type</code> must match the widget's value type (ie a <code>number</code> for sliders, an <code>array</code> for pads, etc).</li>
+</ul>
+<h3 id="precision"><code>precision</code><a class="headerlink" href="#precision" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>integer</code></li>
+<li>default: <code>2</code></li>
+<li>usage: the <code>precision</code> property defines the number of decimals to display and to send. Set to <code>0</code> to send <code>integers</code> only.</li>
+</ul>
+<h3 id="target"><code>target</code><a class="headerlink" href="#target" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage:<ul>
+<li>this defines the targets of the widget's osc messages</li>
+<li>each element of the <code>array</code> must be a string formatted as follows : <code>&quot;ip:port&quot;</code></li>
+<li>multiple targets can be specified : <code>[&quot;ip1:port1&quot;,&quot;ip2:port2&quot;]</code></li>
+<li>if no target is set, messages can still be sent if the server has synchronized hosts (<code>-s / --sync</code>)</li>
+<li>if <a href="../extra/midi.md"><code>midi</code></a> is enabled, targets can be <code>&quot;midi:device_name&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="address"><code>address</code><a class="headerlink" href="#address" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>/widgets_id</code></li>
+<li>usage: this is the <code>address</code> of the osc messages sent by the widget, it must start with a <code>/</code></li>
+</ul>
+<h3 id="touchaddress"><code>touchAddress</code><a class="headerlink" href="#touchaddress" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: sliders and pads can send special osc messages to inform weither they are currently touched or not. The osc message will be of the following form :
+<div class="codehilite"><pre><span></span>    /touch/address [preArgs] 0/1
+</pre></div></li>
+</ul>
+<h3 id="preargs"><code>preArgs</code><a class="headerlink" href="#preargs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage:<ul>
+<li>each element of the <code>array</code> defines a constant value that will be prepended to the osc message</li>
+<li>values can be defined as objects if the type needs to be specified (ie different from the default implied by the <code>precision</code>)</li>
+</ul>
+</li>
+<li>example:
+<div class="codehilite"><pre><span></span><span class="nx">preArgs</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">&quot;1&quot;</span><span class="p">,</span>        <span class="c1">// this will always be sent as a string</span>
+    <span class="mf">0.5</span><span class="p">,</span>        <span class="c1">// this will be sent as an integer if precision equals 0</span>
+    <span class="mi">1</span><span class="p">,</span>          <span class="c1">// this will be sent as float if precision is different from 0</span>
+    <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;f&quot;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span><span class="mf">0.5</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;i&quot;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span><span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;T&quot;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span><span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;F&quot;</span><span class="p">,</span>
+        <span class="nx">value</span><span class="o">:</span><span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../editing-sessions/" title="Editing sessions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Editing sessions
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../containers/" title="Containers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Containers
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Open Stage Control is an <a href='http://ammd.net'>AMMD</a> software licensed under the <a href='https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE'>GNU/GPLv3</a> License
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

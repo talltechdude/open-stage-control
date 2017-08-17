@@ -1,0 +1,1344 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A libre desktop OSC bi-directionnal control surface application.">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../img/logo.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.4">
+    
+    
+      
+        <title>Plots - Open Stage Control</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f2c98adc9a.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Open Stage Control" class="md-logo md-header-nav__button">
+            <img src="../../img/logo-material.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Widgets reference
+                </span>
+              
+            
+            Plots
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/jean-emmanuel/open-stage-control" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      open-stage-control
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/logo-material.svg">
+      </i>
+    
+    Open Stage Control
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/jean-emmanuel/open-stage-control" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      open-stage-control
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Open Stage Control" class="md-nav__link">
+      Open Stage Control
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../interface/" title="User interface" class="md-nav__link">
+      User interface
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../editing-sessions/" title="Editing sessions" class="md-nav__link">
+      Editing sessions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Widgets reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Widgets reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../widgets/" title="Widget properties" class="md-nav__link">
+      Widget properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../containers/" title="Containers" class="md-nav__link">
+      Containers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sliders/" title="Sliders" class="md-nav__link">
+      Sliders
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pads/" title="Pads" class="md-nav__link">
+      Pads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../buttons/" title="Buttons" class="md-nav__link">
+      Buttons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../switchers/" title="Switchers" class="md-nav__link">
+      Switchers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Plots
+      </label>
+    
+    <a href="./" title="Plots" class="md-nav__link md-nav__link--active">
+      Plots
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#led" title="Led" class="md-nav__link">
+    Led
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" title="range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscale" title="logScale" class="md-nav__link">
+    logScale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rgbled" title="RgbLed" class="md-nav__link">
+    RgbLed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot" title="Plot" class="md-nav__link">
+    Plot
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points" title="points" class="md-nav__link">
+    points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range_1" title="range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscalex" title="logScaleX" class="md-nav__link">
+    logScaleX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscaley" title="logScaleY" class="md-nav__link">
+    logScaleY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origin" title="origin" class="md-nav__link">
+    origin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eq" title="Eq" class="md-nav__link">
+    Eq
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filters" title="filters" class="md-nav__link">
+    filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution" title="resolution" class="md-nav__link">
+    resolution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rangey" title="rangeY" class="md-nav__link">
+    rangeY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscalex_1" title="logScaleX" class="md-nav__link">
+    logScaleX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origin_1" title="origin" class="md-nav__link">
+    origin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizer" title="Visualizer" class="md-nav__link">
+    Visualizer
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid_1" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" title="duration" class="md-nav__link">
+    duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range_2" title="range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscale_1" title="logScale" class="md-nav__link">
+    logScale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origin_2" title="origin" class="md-nav__link">
+    origin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" title="Text" class="md-nav__link">
+    Text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid_2" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical" title="vertical" class="md-nav__link">
+    vertical
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meter" title="Meter" class="md-nav__link">
+    Meter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid_3" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal" title="horizontal" class="md-nav__link">
+    horizontal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range_3" title="range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscale_2" title="logScale" class="md-nav__link">
+    logScale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Matrices" class="md-nav__link">
+      Matrices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maths/" title="Maths" class="md-nav__link">
+      Maths
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Extras
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Extras
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/property-inheritance/" title="Property inheritance" class="md-nav__link">
+      Property inheritance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/theming/" title="Theming" class="md-nav__link">
+      Theming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/url-options/" title="URL options" class="md-nav__link">
+      URL options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/remote-control/" title="Remote control" class="md-nav__link">
+      Remote control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/custom-module/" title="Custom module" class="md-nav__link">
+      Custom module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../extras/midi/" title="Midi" class="md-nav__link">
+      Midi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#led" title="Led" class="md-nav__link">
+    Led
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" title="range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscale" title="logScale" class="md-nav__link">
+    logScale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rgbled" title="RgbLed" class="md-nav__link">
+    RgbLed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot" title="Plot" class="md-nav__link">
+    Plot
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#points" title="points" class="md-nav__link">
+    points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range_1" title="range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscalex" title="logScaleX" class="md-nav__link">
+    logScaleX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscaley" title="logScaleY" class="md-nav__link">
+    logScaleY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origin" title="origin" class="md-nav__link">
+    origin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eq" title="Eq" class="md-nav__link">
+    Eq
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filters" title="filters" class="md-nav__link">
+    filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution" title="resolution" class="md-nav__link">
+    resolution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rangey" title="rangeY" class="md-nav__link">
+    rangeY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscalex_1" title="logScaleX" class="md-nav__link">
+    logScaleX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origin_1" title="origin" class="md-nav__link">
+    origin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizer" title="Visualizer" class="md-nav__link">
+    Visualizer
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid_1" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" title="duration" class="md-nav__link">
+    duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range_2" title="range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscale_1" title="logScale" class="md-nav__link">
+    logScale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origin_2" title="origin" class="md-nav__link">
+    origin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" title="Text" class="md-nav__link">
+    Text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid_2" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical" title="vertical" class="md-nav__link">
+    vertical
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meter" title="Meter" class="md-nav__link">
+    Meter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgetid_3" title="widgetId" class="md-nav__link">
+    widgetId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal" title="horizontal" class="md-nav__link">
+    horizontal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range_3" title="range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logscale_2" title="logScale" class="md-nav__link">
+    logScale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="plots">Plots<a class="headerlink" href="#plots" title="Permanent link">&para;</a></h1>
+<p>Plots are tools that display other widgets' state or incomming osc messages. They are not sensitive to mouse and touch interactions.</p>
+<h2 id="led">Led<a class="headerlink" href="#led" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;led&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="widgetid"><code>widgetId</code><a class="headerlink" href="#widgetid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: a widget's <code>id</code> whose value will be mapped to the led's color opacity</li>
+</ul>
+<h3 id="range"><code>range</code><a class="headerlink" href="#range" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>object</code></li>
+<li>default: <code>{&quot;min&quot;:0,&quot;max&quot;:1}</code></li>
+<li>usage: defines the <code>min</code> and <code>max</code> value the led's intensity will be mapped to</li>
+</ul>
+<h3 id="logscale"><code>logScale</code><a class="headerlink" href="#logscale" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to true use logarithmic scaling</li>
+</ul>
+<h2 id="rgbled">RgbLed<a class="headerlink" href="#rgbled" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;rgbled&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>This one is like the <code>led</code> except it takes either three arguments (red, green and blue values between 0 and 255) with an optionnal forth argument (alpha, between 0 and 1), or one argument (a valid css color name).</p>
+<h2 id="plot">Plot<a class="headerlink" href="#plot" title="Permanent link">&para;</a></h2>
+<p>The plot receives an array of [x,y] coordinates and draws them on a chart with linear or logarithmic interpolation.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;plot&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="points"><code>points</code><a class="headerlink" href="#points" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>array|string</code></li>
+<li>default: <code>[]</code></li>
+<li>usage:<ul>
+<li>as a <code>string</code>: a widget's <code>id</code> whose multiple values will be displayed on the <code>y</code> axis, evenly spaced on the <code>x</code> axis (only <em><a href="../matrices/">matrices</a></em> and <em><a href="../pads/">pads</a></em> will work)</li>
+<li>as an <code>array</code>: each element must be an <code>array</code> of <code>[x,y]</code> coordinates, where <code>x</code> and <code>y</code> can either be a:<ul>
+<li><code>number</code>: constant values</li>
+<li><code>string</code>: a widget's <code>id</code> whose value will be used</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="range_1"><code>range</code><a class="headerlink" href="#range_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>object</code></li>
+<li>default:
+    <code>{
+        x:{&quot;min&quot;:0,&quot;max&quot;:1},
+        y:{&quot;min&quot;:0,&quot;max&quot;:1}
+    }</code></li>
+<li>usage: defines the <code>min</code> and <code>max</code> values for the <code>x</code> and <code>y</code> axis</li>
+</ul>
+<h3 id="logscalex"><code>logScaleX</code><a class="headerlink" href="#logscalex" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to use logarithmic scale for the <code>x</code> axis (log10)</li>
+</ul>
+<h3 id="logscaley"><code>logScaleY</code><a class="headerlink" href="#logscaley" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to use logarithmic scale for the <code>y</code> axis (log10)</li>
+</ul>
+<h3 id="origin"><code>origin</code><a class="headerlink" href="#origin" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>auto</code></li>
+<li>usage: defines the y-axis origin. Set to <code>false</code> to disable it.</li>
+</ul>
+<h2 id="eq">Eq<a class="headerlink" href="#eq" title="Permanent link">&para;</a></h2>
+<p>The Eq receives an array of filter objects and draws their frequency response between 20Hz and 22050Hz.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;eq&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="filters"><code>filters</code><a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>array</code></li>
+<li>default: <code>[]</code></li>
+<li>usage:<ul>
+<li>each item must be an object of the form below</li>
+<li>all filters parameters can be filled with widget ids, whose value will be used</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>{
+    type:[string],   // &quot;highpass&quot;, &quot;highshelf&quot;, &quot;lowpass&quot;, &quot;lowshelf&quot;, &quot;peak&quot;, &quot;notch&quot;
+    freq:[number],   //
+    q:[number],      //
+    gain:[number],   //
+    on:[bool]        // 1 or true = active, 0 or false = bypassed
+}
+</pre></div>
+
+<h3 id="resolution"><code>resolution</code><a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>128</code></li>
+<li>usage: defines the number of points used to compute the frequency response</li>
+</ul>
+<h3 id="rangey"><code>rangeY</code><a class="headerlink" href="#rangey" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>object</code></li>
+<li>default:
+    <code>{&quot;min&quot;:-20,&quot;max&quot;:20}</code></li>
+<li>usage: defines the <code>min</code> and <code>max</code> values for the <code>y</code> axis (dB level)</li>
+</ul>
+<h3 id="logscalex_1"><code>logScaleX</code><a class="headerlink" href="#logscalex_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to use logarithmic scale for the <code>x</code> axis (log10)</li>
+</ul>
+<h3 id="origin_1"><code>origin</code><a class="headerlink" href="#origin_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>auto</code></li>
+<li>usage: defines the y-axis origin. Set to <code>false</code> to disable it.</li>
+</ul>
+<h2 id="visualizer">Visualizer<a class="headerlink" href="#visualizer" title="Permanent link">&para;</a></h2>
+<p>The visualizer displays the evolution in time of a received value (through osc) <em>or</em> another widget's value.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;visualizer&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="widgetid_1"><code>widgetId</code><a class="headerlink" href="#widgetid_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: a widget's <code>id</code> whose value will be displayed (thus bypassing the incoming osc)</li>
+</ul>
+<h3 id="duration"><code>duration</code><a class="headerlink" href="#duration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>1</code></li>
+<li>usage: window size in seconds</li>
+</ul>
+<h3 id="range_2"><code>range</code><a class="headerlink" href="#range_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>object</code></li>
+<li>default: <code>{&quot;min&quot;:0,&quot;max&quot;:1}</code></li>
+<li>usage: defines the <code>min</code> and <code>max</code> values for the <code>y</code> axis</li>
+</ul>
+<h3 id="logscale_1"><code>logScale</code><a class="headerlink" href="#logscale_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> use logarithmic scaling (log10)</li>
+</ul>
+<h3 id="origin_2"><code>origin</code><a class="headerlink" href="#origin_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>number</code></li>
+<li>default: <code>auto</code></li>
+<li>usage: defines the y-axis origin. Set to <code>false</code> to disable it.</li>
+</ul>
+<h2 id="text">Text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h2>
+<p>Text displays incoming values (via osc) as text. Sending a message with no argument to the widget will reset it to its default text.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="widgetid_2"><code>widgetId</code><a class="headerlink" href="#widgetid_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>string</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: a widget's <code>id</code> whose value will be displayed</li>
+</ul>
+<h3 id="vertical"><code>vertical</code><a class="headerlink" href="#vertical" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> display vertically</li>
+</ul>
+<h2 id="meter">Meter<a class="headerlink" href="#meter" title="Permanent link">&para;</a></h2>
+<p>Meter displays incoming numerical values (via osc) as a gauge level</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s1">&#39;meter&#39;</span><span class="p">,</span>
+    <span class="c1">// etc</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="widgetid_3"><code>widgetId</code><a class="headerlink" href="#widgetid_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>object</code></li>
+<li>default: <code>empty</code></li>
+<li>usage: a widget's <code>id</code> whose value will be displayed</li>
+</ul>
+<h3 id="horizontal"><code>horizontal</code><a class="headerlink" href="#horizontal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>type: <code>boolean</code></li>
+<li>default: <code>false</code></li>
+<li>usage: set to <code>true</code> to display the meter horizontally</li>
+</ul>
+<h3 id="range_3"><code>range</code><a class="headerlink" href="#range_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>see fader's <a href="../sliders/#fader"><code>range</code></a></li>
+</ul>
+<h3 id="logscale_2"><code>logScale</code><a class="headerlink" href="#logscale_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>see fader's <a href="../sliders/#fader"><code>logScale</code></a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../switchers/" title="Switchers" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Switchers
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../matrices/" title="Matrices" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Matrices
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Open Stage Control is an <a href='http://ammd.net'>AMMD</a> software licensed under the <a href='https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE'>GNU/GPLv3</a> License
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-c35428f87f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
