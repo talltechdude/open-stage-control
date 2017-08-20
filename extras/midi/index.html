@@ -502,8 +502,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-events" title="Supported events" class="md-nav__link">
-    Supported events
+  <a href="#supported-midi-messages" title="Supported MIDI messages" class="md-nav__link">
+    Supported MIDI messages
   </a>
   
     <nav class="md-nav">
@@ -598,8 +598,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-events" title="Supported events" class="md-nav__link">
-    Supported events
+  <a href="#supported-midi-messages" title="Supported MIDI messages" class="md-nav__link">
+    Supported MIDI messages
   </a>
   
     <nav class="md-nav">
@@ -654,34 +654,34 @@
                 
                 
                 <h1 id="sending-receiving-midi">Sending / Receiving MIDI<a class="headerlink" href="#sending-receiving-midi" title="Permanent link">&para;</a></h1>
-<p>Open Stage Control can send and receive midi messages using a tiny python addon.</p>
+<p>Open Stage Control can send and receive MIDI messages.</p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
-<p>MIDI support requires additionnal softwares to be installed on the server's system:</p>
+<p>MIDI support requires additional software to be installed on the server's system:</p>
 <ul>
 <li>python (2 / 3)</li>
-<li>python package <a href="https://pypi.python.org/pypi/rtmidi">rtmidi</a> (2.3.2)</li>
+<li>python package <a href="https://pypi.python.org/pypi/rtmidi">rtmidi</a> (version 2.3.2, compiled with <code>--jack-midi</code> flag for JACK MIDI support)</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Why an additionnal dependency ?</p>
-<p>Providing cross-platform midi support is not trivial, as it requires os-specific compilations that cannot be automated within Open Stage Control's current packaging workflow. Using a python addon seems the best compromise so far : the core app remains easy to build, and the extra dependency is easy to install.</p>
+<p>Providing cross-platform MIDI support is not trivial, as it requires OS-specific compilation that cannot be automated within Open Stage Control's current packaging workflow. Using a python addon seems to be the best compromise so far : the core app remains easy to build, and the extra dependency is easy to install.</p>
 </div>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <p>When running the app, the <code>-m / -midi</code> switch must be set; it accepts the following options (separated by spaces):</p>
 <ul>
-<li><code>list</code>: prints the available midi ports to the consolle</li>
+<li><code>list</code>: prints the available MIDI ports to the console; numbers in the first column may be used for <code>input</code>/<code>output</code> definition below</li>
 <li><code>device_name:input,output</code>: connect to midi ports <code>input</code> and <code>output</code>; osc messages sent to target <code>midi:device_name</code> will be processed as midi events; Multiple devices can be declared</li>
 </ul>
 <p><em>Linux only:</em></p>
 <ul>
 <li><code>device_name:virtual</code>: creates a virtual midi device with one input port and one output port</li>
-<li><code>jack</code>: use jack-midi instead of alsa (pyrtmidi midi must be compiled with the <code>--jack-midi</code> flag in order to make this work)</li>
+<li><code>jack</code>: use JACK MIDI instead of ALSA (add as extra parameter)</li>
 </ul>
 <h2 id="widget-settings">Widget settings<a class="headerlink" href="#widget-settings" title="Permanent link">&para;</a></h2>
-<p>In order to send midi messages, a widget must have at least one <code>target</code> formatted as follow;  </p>
+<p>In order to send MIDI messages, a widget must have at least one <code>target</code> formatted as follows:</p>
 <p><code>midi:device_name</code> (where <code>device_name</code> is one of the declared midi devices)</p>
-<h2 id="supported-events">Supported events<a class="headerlink" href="#supported-events" title="Permanent link">&para;</a></h2>
+<h2 id="supported-midi-messages">Supported MIDI messages<a class="headerlink" href="#supported-midi-messages" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
-<p>Use the <a href="../../widgets/widgets/#preargs"><code>preArgs</code></a> option to make sure the correct number of arguments is sent.</p>
+<p>Define static argument values using the <a href="../../widgets/widgets/#preargs"><code>preArgs</code></a> option in order to complete the respective MIDI message.</p>
 </div>
 <h3 id="note-channel-note-velocity"><code>/note channel note velocity</code><a class="headerlink" href="#note-channel-note-velocity" title="Permanent link">&para;</a></h3>
 <p>NoteOn event or noteOff if velocity equals <code>0</code>.</p>
@@ -689,6 +689,15 @@
 <li><code>channel</code>: integer between 1 and 16</li>
 <li><code>note</code>: integer between 0 and 127</li>
 <li><code>velocity</code>: integer between 0 and 127</li>
+</ul>
+<p>Example:</p>
+<p>A push button might be configured as follows in order to send a MIDI note whose velocity is defined by the button's on/off value:</p>
+<ul>
+<li><code>address</code>: /note</li>
+<li><code>preArgs</code>: [1, 60] (for MIDI channel 1, and note 60 / C3)</li>
+<li><code>on</code>: 100 (for noteOn velocity of 100 on button push)</li>
+<li><code>off</code>: 0 (to send a noteOff on button release)</li>
+<li><code>target</code>: ["midi:device_name"] (where device_name is one of the declared midi devices defined during <a href="#setup">setup</a>)</li>
 </ul>
 <h3 id="control-channel-cc-value"><code>/control channel cc value</code><a class="headerlink" href="#control-channel-cc-value" title="Permanent link">&para;</a></h3>
 <p>Control change event.</p>
