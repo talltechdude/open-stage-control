@@ -1107,7 +1107,7 @@
         }, 
         {
             "location": "/widgets/maths/", 
-            "text": "Maths\n\n\nMaths do the maths !\n\n\nFormula\n\n\nFormula evaluates mathematical expressions over other widgets' values each one of these widgets changes.\n\n\n{\n\n    \ntype\n:\nformula\n,\n\n    \n// etc\n\n\n}\n\n\n\n\n\nformula\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage: a \nmathjs\n expression in which\n\n\n${id}\n will be replaced the \nid\n's value  \n\n\nexample: \n${fader_1} * 2 + ${fader_2}\n\n\n\n\n\n\nimportant note\n: contrary to what is stated in \nmathjs\n' documentation, \nmatrix indexes are zero-based\n here\n\n\n\n\ncondition\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage:\n\n\na \nmathjs\n comparison expression that bypasses widget's osc sending when returning\nfalse\n\n\nexample: \n${fader_1} \n 0.5\n\n\n\n\n\n\n\n\nsplit\n\n\n\n\ntype: \nobject\n\n\ndefault: \n[]\n\n\nusage: specify a different \naddress\n for each item of the widget's value : \n['/a', '/b']\n\n\nnote: only use this is the formula return an \narray", 
+            "text": "Maths\n\n\nMaths do the maths !\n\n\nFormula\n\n\nFormula evaluates mathematical expressions over other widgets' values each one of these widgets changes.\n\n\n{\n\n    \ntype\n:\nformula\n,\n\n    \n// etc\n\n\n}\n\n\n\n\n\nformula\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage: a \nmathjs\n expression in which\n\n\n${id}\n will be replaced the \nid\n's value  \n\n\nexample: \n${fader_1} * 2 + ${fader_2}\n\n\n\n\n\n\nimportant note\n: contrary to what is stated in \nmathjs\n' documentation, \nmatrix indexes are zero-based\n here\n\n\n\n\ncondition\n\n\n\n\ntype: \nstring\n\n\ndefault: \n''\n\n\nusage:\n\n\na \nmathjs\n comparison expression that bypasses widget's osc sending when returning\nfalse\n\n\nexample: \n${fader_1} \n 0.5\n\n\n\n\n\n\n\n\nunit\n\n\n\n\ntype: \nstring\n\n\ndefault: \nempty\n\n\nusage: \nunit\n will be appended to the displayed widget's value (it doesn't affect osc messages)\n\n\n\n\nsplit\n\n\n\n\ntype: \nobject\n\n\ndefault: \n[]\n\n\nusage: specify a different \naddress\n for each item of the widget's value : \n['/a', '/b']\n\n\nnote: only use this is the formula return an \narray", 
             "title": "Maths"
         }, 
         {
@@ -1129,6 +1129,11 @@
             "location": "/widgets/maths/#condition", 
             "text": "type:  string  default:  ''  usage:  a  mathjs  comparison expression that bypasses widget's osc sending when returning false  example:  ${fader_1}   0.5", 
             "title": "condition"
+        }, 
+        {
+            "location": "/widgets/maths/#unit", 
+            "text": "type:  string  default:  empty  usage:  unit  will be appended to the displayed widget's value (it doesn't affect osc messages)", 
+            "title": "unit"
         }, 
         {
             "location": "/widgets/maths/#split", 
