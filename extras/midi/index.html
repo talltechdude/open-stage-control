@@ -537,6 +537,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sysex-msg-v1-vn" title="/sysex msg v1 .. vN" class="md-nav__link">
+    /sysex msg v1 .. vN
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -633,6 +640,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sysex-msg-v1-vn" title="/sysex msg v1 .. vN" class="md-nav__link">
+    /sysex msg v1 .. vN
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -718,6 +732,13 @@
 <li><code>channel</code>: integer between 1 and 16</li>
 <li><code>pitch</code>: integer between 0 and 16383</li>
 </ul>
+<h3 id="sysex-msg-v1-vn"><code>/sysex msg v1 .. vN</code><a class="headerlink" href="#sysex-msg-v1-vn" title="Permanent link">&para;</a></h3>
+<p>System exclusive message.</p>
+<ul>
+<li><code>msg</code>: hexadecimal sysex data string of the form <code>f0 ... f7</code>. You may include placeholders of the form <code>nn</code> which will be replaced by <code>v1, .., vN</code> respectively.</li>
+<li><code>v1, .., vN</code>: values encoded as hexadecimal data strings to include in <code>msg</code>. Most probably, you will need to sepcify a <a href="../../extras/custom-module/">custom module</a> in order to convert numeric widget values into the required hexadecimal format. In general, this conversion will be different for each manufacturer / device.</li>
+</ul>
+<p>For a very simple example, refer to session 'sysex_device_inquiry.js' found in the application's sub folder 'resources/app/examples/'. Please remember to adjust the button's <code>target</code> to the <code>device_name</code> used in your MIDI setup.</p>
                 
                   
                 
@@ -784,6 +805,8 @@
       
     
     
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-41577570-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       
     
   </body>
