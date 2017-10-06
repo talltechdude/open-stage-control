@@ -646,6 +646,7 @@
 <p>By default, widget resizing / dragging snaps to a 10 pixel wide grid. Its width can be customized in the editor (when it's enabled). Setting its width to 1 will disable it. Note that the grid doesn't affect manual setting of a widget's size / position.</p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <p>Selected widget's properties are displayed and can be modified in the sidepanel. The <a href="../widgets/widgets">widgets reference</a> section lists the available properties for each widget type. Property fields are all multiline (press <code>shit + enter</code> for new line).</p>
+<p>Properties are written in JSON, with some flexibility brought by the <a href="https://github.com/json5/json5">JSON5</a> format. For example, doubles quotes around object keys are not mandatory. All input will be converted to standard JSON.</p>
 <h2 id="widget-resizing-dragging">Widget resizing / dragging<a class="headerlink" href="#widget-resizing-dragging" title="Permanent link">&para;</a></h2>
 <p>Selected widget can be resized using its south, south-east and east handles. It can be dragged with its north-west handle.</p>
                 

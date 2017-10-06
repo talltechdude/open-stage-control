@@ -594,63 +594,63 @@
 </thead>
 <tbody>
 <tr>
-<td>sync</td>
-<td>synchronized hosts (ip:port pairs) (osc messages sent by widgets will also be sent to these targets)</td>
+<td>-s, --send</td>
+<td>default targets for all widgets (ip:port pairs)</td>
 </tr>
 <tr>
-<td>load</td>
+<td>-l, --load</td>
 <td>session file to load</td>
 </tr>
 <tr>
-<td>blank</td>
+<td>-b, --blank</td>
 <td>load a blank session and start the editor</td>
 </tr>
 <tr>
-<td>custom-module</td>
+<td>-c, --custom-module</td>
 <td>custom module file to load</td>
 </tr>
 <tr>
-<td>port</td>
+<td>-p, --port</td>
 <td>http port of the server (default to 8080)</td>
 </tr>
 <tr>
-<td>osc-port</td>
+<td>-o, --osc-port</td>
 <td>osc input port (default to --port)</td>
 </tr>
 <tr>
-<td>midi</td>
+<td>-m, --midi</td>
 <td>midi router settings (requires python-pyo)</td>
 </tr>
 <tr>
-<td>debug</td>
+<td>-d, --debug</td>
 <td>log received osc messages in the console</td>
 </tr>
 <tr>
-<td>no-gui</td>
+<td>-n, --no-gui</td>
 <td>disable default gui</td>
 </tr>
 <tr>
-<td>gui-only</td>
+<td>-g, --gui-only</td>
 <td>app server's url. If true, local port (--port) is used</td>
 </tr>
 <tr>
-<td>theme</td>
+<td>-t, --theme</td>
 <td>theme name or path (mutliple values allowed)</td>
 </tr>
 <tr>
-<td>examples</td>
+<td>-e, --examples</td>
 <td>list examples instead of recent sessions</td>
 </tr>
 <tr>
-<td>url-options</td>
+<td>--url-options</td>
 <td><a href="../extras/url-options">url options</a> (opt=value pairs)</td>
 </tr>
 <tr>
-<td>disable-vsync</td>
+<td>--disable-vsync</td>
 <td>disable gui's vertical synchronization</td>
 </tr>
 <tr>
-<td>read-only</td>
+<td>--read-only</td>
 <td>disable session editing and session history changes</td>
 </tr>
 </tbody>
@@ -665,17 +665,17 @@
 </thead>
 <tbody>
 <tr>
-<td>help</td>
+<td>-h, --help</td>
 <td>print available options</td>
 </tr>
 <tr>
-<td>version</td>
+<td>-v, --version</td>
 <td>print version number</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Examples</strong></p>
-<div class="codehilite"><pre><span></span>$ open-stage-control --sync 127.0.0.1:5555 127.0.0.1:6666 --port 7777
+<div class="codehilite"><pre><span></span>$ open-stage-control --send 127.0.0.1:5555 127.0.0.1:6666 --port 7777
 </pre></div>
 
 <p>This will create an app listening on port 7777 for synchronization messages, and sending its widgets state changes to ports 5555 and 6666.</p>
