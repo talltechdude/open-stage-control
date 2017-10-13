@@ -255,6 +255,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#running-without-electron" title="Running without Electron" class="md-nav__link">
+    Running without Electron
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -564,6 +571,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#running-without-electron" title="Running without Electron" class="md-nav__link">
+    Running without Electron
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -746,6 +760,12 @@ $ npm run debarm
 <p>Electron, Open Stage Control's engine, is based on chromium and can't run out of the box without a display server. However, using a virtual framebuffer does the trick. Detailed instructions can be found in Electron's <a href="http://electron.atom.io/docs/tutorial/testing-on-headless-ci/">documentation</a>.</p>
 <p>In short: install <a href="https://en.wikipedia.org/wiki/Xvfb">xvfb</a> and prepend your command with <code>xvfb-run</code>:  </p>
 <div class="codehilite"><pre><span></span>$ xvfb-run open-stage-control -n
+</pre></div>
+
+<h2 id="running-without-electron">Running without Electron<a class="headerlink" href="#running-without-electron" title="Permanent link">&para;</a></h2>
+<p>It is possible to run the server in headless mode without Electron using <a href="https://nodejs.org">node</a> (v6 or higher) :</p>
+<div class="codehilite"><pre><span></span>$ node /path/to/packaged/open-stage-control/resources/app/ -n
+$ node /path/to/sources/open-stage-control/app/ -n
 </pre></div>
                 
                   
