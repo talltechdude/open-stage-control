@@ -1,4 +1,5 @@
 FROM node
+LABEL maintainer="talltechdude"
 
 RUN mkdir /open-stage-control
 RUN git clone https://github.com/talltechdude/open-stage-control /open-stage-control
